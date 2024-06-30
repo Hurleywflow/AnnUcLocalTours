@@ -9,9 +9,9 @@
     "lineEnding": "lf",
     "lineWidth": 80,
     "ignore": [
-      "node_modules",
+      "**/node_modules",
       "./.next",
-      "dist",
+      "dist/**",
       ".nuxt",
       ".wrangler",
       ".react-email",
@@ -60,9 +60,9 @@
       }
     },
     "ignore": [
-      "node_modules",
+      "**/node_modules",
       "./.next",
-      "dist",
+      "dist/**",
       ".wrangler",
       ".react-email",
       ".contentlayer",
@@ -72,15 +72,23 @@
   "organizeImports": {
     "enabled": true,
     "ignore": [
-      "node_modules",
+      "**/node_modules",
       "./.next",
-      "dist",
+      "dist/**",
       ".nuxt",
       ".wrangler",
       ".react-email",
       ".contentlayer"
     ]
   },
+   "overrides": [
+    {
+      "include": ["*.json", "*.jsonc"],
+      "formatter": {
+        "indentWidth": 2
+      }
+    }
+  ],
   "vcs": {
     "clientKind": "git",
     "defaultBranch": "main",

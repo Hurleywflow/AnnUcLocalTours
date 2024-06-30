@@ -33,46 +33,16 @@ function Navbar(): JSX.Element {
 					{/* <Package2 className='size-6' /> */}
 					<div className='relative size-10 overflow-hidden rounded-full'>
 						<Images
-							src='/Images/logo/logo.jpg'
-							alt='Nail Studio'
+							src='/NetCode.svg'
+							alt='AnnUcLocalTours'
 							className=''
 							fill
 						/>
 					</div>
-					<span className='sr-only'>Nail Studio</span>
+					<span className='sr-only'>AnnUcLocalTours</span>
 				</Link>
 				{/* Menu items */}
 				<LineTabs />
-				{/* <Link
-					href='https://www.nailstudiopro.com/'
-					className='ml-20 text-foreground transition-colors hover:text-foreground'
-				>
-					Dashboard
-				</Link>
-				<Link
-					href='https://www.nailstudiopro.com/'
-					className='text-muted-foreground transition-colors hover:text-foreground'
-				>
-					Orders
-				</Link>
-				<Link
-					href='https://www.nailstudiopro.com/'
-					className='text-muted-foreground transition-colors hover:text-foreground'
-				>
-					Products
-				</Link>
-				<Link
-					href='https://www.nailstudiopro.com/'
-					className='text-muted-foreground transition-colors hover:text-foreground'
-				>
-					Customers
-				</Link>
-				<Link
-					href='https://www.nailstudiopro.com/'
-					className='text-muted-foreground transition-colors hover:text-foreground'
-				>
-					Analytics
-				</Link> */}
 			</nav>
 			<Sheet>
 				<SheetTrigger asChild>
@@ -89,35 +59,35 @@ function Navbar(): JSX.Element {
 						>
 							<div className='relative size-10 overflow-hidden rounded-full'>
 								<Images
-									src='/Images/logo/logo.jpg'
-									alt='Nail Studio'
+									src='/NetCode.svg'
+									alt='AnnUcLocalTours'
 									className=''
 									fill
 								/>
 							</div>
-							<span className='sr-only'>Nail Studio</span>
+							<span className='sr-only'>AnnUcLocalTours</span>
 						</Link>
 						<Link href='/#home' className='hover:text-foreground'>
 							Home
 						</Link>
 						<Link
-							href='/#manicure'
+							href='/#intro'
 							className='text-muted-foreground hover:text-foreground'
 						>
-							Manicure
+							Intro
+						</Link>
+						<Link
+							href='/#our-tours'
+							className='text-muted-foreground hover:text-foreground'
+						>
+							Our Tours
 						</Link>
 
 						<Link
-							href='/#pedicure'
+							href='/#feedback'
 							className='text-muted-foreground hover:text-foreground'
 						>
-							Pedicure
-						</Link>
-						<Link
-							href='/#nail-art'
-							className='text-muted-foreground hover:text-foreground'
-						>
-							Nail Art
+							Feedback
 						</Link>
 						<Link
 							href='/#contact'
@@ -125,15 +95,21 @@ function Navbar(): JSX.Element {
 						>
 							Contact
 						</Link>
+						<Link
+							href='/#blogs'
+							className='text-muted-foreground hover:text-foreground'
+						>
+							Blogs
+						</Link>
 					</nav>
 				</SheetContent>
 			</Sheet>
 			<div className='flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4'>
 				<Button className='group relative ml-auto flex-1 overflow-hidden rounded-md px-6  transition  sm:flex-initial '>
-					<Link href='tel:+12565462553'>
-						<span className='relative'>Book Now</span>
+					<Link href='tel:+610423099677'>
+						<span className='relative text-base'>Book Now</span>
 						<div className='absolute inset-0 top-[-20px] flex h-[calc(100%+40px)] w-full animate-shine-infinite justify-center blur-md'>
-							<div className='relative h-full w-8 bg-neutral-400' />
+							<div className='relative h-full w-8 bg-accent' />
 						</div>
 					</Link>
 				</Button>

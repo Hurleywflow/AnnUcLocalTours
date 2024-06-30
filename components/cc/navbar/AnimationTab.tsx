@@ -9,8 +9,16 @@ const tabs = [
 		link: "/",
 	},
 	{
+		text: "Intro",
+		link: "/#intro",
+	},
+	{
 		text: "Our Tours",
 		link: "/#our-tours",
+	},
+	{
+		text: "Feedback",
+		link: "/#feedback",
 	},
 	{
 		text: "Contact",
@@ -45,7 +53,7 @@ export const Tab = ({
 			variant={selected ? "secondary" : "ghost"}
 			className={` ${
 				selected ? "text-background" : " hover:text-muted-foreground"
-			} relative rounded-md  px-2 py-1 text-foreground transition-colors duration-300 focus-within:outline-red-500/50`}
+			} relative rounded-md ml-5 px-2 py-1 text-foreground font-medium text-base transition-colors duration-300 focus-within:outline-red-500/50`}
 		>
 			<span className='relative z-10'>{text}</span>
 			{selected && (
