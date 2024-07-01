@@ -105,14 +105,12 @@ const Carousel = forwardRef<
 		}, [emblaMainApi]);
 
 		const ScrollPrev = useCallback(() => {
-			// biome-ignore lint/style/useBlockStatements: <explanation>
 			if (!emblaMainApi) return;
 			emblaMainApi.scrollPrev();
 		}, [emblaMainApi]);
 
 		const direction = carouselOptions?.direction ?? (dir as DirectionOption);
 
-		// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 		// const handleKeyDown = useCallback(
 		// 	(event: React.KeyboardEvent<HTMLDivElement>): void => {
 		// 		event.preventDefault();
@@ -198,6 +196,7 @@ const Carousel = forwardRef<
 				ArrowUp: handleArrowUp,
 				ArrowDown: handleArrowDown,
 			}),
+			// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 			[handleArrowLeft, handleArrowRight, handleArrowUp, handleArrowDown],
 		);
 

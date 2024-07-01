@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
-import DestinationsGeneral from "../Destinations/DestinationsGeneral";
+import DestinationsAustralia from "../Destinations/DestinationsAustralia";
+import DestinationsVietNam from "../Destinations/DestinationsVietNam";
 import BoxRevealOurTourDemo from "../boxTextReveal/boxTextRevealOurTourDemo";
 import { SparklesTextOurTourDemo } from "../magicui/sparkles-text/SparklesTextOurTourDemo";
 
@@ -10,7 +11,8 @@ function OurTours() {
 				<SparklesTextOurTourDemo />
 				<BoxRevealOurTourDemo />
 			</div>
-			<DestinationsGeneral />
+			<DestinationsAustralia />
+			<DestinationsVietNam />
 		</Card>
 	);
 }

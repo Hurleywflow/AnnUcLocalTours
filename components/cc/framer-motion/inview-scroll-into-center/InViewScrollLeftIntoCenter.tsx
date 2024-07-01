@@ -2,7 +2,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, type FC } from "react";
+import { type FC, useRef } from "react";
 
 type Props = {
 	children: React.ReactNode;

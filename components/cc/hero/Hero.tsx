@@ -14,7 +14,7 @@ function Hero(): JSX.Element {
 	return (
 		<div className=' flex h-fit w-full flex-col items-center justify-center'>
 			{/* <BorderBeam size={250} duration={12} delay={9} /> */}
-			<ImagesSlider className='h-fit min-h-svh relative' images={images}>
+			<ImagesSlider className='relative h-fit min-h-svh' images={images}>
 				<MotionDiv
 					initial={{ opacity: 0.3, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -23,10 +23,10 @@ function Hero(): JSX.Element {
 						duration: 0.5,
 						ease: "easeInOut",
 					}}
-					className='z-10 flex flex-col items-center justify-center gap-2 absolute bottom-20 md:bottom-40 h-fit w-[80%] backdrop-blur-lg rounded-[0.4rem] p-1'
+					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] p-1 backdrop-blur-lg md:bottom-40'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
-					<H1 className='text-center text-balance text-5xl font-light italic md:text-7xl lg:text-9xl p-2'>
+					<H1 className='text-balance p-2 text-center text-5xl font-light italic md:text-7xl lg:text-9xl'>
 						G'day mate!
 					</H1>
 					<P className=''>

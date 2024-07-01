@@ -3,7 +3,7 @@
 // validateString helper
 // biome-ignore lint/correctness/noUnusedVariables: <explanation>
 const validateString = (value: unknown, maxLength: number): value is string => {
-	if (!(value) || typeof value !== "string" || value.length > maxLength) {
+	if (!value || typeof value !== "string" || value.length > maxLength) {
 		return false;
 	}
 	return true;

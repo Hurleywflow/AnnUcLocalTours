@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, type HTMLMotionProps } from "framer-motion";
+import { AnimatePresence, type HTMLMotionProps, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 type WordRotateProps = {

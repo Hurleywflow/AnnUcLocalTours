@@ -53,7 +53,7 @@ export const Tab = ({
 			variant={selected ? "secondary" : "ghost"}
 			className={` ${
 				selected ? "text-background" : " hover:text-muted-foreground"
-			} relative rounded-md ml-5 px-2 py-1 text-foreground font-medium text-base transition-colors duration-300 focus-within:outline-red-500/50`}
+			} relative ml-5 rounded-md px-2 py-1 text-base font-medium text-foreground transition-colors duration-300 focus-within:outline-red-500/50`}
 		>
 			<span className='relative z-10'>{text}</span>
 			{selected && (

@@ -59,7 +59,7 @@ const ReviewCard = ({
 
 const MarqueeDemoVertical = () => {
 	const keyID1 = useId();
-	const keyID2 = useId();
+	// const keyID2 = useId();
 	return (
 		<div className='relative flex h-[40rem] w-fit flex-row items-center justify-center overflow-hidden rounded-lg border bg-background sm:px-2 md:shadow-xl'>
 			<Marquee pauseOnHover vertical className='[--duration:40s]'>

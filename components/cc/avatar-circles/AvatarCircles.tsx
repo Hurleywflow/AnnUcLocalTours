@@ -2,11 +2,11 @@
 
 import { cn } from "@/lib/utils";
 
-interface AvatarCirclesProps {
+type AvatarCirclesProps = {
 	className?: string;
 	numPeople?: number;
 	avatarUrls: string[];
-}
+};
 
 const AvatarCircles = ({
 	numPeople,
@@ -19,7 +19,7 @@ const AvatarCircles = ({
 				<img
 					// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
 					key={index}
-					className='h-10 w-10 rounded-full border-2 border-white dark:border-gray-800'
+					className='size-10 rounded-full border-2 border-white dark:border-gray-800'
 					src={url}
 					width={40}
 					height={40}
@@ -27,7 +27,7 @@ const AvatarCircles = ({
 				/>
 			))}
 			<a
-				className='flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-black text-center text-xs font-medium text-white hover:bg-gray-600 dark:border-gray-800 dark:bg-white dark:text-black'
+				className='flex size-10 items-center justify-center rounded-full border-2 border-white bg-black text-center text-xs font-medium text-white hover:bg-gray-600 dark:border-gray-800 dark:bg-white dark:text-black'
 				href='https://www.netcodedev.com'
 			>
 				+{numPeople}

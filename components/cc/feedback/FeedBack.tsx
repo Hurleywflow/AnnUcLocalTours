@@ -7,7 +7,7 @@ import { P } from "../text-utils/TextUtils";
 
 function FeedBack() {
 	return (
-		<Card className='flex flex-col items-center justify-center gap-10 p-2 w-full'>
+		<Card className='flex w-full flex-col items-center justify-center gap-10 p-2'>
 			<ShineBorderBasicDemo />
 			<MarqueeDemo />
 			<P className=''>
@@ -17,7 +17,7 @@ function FeedBack() {
 				your experience with us!
 			</P>
 			<Link href='/'>
-				<Button className='text-base flex flex-col h-fit ' variant='secondary'>
+				<Button className='flex h-fit flex-col text-base ' variant='secondary'>
 					Submit 🌟🌟🌟🌟🌟 Feedback
 					<span className='sr-only'>Submit Your Feedback</span>
 				</Button>

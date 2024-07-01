@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 
 type TColorProp = `#${string}` | `#${string}`[];
-interface ShineBorderProps {
+type ShineBorderProps = {
 	borderRadius?: number;
 	borderWidth?: number;
 	duration?: number;
 	color?: TColorProp;
 	className?: string;
 	children: React.ReactNode;
-}
+};
 
 /**
  * @name Shine Border
@@ -52,9 +52,9 @@ export default function ShineBorder({
 						"--background-radial-gradient": `radial-gradient(transparent,transparent, ${!Array.isArray(color) ? color : color.join(",")},transparent,transparent)`,
 					} as React.CSSProperties
 				}
-				className={`before:bg-shine-size before:absolute before:inset-[0] before:aspect-square before:h-full before:w-full before:rounded-[--border-radius] before:p-[--border-width] before:will-change-[background-position] before:content-[""] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:var(--background-radial-gradient)] before:[background-size:300%_300%] before:[mask:var(--mask-linear-gradient)] motion-safe:before:animate-[shine-pulse_var(--shine-pulse-duration)_infinite_linear]`}
+				className={`before:bg-shine-size before:absolute before:inset-0 before:aspect-square before:size-full before:rounded-[--border-radius] before:p-[--border-width] before:will-change-[background-position] before:content-[""] before:![-webkit-mask-composite:xor] before:[background-image:var(--background-radial-gradient)] before:[background-size:300%_300%] before:![mask-composite:exclude] before:[mask:var(--mask-linear-gradient)] motion-safe:before:animate-[shine-pulse_var(--shine-pulse-duration)_infinite_linear]`}
 			/>
-			<div className={"z-[1] h-full w-full rounded-[--border-radius-child]"}>
+			<div className='z-[1] size-full rounded-[--border-radius-child]'>
 				{children}
 			</div>
 		</div>

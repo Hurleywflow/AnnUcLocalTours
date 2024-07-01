@@ -1,19 +1,19 @@
 export const projects = [
 	{
-		title: 'Matthias Leidinger',
+		title: "Matthias Leidinger",
 		description:
-			'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-		link: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
-		src: '/images/BBQ/1.jpeg',
-		color: '#BBACAF',
+			"Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
+		link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+		src: "/images/BBQ/1.jpeg",
+		color: "#BBACAF",
 	},
 	{
-		title: 'Clément Chapillon',
+		title: "Clément Chapillon",
 		description:
-			'This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).',
-		src: '/images/BBQ/2.jpeg',
-		link: 'https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/',
-		color: '#977F6D',
+			"This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
+		src: "/images/BBQ/2.jpeg",
+		link: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
+		color: "#977F6D",
 	},
 	// {
 	//   title: 'Zissou',
@@ -56,27 +56,27 @@ export const projects = [
 	//   color: '#C2491D',
 	// },
 	{
-		title: 'Johannes Scheidel',
+		title: "Johannes Scheidel",
 		description:
-			'The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.',
-		src: '/images/BBQ/9.jpeg',
-		link: 'https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/',
-		color: '#977F6D',
+			"The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.",
+		src: "/images/BBQ/9.jpeg",
+		link: "https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/",
+		color: "#977F6D",
 	},
 	{
-		title: 'chalua',
+		title: "chalua",
 		description:
-			'The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.',
-		src: '/images/BBQ/8.jpeg',
-		link: 'https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/',
-		color: '#88A28D',
+			"The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.",
+		src: "/images/BBQ/8.jpeg",
+		link: "https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/",
+		color: "#88A28D",
 	},
 	{
-		title: 'chalua',
+		title: "chalua",
 		description:
-			'The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.',
-		src: '/images/BBQ/10.jpeg',
-		link: 'https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/',
-		color: '#C2491D',
+			"The photographer and illustrator <NAME> has been working on a series of illustrations for the book, “The Soul of the Wild.” The illustrations are a series of self-portraits, each one portraying a different aspect of the wildlife he has photographed.",
+		src: "/images/BBQ/10.jpeg",
+		link: "https://www.ignant.com/2022/09/19/the-soul-of-the-wild-illustrations-by-jim-davis/",
+		color: "#C2491D",
 	},
-]
+];

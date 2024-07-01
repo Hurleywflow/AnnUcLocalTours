@@ -9,7 +9,7 @@ import {
 	useState,
 } from "react";
 
-interface Sparkle {
+type Sparkle = {
 	id: string;
 	x: string;
 	y: string;
@@ -17,9 +17,9 @@ interface Sparkle {
 	delay: number;
 	scale: number;
 	lifespan: number;
-}
+};
 
-interface SparklesTextProps {
+type SparklesTextProps = {
 	/**
 	 * @default <div />
 	 * @type ReactElement
@@ -62,7 +62,7 @@ interface SparklesTextProps {
 		first: string;
 		second: string;
 	};
-}
+};
 
 const SparklesText: React.FC<SparklesTextProps> = ({
 	text,
@@ -79,7 +79,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 			const starY = `${Math.random() * 100}%`;
 			const color = Math.random() > 0.5 ? colors.first : colors.second;
 			const delay = Math.random() * 2;
-			const scale = Math.random() * 1 + 0.3;
+			const scale = Number(Math.random()) + 0.3;
 			const lifespan = Math.random() * 10 + 5;
 			const id = `${starX}-${starY}-${Date.now()}`;
 			return { id, x: starX, y: starY, color, delay, scale, lifespan };
@@ -104,7 +104,9 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 		initializeStars();
 		const interval = setInterval(updateStars, 100);
 
-		return () => clearInterval(interval);
+		return () => {
+			clearInterval(interval);
+		};
 	}, [colors.first, colors.second, sparklesCount]); // Added sparklesCount to the dependency array
 
 	return (
@@ -118,11 +120,11 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 				} as CSSProperties
 			}
 		>
-			<span className='relative inline-block text-center text-balance'>
+			<span className='relative inline-block text-balance text-center'>
 				{sparkles.map((sparkle) => (
 					<Sparkle key={sparkle.id} {...sparkle} />
 				))}
-				<strong className='bg-gradient-to-r from-[var(--sparkles-first-color)] to-[var(--sparkles-second-color)] bg-clip-text text-transparent text-center text-balance'>
+				<strong className='text-balance bg-gradient-to-r from-[var(--sparkles-first-color)] to-[var(--sparkles-second-color)] bg-clip-text text-center text-transparent'>
 					{text}
 				</strong>
 			</span>

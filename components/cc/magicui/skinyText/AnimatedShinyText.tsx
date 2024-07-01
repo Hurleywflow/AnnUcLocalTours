@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 import type { CSSProperties, FC, ReactNode } from "react";
 
-interface AnimatedShinyTextProps {
+type AnimatedShinyTextProps = {
 	children: ReactNode;
 	className?: string;
 	shimmerWidth?: number;
-}
+};
 
 const AnimatedShinyText: FC<AnimatedShinyTextProps> = ({
 	children,

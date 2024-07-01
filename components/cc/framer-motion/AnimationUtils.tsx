@@ -4,17 +4,17 @@ import type React from "react";
 type Props = {
 	children: React.ReactNode | string;
 	className?: string;
-  delay?: number;
-  duration?: number;
-  ease?: string;
+	delay?: number;
+	duration?: number;
+	ease?: string;
 };
 
 export function InViewFadeInFromBottom({
 	children,
 	className,
-  delay,
-  duration,
-  ease,
+	delay,
+	duration,
+	ease,
 }: Readonly<Props>): React.ReactElement {
 	return (
 		<MotionDiv
@@ -24,14 +24,11 @@ export function InViewFadeInFromBottom({
 				// delay: 0.3,
 				// duration: 0.8,
 				// ease: "easeInOut",
-        delay: delay ?? 0.3,
-        duration: duration ?? 0.8,
-        ease: ease ?? "easeInOut",
+				delay: delay ?? 0.3,
+				duration: duration ?? 0.8,
+				ease: ease ?? "easeInOut",
 			}}
-			className={cn(
-				"flex w-fit h-fit items-center justify-center",
-				className,
-			)}
+			className={cn("flex w-fit h-fit items-center justify-center", className)}
 		>
 			{children}
 		</MotionDiv>

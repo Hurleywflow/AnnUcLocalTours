@@ -1,7 +1,7 @@
 /* eslint-disable no-implicit-coercion */
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
 function useMediaQuery(query: string) {
 	const [matches, setMatches] = useState(false);

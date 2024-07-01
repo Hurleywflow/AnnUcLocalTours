@@ -30,11 +30,13 @@ const IMAGES_DATA: CardType[] = [
 	// { id: 21, src: "/images/21.png" },
 ];
 
- function VerticalParallaxScroll(): JSX.Element {
-	return <div className='relative size-full'>
-		<div className='pointer-events-none absolute -top-1 z-10 h-20 w-full bg-gradient-to-b from-background to-transparent' />
-		<div className='pointer-events-none absolute -bottom-1 z-10 h-20 w-full bg-gradient-to-t from-background to-transparent' />
-		<ParallaxScroll images={IMAGES_DATA} />
-	</div>
+function VerticalParallaxScroll(): JSX.Element {
+	return (
+		<div className='relative size-full'>
+			<div className='pointer-events-none absolute -top-1 z-10 h-20 w-full bg-gradient-to-b from-background to-transparent' />
+			<div className='pointer-events-none absolute -bottom-1 z-10 h-20 w-full bg-gradient-to-t from-background to-transparent' />
+			<ParallaxScroll images={IMAGES_DATA} />
+		</div>
+	);
 }
 export default VerticalParallaxScroll;

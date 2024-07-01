@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable no-undef */
-'use client';
-import Lenis from '@studio-freight/lenis';
-import { useScroll } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import Card from './Card';
-import { projects } from './data';
+"use client";
+import Lenis from "@studio-freight/lenis";
+import { useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import Card from "./Card";
+import { projects } from "./data";
 
 export default function CardStackScroll() {
 	const container = useRef(null);
 	const { scrollYProgress } = useScroll({
 		target: container,
-		offset: ['start start', 'end end'],
+		offset: ["start start", "end end"],
 	});
 
 	useEffect(() => {

@@ -4,12 +4,12 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-interface BoxRevealProps {
+type BoxRevealProps = {
 	children: JSX.Element;
 	width?: "fit-content" | "100%";
 	boxColor?: string;
 	duration?: number;
-}
+};
 
 const BoxReveal = ({
 	children,

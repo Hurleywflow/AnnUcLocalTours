@@ -43,20 +43,29 @@ const InfiniteMovingCards = ({
 		}
 	}, [direction]);
 
-  const getSpeed = useCallback(() => {
-    if (containerRef.current) {
-      switch (speed) {
-        case 'slow':
-          containerRef.current.style.setProperty('--animation-duration', '500s')
-          break
-        case 'fast':
-          containerRef.current.style.setProperty('--animation-duration', '400s')
-          break
-        default:
-          containerRef.current.style.setProperty('--animation-duration', '450s')
-      }
-    }
-  }, [speed])
+	const getSpeed = useCallback(() => {
+		if (containerRef.current) {
+			switch (speed) {
+				case "slow":
+					containerRef.current.style.setProperty(
+						"--animation-duration",
+						"500s",
+					);
+					break;
+				case "fast":
+					containerRef.current.style.setProperty(
+						"--animation-duration",
+						"400s",
+					);
+					break;
+				default:
+					containerRef.current.style.setProperty(
+						"--animation-duration",
+						"450s",
+					);
+			}
+		}
+	}, [speed]);
 
 	const addAnimation = useCallback(() => {
 		if (containerRef.current && scrollerRef.current) {
@@ -126,7 +135,6 @@ const InfiniteMovingCards = ({
 				))}
 			</ul>
 		</div>
-		
 	);
 };
 export default InfiniteMovingCards;

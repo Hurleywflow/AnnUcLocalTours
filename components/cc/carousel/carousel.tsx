@@ -44,7 +44,6 @@ export default function Carousel(): JSX.Element {
 			// Grab the first item in the array
 			const firstItem = imgArrCopy.shift();
 			// If firstItem returns false
-			// biome-ignore lint/style/useBlockStatements: <explanation>
 			if (!firstItem) return;
 			// Add the first item to the end of the array
 			imgArrCopy.push({ ...firstItem, id: Math.random() });

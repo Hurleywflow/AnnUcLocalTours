@@ -43,9 +43,9 @@ const ParallaxScroll = ({
 	const secondPart = images.slice(third, 2 * third);
 	const thirdPart = images.slice(2 * third);
 
-		const keyID1 = useId();
+	const keyID1 = useId();
 	const keyID2 = useId();
-	const keyID3 = useId();
+	// const keyID3 = useId();
 	return (
 		<div
 			className={cn(
@@ -90,11 +90,8 @@ const ParallaxScroll = ({
 					))}
 				</div>
 				<div className='col-span-6 grid  gap-1 md:col-span-4 md:gap-5'>
-					{secondPart.map((el, idx) => (
-						<motion.div
-							style={{ y: translateSecond }}
-							key={keyID2}
-						>
+					{secondPart.map((el, _idx) => (
+						<motion.div style={{ y: translateSecond }} key={keyID2}>
 							<Suspense
 								fallback={
 									<div className='flex size-full flex-col items-center justify-center space-y-3 bg-background'>
