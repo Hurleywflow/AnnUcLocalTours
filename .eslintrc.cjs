@@ -41,8 +41,8 @@ const config = {
 				warnOnUnsupportedTypeScriptVersion: true,
 			},
 			extends: [
-				"next",
-				"next/core-web-vitals",
+				// "next",
+				// "next/core-web-vitals",
 				"eslint:recommended",
 				"plugin:@typescript-eslint/recommended",
 				// "plugin:@typescript-eslint/recommended-requiring-type-checking",
