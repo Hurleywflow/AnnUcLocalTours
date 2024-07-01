@@ -56,7 +56,6 @@ const config = {
 				"async",
 				"async/node",
 				"async/typescript",
-				"plugin:oxlint/recommended",
 			],
 			parser: "@typescript-eslint/parser",
 			plugins: [
