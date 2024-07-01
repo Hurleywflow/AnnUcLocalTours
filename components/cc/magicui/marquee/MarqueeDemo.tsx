@@ -98,7 +98,7 @@ const ReviewCard = ({
 
 const MarqueeDemo = (): JSX.Element => {
 	return (
-		<div className='relative flex size-full flex-col items-center justify-center gap-2 overflow-hidden rounded-md p-2'>
+		<div className='relative flex size-full flex-col items-center justify-center gap-2 overflow-hidden border-border p-2'>
 			<Marquee pauseOnHover className='[--duration:190s]'>
 				{firstRow.map((review) => (
 					<ReviewCard key={review.id} {...review} />

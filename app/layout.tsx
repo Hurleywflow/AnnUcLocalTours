@@ -1,4 +1,4 @@
-import Footer from "@/components/cc/footer/footer";
+import Loading from "@/components/cc/loading/Loading";
 import Navbar from "@/components/cc/navbar/Navbar";
 import { TailwindIndicator } from "@/components/cc/tailwind-indicator/tailwind-indicator";
 import { Toaster } from "@/components/ui/sonner";
@@ -7,9 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Inter as FontSans } from "next/font/google";
 import dynamic from "next/dynamic";
-import Loading from "@/components/cc/loading/Loading";
+import { Inter as FontSans } from "next/font/google";
 const DynamicFooter = dynamic(
 	async () => import("@/components/cc/footer/footer"),
 	{

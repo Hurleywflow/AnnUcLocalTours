@@ -13,7 +13,14 @@ const Intro = dynamic(async () => import("@/components/cc/intro/Intro"), {
 	ssr: true,
 	loading: () => <Loading />,
 });
-import FeedBack from "@/components/cc/feedback/FeedBack";
+// import FeedBack from "@/components/cc/feedback/FeedBack";
+const FeedBack = dynamic(
+	async () => import("@/components/cc/feedback/FeedBack"),
+	{
+		ssr: true,
+		loading: () => <Loading />,
+	},
+);
 import Hero from "@/components/cc/hero/Hero";
 // import OurTours from "@/components/cc/our-tours/OurTours";
 const OurTours = dynamic(
@@ -42,7 +49,7 @@ const Home = () => {
 						</Suspense>
 					</div>
 
-					<div
+					{/* <div
 						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center flex-col gap-10 bg-background overscroll-x-auto'
 						id='#intro'
 					>
@@ -59,7 +66,7 @@ const Home = () => {
 						<Suspense fallback={<Loading />}>
 							<FeedBack />
 						</Suspense>
-					</div>
+					</div> */}
 				</div>
 			</Container>
 		</main>
