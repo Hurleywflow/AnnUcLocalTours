@@ -4,7 +4,7 @@ export default function robots(): MetadataRoute.Robots {
 	return {
 		rules: {
 			userAgent: "*",
-			allow: ["/", "/blogs"],
+			allow: ["/", "/blogs", "/destinations"],
 			// not allow to show in google
 			// disallow: "/studio",
 		},
