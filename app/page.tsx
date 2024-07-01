@@ -1,6 +1,4 @@
 import { Container } from "@/components/cc/container/container";
-import VerticalParallaxTiltScroll from "@/components/cc/images-utils/verticalScroll/VerticalParallaxTiltScroll";
-import { InfiniteMovingCardsDemo } from "@/components/cc/infinite-moving-cards/InfiniteMovingCardsDemo";
 import Loading from "@/components/cc/loading/Loading";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
@@ -15,8 +13,7 @@ const Intro = dynamic(async () => import("@/components/cc/intro/Intro"), {
 	ssr: true,
 	loading: () => <Loading />,
 });
-
-import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
+import FeedBack from "@/components/cc/feedback/FeedBack";
 import Hero from "@/components/cc/hero/Hero";
 // import OurTours from "@/components/cc/our-tours/OurTours";
 const OurTours = dynamic(
@@ -37,7 +34,7 @@ const Home = () => {
 			<Container>
 				<div className='relative w-full'>
 					<div
-						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-sky-50'
+						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background overscroll-x-auto'
 						id='#home'
 					>
 						<Suspense fallback={<Loading />}>
@@ -46,31 +43,21 @@ const Home = () => {
 					</div>
 
 					<div
-						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center flex-col gap-10 bg-background'
+						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center flex-col gap-10 bg-background overscroll-x-auto'
 						id='#intro'
 					>
 						<SkewScrollIntro />
 						<Intro />
 					</div>
 					<div
-						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background'
+						className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background overscroll-x-auto'
 						id='#our-tours'
 					>
 						<OurTours />
 					</div>
-					<div className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background'>
+					<div className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background overscroll-x-auto'>
 						<Suspense fallback={<Loading />}>
-							<VerticalParallaxTiltScroll />
-						</Suspense>
-					</div>
-					<div className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-background'>
-						<Suspense fallback={<Loading />}>
-							<InfiniteMovingCardsDemo />
-						</Suspense>
-					</div>
-					<div className='sticky top-0 flex h-fit min-h-screen w-full items-center justify-center bg-blue-400'>
-						<Suspense fallback={<Loading />}>
-							<CarouselWithThumbnails />
+							<FeedBack />
 						</Suspense>
 					</div>
 				</div>

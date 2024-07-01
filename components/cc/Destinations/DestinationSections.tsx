@@ -15,7 +15,7 @@ function DestinationSections({ tours }: Props): JSX.Element {
 						<Image
 							src={tour?.imageUrl || "Destination Image"}
 							alt={tour?.title || " Destination title"}
-							className='object-cover object-center hover:scale-110 transition-all duration-300 ease-in-out'
+							className='object-cover object-center hover:scale-110 hover:blur-sm transition-all duration-300 ease-in-out'
 							fill
 							sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
 						/>
