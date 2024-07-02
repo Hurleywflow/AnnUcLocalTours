@@ -12,9 +12,9 @@ function Hero(): JSX.Element {
 		// "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	];
 	return (
-		<div className=' flex h-fit w-full flex-col items-center justify-center'>
+		<div className=' flex h-fit min-h-dvh w-full flex-col items-center justify-center'>
 			{/* <BorderBeam size={250} duration={12} delay={9} /> */}
-			<ImagesSlider className='relative h-fit min-h-svh' images={images}>
+			<ImagesSlider className='relative h-fit min-h-dvh' images={images}>
 				<MotionDiv
 					initial={{ opacity: 0.3, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
