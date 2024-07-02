@@ -14,7 +14,7 @@ function Hero(): JSX.Element {
 	return (
 		<div className=' flex h-screen w-full flex-col items-center justify-center'>
 			{/* <BorderBeam size={250} duration={12} delay={9} /> */}
-			<ImagesSlider className='relative size-full' images={images}>
+			<ImagesSlider className='relative h-screen w-full' images={images}>
 				<MotionDiv
 					initial={{ opacity: 0.3, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ function Hero(): JSX.Element {
 						duration: 0.5,
 						ease: "easeInOut",
 					}}
-					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/50 p-1 backdrop-blur-md md:bottom-40'
+					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/80 p-1 backdrop-blur-md  md:bottom-40'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
 					<H1 className='text-balance p-2 text-center text-5xl font-light italic md:text-7xl lg:text-9xl'>
