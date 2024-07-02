@@ -8,7 +8,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
-import { Inter as FontSans } from "next/font/google";
+import {
+	Dancing_Script as FontDans,
+	Inter as FontSans,
+} from "next/font/google";
 const DynamicFooter = dynamic(
 	async () => import("@/components/cc/footer/footer"),
 	{
@@ -22,6 +25,10 @@ import "@splidejs/react-splide/css";
 const fontSans = FontSans({
 	subsets: ["latin"],
 	variable: "--font-sans",
+});
+const fontDans = FontDans({
+	subsets: ["latin"],
+	variable: "--font-dans",
 });
 export const viewport = {
 	width: "device-width",
