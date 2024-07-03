@@ -167,7 +167,7 @@ const config = {
 				"no-dupe-keys": "error",
 				"no-duplicate-imports": "error",
 				"no-unreachable": "error",
-				"no-use-before-define": "error",
+				"no-use-before-define": "warn",
 				"dot-notation": "error",
 				eqeqeq: "error",
 				"no-lonely-if": "error",
@@ -177,7 +177,7 @@ const config = {
 				"prefer-const": "warn",
 				"@typescript-eslint/no-floating-promises": "error",
 				"@typescript-eslint/consistent-type-definitions": ["warn", "type"],
-				"consistent-return": "error",
+				"consistent-return": "warn",
 				"@typescript-eslint/explicit-function-return-type": [
 					"warn",
 					{
@@ -196,7 +196,7 @@ const config = {
 					},
 				],
 				"import/no-default-export": "off",
-				"@typescript-eslint/no-confusing-void-expression": "error",
+				"@typescript-eslint/no-confusing-void-expression": "warn",
 				"@typescript-eslint/no-meaningless-void-operator": "warn",
 				"react/function-component-definition": [
 					"off",

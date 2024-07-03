@@ -2,12 +2,7 @@ import Loading from "@/components/cc/loading/Loading";
 import Navbar from "@/components/cc/navbar/Navbar";
 import { TailwindIndicator } from "@/components/cc/tailwind-indicator/tailwind-indicator";
 import { Toaster } from "@/components/ui/sonner";
-import {
-	dancing_script,
-	nunito_sans,
-	pinyon_script,
-	poppins,
-} from "@/lib/fonts";
+import { dancing_script, pinyon_script, poppins } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -106,7 +101,6 @@ const RootLayout = ({
 				className={cn(
 					"min-h-fit m-0 p-0 bg-background font-sans antialiased bg-dot-black/[0.2]  dark:bg-dot-white/[0.2] overflow-x-clip",
 					fontSans.variable,
-					`${nunito_sans} `,
 					`${poppins} `,
 					`${dancing_script} `,
 					`${pinyon_script} `,
