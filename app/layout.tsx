@@ -2,16 +2,19 @@ import Loading from "@/components/cc/loading/Loading";
 import Navbar from "@/components/cc/navbar/Navbar";
 import { TailwindIndicator } from "@/components/cc/tailwind-indicator/tailwind-indicator";
 import { Toaster } from "@/components/ui/sonner";
+import {
+	dancing_script,
+	nunito_sans,
+	pinyon_script,
+	poppins,
+} from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
-import {
-	Dancing_Script as FontDans,
-	Inter as FontSans,
-} from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 const DynamicFooter = dynamic(
 	async () => import("@/components/cc/footer/footer"),
 	{
@@ -26,10 +29,7 @@ const fontSans = FontSans({
 	subsets: ["latin"],
 	variable: "--font-sans",
 });
-const fontDans = FontDans({
-	subsets: ["latin"],
-	variable: "--font-dans",
-});
+
 export const viewport = {
 	width: "device-width",
 	initialScale: 1,
@@ -106,6 +106,10 @@ const RootLayout = ({
 				className={cn(
 					"min-h-fit m-0 p-0 bg-background font-sans antialiased bg-dot-black/[0.2]  dark:bg-dot-white/[0.2] overflow-x-clip",
 					fontSans.variable,
+					`${nunito_sans} `,
+					`${poppins} `,
+					`${dancing_script} `,
+					`${pinyon_script} `,
 				)}
 			>
 				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>

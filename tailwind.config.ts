@@ -54,6 +54,10 @@ const config = {
 			},
 			fontFamily: {
 				sans: ["var(--font-sans)", ...fontFamily.sans],
+				nunito_sans: ["var(--font-nunito_sans)"],
+				poppins: ["var(--font-poppins)"],
+				dancing_script: ["var(--font-dancing_script)"],
+				pinyon_script: ["var(--font-pinyon_script)"],
 			},
 			colors: {
 				border: "hsl(var(--border))",
