@@ -43,7 +43,7 @@ const BoxReveal = ({
 				}}
 				initial='hidden'
 				animate={mainControls}
-				transition={{ duration: duration ? duration : 0.9, delay: 0.5 }}
+				transition={{ duration: duration ? duration : 0.9, delay: 1 }}
 			>
 				{children}
 			</motion.div>

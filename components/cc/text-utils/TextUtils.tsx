@@ -107,7 +107,7 @@ export function H6({
 	return (
 		<h6
 			className={cn(
-				" text-center text-balance text-lg font-normal  md:text-2xl lg:text-3xl",
+				" text-center text-balance text-lg font-normal  md:text-xl lg:text-2xl",
 				className,
 			)}
 		>
@@ -139,7 +139,7 @@ export function Span({
 	return (
 		<span
 			className={cn(
-				" text-center text-balance text-sm font-normal  md:text-base lg:text-lg ",
+				" text-center text-balance text-sm font-normal  md:text-base lg:text-lg",
 				className,
 			)}
 		>

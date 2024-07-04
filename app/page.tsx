@@ -1,7 +1,7 @@
 import { Container } from "@/components/cc/container/container";
 import Hero from "@/components/cc/hero/Hero";
-import Loading from '@/components/cc/loading/Loading';
-import dynamic from 'next/dynamic';
+import Loading from "@/components/cc/loading/Loading";
+import dynamic from "next/dynamic";
 const SkewScrollIntro: React.ComponentType = dynamic(
 	async () => import("@/components/cc/skewScroll/SkewScroll"),
 	{
@@ -33,7 +33,7 @@ const Home = () => {
 		<main className='m-0 h-fit w-full p-0'>
 			<Container>
 				<div className='flex h-fit min-h-screen w-full flex-col items-center justify-center gap-20 overscroll-x-none'>
-					<div className='h-dvh w-full' id='home'>
+					<div className='h-screen w-full' id='home'>
 						<Hero />
 					</div>
 					<div className='h-fit w-full gap-10' id='intro'>
