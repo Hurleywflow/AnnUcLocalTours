@@ -233,7 +233,7 @@ export default function BookingForm() {
 					)}
 				/>
 
-				<Button type='submit' className='self-center'>
+				<Button type='submit' className='w-full self-center'>
 					Submit
 				</Button>
 			</form>

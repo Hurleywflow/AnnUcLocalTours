@@ -5,7 +5,7 @@ import { H5, Span } from "../text-utils/TextUtils";
 
 export function CardBooking() {
 	return (
-		<Card className='flex flex-col items-center justify-center'>
+		<Card className='flex w-full flex-col items-center justify-center'>
 			<CardHeader className='flex items-center justify-center'>
 				<H5>Booking</H5>
 				<Span>Please fill out the form below to book your tour.</Span>

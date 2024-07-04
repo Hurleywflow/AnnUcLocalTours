@@ -17,8 +17,8 @@ function FeedBack() {
 				your experience with us!
 			</P>
 			<Link href='/'>
-				<Button className='flex h-fit flex-col text-base ' variant='secondary'>
-					Submit 🌟🌟🌟🌟🌟 Feedback
+				<Button className='flex h-fit  flex-col text-base'>
+					<span className='animate-pulse'>Give us 🌟🌟🌟🌟🌟</span>
 					<span className='sr-only'>Submit Your Feedback</span>
 				</Button>
 			</Link>

@@ -13,13 +13,13 @@ const Intro = dynamic(async () => import("@/components/cc/intro/Intro"), {
 	ssr: true,
 	loading: () => <Loading />,
 });
-// const FeedBack = dynamic(
-// 	async () => import("@/components/cc/feedback/FeedBack"),
-// 	{
-// 		ssr: true,
-// 		loading: () => <Loading />,
-// 	},
-// );
+const FeedBack = dynamic(
+	async () => import("@/components/cc/feedback/FeedBack"),
+	{
+		ssr: true,
+		loading: () => <Loading />,
+	},
+);
 // const OurTours = dynamic(
 // 	async () => import("@/components/cc/our-tours/OurTours"),
 // 	{
@@ -27,6 +27,7 @@ const Intro = dynamic(async () => import("@/components/cc/intro/Intro"), {
 // 		loading: () => <Loading />,
 // 	},
 // );
+// import Contact from "@/components/cc/contact/Contact";
 
 const Home = () => {
 	return (
@@ -43,8 +44,11 @@ const Home = () => {
 					{/* <div className='h-fit w-full' id='our-tours'>
 						<OurTours />
 					</div> */}
-					{/* <div className='h-fit w-full' id='feedback'>
+					<div className='h-fit w-full' id='feedback'>
 						<FeedBack />
+					</div>
+					{/* <div className='h-fit w-full gap-10' id='intro'>
+						<Contact />
 					</div> */}
 				</div>
 			</Container>
