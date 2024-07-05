@@ -154,6 +154,8 @@ export const ImagesSlider = ({
 						alt='SliderImage'
 						exit={direction === "up" ? "upExit" : "downExit"}
 						variants={slideVariants}
+						// hero section images need to be eager loaded
+						loading='eager'
 						className='image absolute inset-0 size-full object-cover object-center'
 					/>
 				</AnimatePresence>

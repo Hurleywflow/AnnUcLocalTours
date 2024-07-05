@@ -77,6 +77,12 @@ function Navbar(): JSX.Element {
 							Intro
 						</Link>
 						<Link
+							href='/#blogs'
+							className='text-muted-foreground hover:text-foreground'
+						>
+							Blogs
+						</Link>
+						<Link
 							href='/#our-tours'
 							className='text-muted-foreground hover:text-foreground'
 						>
@@ -94,12 +100,6 @@ function Navbar(): JSX.Element {
 							className='text-muted-foreground hover:text-foreground'
 						>
 							Contact
-						</Link>
-						<Link
-							href='/#blogs'
-							className='text-muted-foreground hover:text-foreground'
-						>
-							Blogs
 						</Link>
 					</nav>
 				</SheetContent>

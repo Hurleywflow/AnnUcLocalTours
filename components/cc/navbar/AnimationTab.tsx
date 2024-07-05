@@ -13,6 +13,10 @@ const tabs = [
 		link: "/#intro",
 	},
 	{
+		text: "Blogs",
+		link: "/#blogs",
+	},
+	{
 		text: "Our Tours",
 		link: "/#our-tours",
 	},
@@ -23,10 +27,6 @@ const tabs = [
 	{
 		text: "Contact",
 		link: "/#contact",
-	},
-	{
-		text: "Blogs",
-		link: "/#blogs",
 	},
 ];
 // const tabs = ["Home", "Docs", "Components", "Hooks"];

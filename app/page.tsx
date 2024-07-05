@@ -1,15 +1,12 @@
-import Blogs from "@/components/cc/blogs/Blogs";
 import { Container } from "@/components/cc/container/container";
 import Hero from "@/components/cc/hero/Hero";
 import Loading from "@/components/cc/loading/Loading";
 import dynamic from "next/dynamic";
-const SkewScrollIntro: React.ComponentType = dynamic(
-	async () => import("@/components/cc/skewScroll/SkewScroll"),
-	{
-		ssr: true,
-		loading: () => <Loading />,
-	},
-);
+
+const Blogs = dynamic(async () => import("@/components/cc/blogs/Blogs"), {
+	ssr: true,
+	loading: () => <Loading />,
+});
 const Intro = dynamic(async () => import("@/components/cc/intro/Intro"), {
 	ssr: true,
 	loading: () => <Loading />,
@@ -33,7 +30,7 @@ const Contact = dynamic(async () => import("@/components/cc/contact/Contact"), {
 	loading: () => <Loading />,
 });
 
-const Home = () => {
+const Home = (): JSX.Element => {
 	return (
 		<main className='m-0 h-fit w-full p-0'>
 			<Container>
@@ -43,9 +40,8 @@ const Home = () => {
 					</div>
 					<div className='h-fit w-full gap-10' id='intro'>
 						<Intro />
-						{/* <SkewScrollIntro /> */}
 					</div>
-					<div className='h-fit w-full' id='our-tours'>
+					<div className='h-fit w-full' id='blogs'>
 						<Blogs />
 					</div>
 					<div className='h-fit w-full' id='our-tours'>
@@ -54,7 +50,7 @@ const Home = () => {
 					<div className='h-fit w-full' id='feedback'>
 						<FeedBack />
 					</div>
-					<div className='h-fit w-full gap-10' id='intro'>
+					<div className='h-fit w-full gap-10' id='contact'>
 						<Contact />
 					</div>
 				</div>
