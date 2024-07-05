@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import MarqueeDemo from "../magicui/marquee/MarqueeDemo";
-import { ShineBorderBasicDemo } from "../magicui/shine-border/ShineBorderBasicDemo";
+import { SparklesTextFeedbacklDemo } from "../magicui/sparkles-text/SparklesTextFeedbacklDemo";
 import { P } from "../text-utils/TextUtils";
 
 function FeedBack() {
 	return (
 		<Card className='flex w-full flex-col items-center justify-center gap-10 p-2'>
-			<ShineBorderBasicDemo />
+			<SparklesTextFeedbacklDemo />
+			{/* <ShineBorderBasicDemo /> */}
 			<MarqueeDemo />
 			<P className=''>
 				We would greatly appreciate your feedback on your experience with us.

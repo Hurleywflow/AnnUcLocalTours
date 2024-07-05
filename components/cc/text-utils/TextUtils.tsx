@@ -32,7 +32,7 @@ export function H1({
 	return (
 		<h1
 			className={cn(
-				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-4 text-center text-balance text-5xl font-medium  text-transparent  md:text-7xl lg:text-8xl",
+				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-4 text-center text-balance text-5xl font-medium  text-transparent  md:text-6xl lg:text-7xl",
 				className,
 			)}
 		>
@@ -47,7 +47,7 @@ export function H2({
 	return (
 		<h2
 			className={cn(
-				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-3 text-center text-balance text-4xl font-medium  text-transparent  md:text-6xl lg:text-7xl",
+				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-3 text-center text-balance text-4xl font-medium  text-transparent  md:text-5xl lg:text-6xl",
 				className,
 			)}
 		>
@@ -62,7 +62,7 @@ export function H3({
 	return (
 		<h3
 			className={cn(
-				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-2 text-center text-balance text-3xl font-medium  text-transparent  md:text-5xl lg:text-6xl ",
+				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-2 text-center text-balance text-3xl font-medium  text-transparent  md:text-4xl lg:text-5xl ",
 				className,
 			)}
 		>
@@ -77,7 +77,7 @@ export function H4({
 	return (
 		<h4
 			className={cn(
-				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-1 text-center text-balance text-2xl font-medium  text-transparent  md:text-4xl lg:text-5xl",
+				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-1 text-center text-balance text-2xl font-medium  text-transparent  md:text-3xl lg:text-4xl",
 				className,
 			)}
 		>
@@ -92,7 +92,7 @@ export function H5({
 	return (
 		<h5
 			className={cn(
-				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-1 text-center text-balance text-xl font-medium  text-transparent  md:text-3xl lg:text-4xl ",
+				"bg-gradient-to-br from-foreground to-primary  bg-clip-text p-1 text-center text-balance text-xl font-medium  text-transparent  md:text-2xl lg:text-3xl ",
 				className,
 			)}
 		>
@@ -107,7 +107,7 @@ export function H6({
 	return (
 		<h6
 			className={cn(
-				" text-center text-balance text-lg font-normal  md:text-xl lg:text-2xl",
+				" text-center text-balance text-lg font-normal  md:text-xl lg:text-2xl bg-gradient-to-br from-foreground to-primary  bg-clip-text text-transparent",
 				className,
 			)}
 		>
@@ -155,7 +155,7 @@ export function H1Shadow({
 	return (
 		<h1
 			className={cn(
-				" p-4 text-center text-balance text-5xl font-medium md:text-7xl lg:text-8xl shadow-foreground  text-shadow-lg",
+				" p-4 text-center text-balance text-5xl font-medium md:text-6xl lg:text-7xl shadow-foreground  text-shadow-lg",
 				className,
 			)}
 		>
@@ -170,7 +170,7 @@ export function H2Shadow({
 	return (
 		<h2
 			className={cn(
-				" p-3 text-center text-balance text-4xl font-medium md:text-6xl lg:text-7xl shadow-foreground  text-shadow-lg",
+				" p-3 text-center text-balance text-4xl font-medium md:text-5xl lg:text-6xl shadow-foreground  text-shadow-lg",
 				className,
 			)}
 		>
@@ -185,7 +185,7 @@ export function H3Shadow({
 	return (
 		<h3
 			className={cn(
-				" p-2 text-center text-balance text-3xl font-medium md:text-5xl lg:text-6xl shadow-foreground  text-shadow",
+				" p-2 text-center text-balance text-3xl font-medium md:text-4xl lg:text-5xl shadow-foreground  text-shadow",
 				className,
 			)}
 		>
@@ -200,7 +200,7 @@ export function H4Shadow({
 	return (
 		<h4
 			className={cn(
-				" p-1 text-center text-balance text-2xl font-medium md:text-4xl lg:text-5xl shadow-foreground  text-shadow",
+				" p-1 text-center text-balance text-2xl font-medium md:text-3xl lg:text-4xl shadow-foreground  text-shadow",
 				className,
 			)}
 		>
@@ -215,7 +215,7 @@ export function H5Shadow({
 	return (
 		<h5
 			className={cn(
-				" p-1 text-center text-balance text-xl font-medium md:text-3xl lg:text-4xl shadow-foreground  text-shadow",
+				" p-1 text-center text-balance text-xl font-medium md:text-2xl lg:text-3xl shadow-foreground  text-shadow",
 				className,
 			)}
 		>
@@ -230,7 +230,7 @@ export function H6Shadow({
 	return (
 		<h6
 			className={cn(
-				" p-1 text-center text-balance text-lg font-normal md:text-2xl lg:text-3xl shadow-foreground  text-shadow",
+				" p-1 text-center text-balance text-lg font-normal md:text-xl lg:text-2xl shadow-foreground  text-shadow",
 				className,
 			)}
 		>

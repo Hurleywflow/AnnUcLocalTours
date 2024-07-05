@@ -197,6 +197,7 @@ const config = {
 				],
 				"import/no-default-export": "off",
 				"@typescript-eslint/no-confusing-void-expression": "warn",
+				"@typescript-eslint/ban-types": "warn",
 				"@typescript-eslint/no-meaningless-void-operator": "warn",
 				"react/function-component-definition": [
 					"off",

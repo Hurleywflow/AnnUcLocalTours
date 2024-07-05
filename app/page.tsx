@@ -1,3 +1,4 @@
+import Blogs from "@/components/cc/blogs/Blogs";
 import { Container } from "@/components/cc/container/container";
 import Hero from "@/components/cc/hero/Hero";
 import Loading from "@/components/cc/loading/Loading";
@@ -20,14 +21,17 @@ const FeedBack = dynamic(
 		loading: () => <Loading />,
 	},
 );
-// const OurTours = dynamic(
-// 	async () => import("@/components/cc/our-tours/OurTours"),
-// 	{
-// 		ssr: true,
-// 		loading: () => <Loading />,
-// 	},
-// );
-// import Contact from "@/components/cc/contact/Contact";
+const OurTours = dynamic(
+	async () => import("@/components/cc/our-tours/OurTours"),
+	{
+		ssr: true,
+		loading: () => <Loading />,
+	},
+);
+const Contact = dynamic(async () => import("@/components/cc/contact/Contact"), {
+	ssr: true,
+	loading: () => <Loading />,
+});
 
 const Home = () => {
 	return (
@@ -39,17 +43,20 @@ const Home = () => {
 					</div>
 					<div className='h-fit w-full gap-10' id='intro'>
 						<Intro />
-						<SkewScrollIntro />
+						{/* <SkewScrollIntro /> */}
 					</div>
-					{/* <div className='h-fit w-full' id='our-tours'>
+					<div className='h-fit w-full' id='our-tours'>
+						<Blogs />
+					</div>
+					<div className='h-fit w-full' id='our-tours'>
 						<OurTours />
-					</div> */}
+					</div>
 					<div className='h-fit w-full' id='feedback'>
 						<FeedBack />
 					</div>
-					{/* <div className='h-fit w-full gap-10' id='intro'>
+					<div className='h-fit w-full gap-10' id='intro'>
 						<Contact />
-					</div> */}
+					</div>
 				</div>
 			</Container>
 		</main>
