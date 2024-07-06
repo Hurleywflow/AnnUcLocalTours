@@ -3,12 +3,16 @@ import type { TourType } from "@/data/tours";
 import Image from "next/image";
 import Link from "next/link";
 import { H4, H6 } from "../text-utils/TextUtils";
-type Props = {
-	tours: TourType[];
-	title: string; // Add this line
+
+type DestinationSectionProps = {
+	tours: TourType[]; // Assuming TourType is the type of your tour objects
+	title: string;
 };
 
-function DestinationSections({ tours, title }: Readonly<Props>): JSX.Element {
+function DestinationSections({
+	tours,
+	title,
+}: Readonly<DestinationSectionProps>): JSX.Element {
 	return (
 		<Card className='w-full p-0'>
 			<CardHeader className=''>
@@ -16,10 +20,10 @@ function DestinationSections({ tours, title }: Readonly<Props>): JSX.Element {
 			</CardHeader>
 			<div className='grid w-full grid-cols-2 gap-1 md:gap-2 lg:grid-cols-3'>
 				{tours.map((tour) => (
-					<Link href={tour.link ?? "/"} key={tour.id}>
+					<Link href={`/tours/${tour.id}`} key={tour.id}>
 						<Card className='relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden shadow-lg md:aspect-video'>
 							<Image
-								src={tour.imageUrl ?? "Destination Image"}
+								src={tour.imageUrl?.[0] ?? "Destination Image"}
 								alt={tour.title ?? " Destination title"}
 								className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-110 hover:blur-[1px]'
 								fill
@@ -35,5 +39,4 @@ function DestinationSections({ tours, title }: Readonly<Props>): JSX.Element {
 		</Card>
 	);
 }
-
 export default DestinationSections;

@@ -8,7 +8,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { Suspense, useEffect, useId, useRef } from "react";
 
-export const CarouselWithThumbnails = (): JSX.Element => {
+export const CarouselWithThumbnails = ({
+	slides,
+}: { slides: string[] }): JSX.Element => {
 	type SplideInstance = {
 		sync: (splide: SplideInstance) => void;
 		splide: SplideInstance;
@@ -16,38 +18,38 @@ export const CarouselWithThumbnails = (): JSX.Element => {
 	const keyIndex = useId();
 	const keyIndex1 = useId();
 
-	const slides = [
-		{
-			imageUrl: "/images/1.png",
-			title: "Slide 1",
-			description: "This is the first slide description.",
-		},
-		{
-			imageUrl: "/images/2.png",
-			title: "Slide 2",
-			description: "This is the second slide description.",
-		},
-		{
-			imageUrl: "/images/3.png",
-			title: "Slide 3",
-			description: "This is the third slide description.",
-		},
-		{
-			imageUrl: "/Images/4.png",
-			title: "Slide 4",
-			description: "This is the fourth slide description.",
-		},
-		{
-			imageUrl: "/Images/5.png",
-			title: "Slide 5",
-			description: "This is the fifth slide description.",
-		},
-		{
-			imageUrl: "/Images/6.png",
-			title: "Slide 6",
-			description: "This is the sixth slide description.",
-		},
-	];
+	// const slides = [
+	// 	{
+	// 		imageUrl: "/images/1.png",
+	// 		title: "Slide 1",
+	// 		description: "This is the first slide description.",
+	// 	},
+	// 	{
+	// 		imageUrl: "/images/2.png",
+	// 		title: "Slide 2",
+	// 		description: "This is the second slide description.",
+	// 	},
+	// 	{
+	// 		imageUrl: "/images/3.png",
+	// 		title: "Slide 3",
+	// 		description: "This is the third slide description.",
+	// 	},
+	// 	{
+	// 		imageUrl: "/Images/4.png",
+	// 		title: "Slide 4",
+	// 		description: "This is the fourth slide description.",
+	// 	},
+	// 	{
+	// 		imageUrl: "/Images/5.png",
+	// 		title: "Slide 5",
+	// 		description: "This is the fifth slide description.",
+	// 	},
+	// 	{
+	// 		imageUrl: "/Images/6.png",
+	// 		title: "Slide 6",
+	// 		description: "This is the sixth slide description.",
+	// 	},
+	// ];
 
 	const primaryRef = useRef<SplideInstance | null>(null);
 	const secondaryRef = useRef<SplideInstance | null>(null);
@@ -95,9 +97,9 @@ export const CarouselWithThumbnails = (): JSX.Element => {
 								}
 							>
 								<LoadingImage
-									src={slide.imageUrl}
+									src={slide}
 									className='mb-4 size-full  object-cover '
-									alt={slide.title}
+									alt={"Ann's Uc Local Tours"}
 									sizes='max-width: 640px) 420px, (max-width: 768px) 720px, (max-width: 1024px) 800px, (max-width: 1280px) 900px, (max-width: 1536px) 1024px, (max-width: 2000px) 1280px, (max-width: 2560px) 1500px, 1500px'
 								/>
 							</Suspense>
@@ -150,9 +152,9 @@ export const CarouselWithThumbnails = (): JSX.Element => {
 								}
 							>
 								<LoadingImage
-									src={slide.imageUrl}
+									src={slide}
 									className='size-full object-cover '
-									alt={slide.title}
+									alt={"Ann's Uc Local Tours"}
 									sizes='100px'
 								/>
 							</Suspense>

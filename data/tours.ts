@@ -1,9 +1,10 @@
 //! Tours
+
 export type TourType = {
-	id?: number;
+	id?: string;
 	title?: string;
 	description?: string;
-	imageUrl?: string;
+	imageUrl?: string[];
 	link?: string;
 	price?: number;
 	rating?: number;
@@ -11,63 +12,105 @@ export type TourType = {
 
 export const ToursAustralia: TourType[] = [
 	{
-		id: 1,
+		id: "au1",
 		title: "Australia",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/1.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 2,
+		id: "au2",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/2.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 3,
+		id: "au3",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/3.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 4,
+		id: "au4",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/4.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 
 		rating: 4,
 	},
 	{
-		id: 5,
+		id: "au5",
 
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/5.webp",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 6,
+		id: "au6",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/6.webp",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
@@ -75,63 +118,105 @@ export const ToursAustralia: TourType[] = [
 ];
 export const ToursVietNam: TourType[] = [
 	{
-		id: 1,
+		id: "vi1",
 		title: "Viet Nam",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/1.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 2,
+		id: "vi2",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/2.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 3,
+		id: "vi3",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/3.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 4,
+		id: "vi4",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/4.jpeg",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 
 		rating: 4,
 	},
 	{
-		id: 5,
+		id: "vi5",
 
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/5.webp",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,
 	},
 	{
-		id: 6,
+		id: "vi6",
 		title: "Ann's Uc Local Tours",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatibus.",
-		imageUrl: "/Images/Demo/6.webp",
+		imageUrl: [
+			"/Images/Demo/1.jpeg",
+			"/Images/Demo/2.jpeg",
+			"/Images/Demo/3.jpeg",
+			"/Images/Demo/4.jpeg",
+			"/Images/Demo/5.jpeg",
+			"/Images/Demo/6.jpeg",
+		],
 		link: "https://www.netcodedev.com",
 		price: 10,
 		rating: 4,

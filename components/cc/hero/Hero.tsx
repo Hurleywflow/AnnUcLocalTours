@@ -28,7 +28,7 @@ function Hero(): JSX.Element {
 					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/70 p-1 backdrop-blur-sm lg:w-fit'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
-					<H1 className='text-balance p-2 text-center font-dancing_script text-8xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
+					<H1 className='text-balance p-2 text-center font-dancing_script text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
 						G'day mate!
 					</H1>
 					<H6 className=''>
