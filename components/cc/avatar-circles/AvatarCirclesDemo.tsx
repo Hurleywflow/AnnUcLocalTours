@@ -1,12 +1,13 @@
 import AvatarCircles from "./AvatarCircles";
 
 const avatarUrls = [
-	"https://avatars.githubusercontent.com/u/16860528",
-	"https://avatars.githubusercontent.com/u/20110627",
-	"https://avatars.githubusercontent.com/u/106103625",
-	"https://avatars.githubusercontent.com/u/59228569",
+	"/Images/Testimonials/t1.png",
+	"/Images/Testimonials/t2.png",
+	"/Images/Testimonials/t3.png",
+	"/Images/Testimonials/t4.png",
+	"/Images/Testimonials/t5.png",
 ];
 
 export default async function AvatarCirclesDemo() {
-	return <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />;
+	return <AvatarCircles numPeople={19} avatarUrls={avatarUrls} />;
 }
