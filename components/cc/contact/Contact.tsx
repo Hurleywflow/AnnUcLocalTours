@@ -17,22 +17,36 @@ function Contact() {
 				</P>
 				<CardBooking />
 				<div className='flex w-full items-center justify-center px-10'>
-					<hr className='flex-1 border-t border-border' />
+					<hr className='border-border flex-1 border-t' />
 					<span className='px-2 text-sm'>OR CONTINUE WITH</span>
-					<hr className='flex-1 border-t border-border' />
+					<hr className='border-border flex-1 border-t' />
 				</div>
-				<Card className=' flex h-fit w-full flex-col items-center justify-center bg-background'>
+				<Card className=' bg-background flex h-fit w-full flex-col items-center justify-center'>
 					<CardHeader className='flex items-center justify-center'>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Recusandae eum unde explicabo molestias non hic fugiat sed
-							sapiente perspiciatis fugit quisquam tempora consectetur laborum
-							voluptate illo atque ullam, rerum exercitationem!
+							<span className='text-primary font-bold'>* </span>
+							You can also reach out to us via email or through various
+							platforms such as Facebook, SMS, Zalo, and WhatsApp for your
+							convenience. Our team will get back to you as soon as possible.
+						</p>
+						<p>
+							<span className='text-primary font-bold'>* </span> if you have any
+							questions, please do not hesitate to contact us. We are here to
+							help and ensure you have the best experience possible.
 						</p>
 					</CardHeader>
 					<CardContent>
 						<ShineBorderBasicDemo />
 					</CardContent>
+					<p className='text-balance text-center text-base font-semibold'>
+						<span className='text-primary font-bold'>* </span>
+						<span className='text-primary font-bold'>* </span>
+						<span className='text-primary font-bold'>* </span> Our trading hours
+						are Monday to Monday, 9:00 AM to 9:00 PM.{" "}
+						<span className='text-primary font-bold'>* </span>
+						<span className='text-primary font-bold'>* </span>
+						<span className='text-primary font-bold'>* </span>
+					</p>
 				</Card>
 				<Card className='relative h-40 w-full overflow-hidden'>
 					<Link

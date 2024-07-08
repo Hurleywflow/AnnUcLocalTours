@@ -29,7 +29,7 @@ function DestinationSections({
 								fill
 								sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
 							/>
-							<div className='absolute inset-x-0 bottom-0 flex h-10 items-center justify-center bg-gradient-to-t from-background to-transparent'>
+							<div className='from-background absolute inset-x-0 bottom-0 flex h-10 items-center justify-center bg-gradient-to-t to-transparent'>
 								<H6 className=''>{tour.title ?? " Destination title"}</H6>
 							</div>
 						</Card>

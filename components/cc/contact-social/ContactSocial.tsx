@@ -35,7 +35,7 @@ function ContactSocial() {
 				</Button>
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
-			<Link href='sms:61423099677;?&body=AnnsUcLocalTours'>
+			<Link href="sms:61401211890;?&body=Hi Ann's Uc Local Tours, I would like to know a tour">
 				<Button variant='ghost'>
 					<Image src={sms} alt='sms' width={40} height={40} className='' />
 				</Button>
@@ -53,7 +53,7 @@ function ContactSocial() {
 				</Button>
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
-			{/* <Link href='viber://chat?number=%2B610423099677'>
+			{/* <Link href='viber://chat?number=%2B6161401211890'>
 				<Button variant='ghost'>
 					<Image
 						src={viberIcon}
