@@ -73,7 +73,7 @@ const Confetti = forwardRef<ConfettiRef, Props>((props, ref) => {
 
 	// `fire` is a function that calls the instance() with `opts` merged with `options`
 	const fire = useCallback(
-		(opts = {}) => instanceRef.current?.({ ...options, ...opts }),
+		async (opts = {}) => instanceRef.current?.({ ...options, ...opts }),
 		[options],
 	);
 
@@ -88,7 +88,7 @@ const Confetti = forwardRef<ConfettiRef, Props>((props, ref) => {
 
 	useEffect(() => {
 		if (!manualstart) {
-			fire();
+			void fire();
 		}
 	}, [manualstart, fire]);
 
@@ -111,7 +111,7 @@ function ConfettiButton({ options, children, ...props }: ConfettiButtonProps) {
 		const rect = event.currentTarget.getBoundingClientRect();
 		const x = rect.left + rect.width / 2;
 		const y = rect.top + rect.height / 2;
-		confetti({
+		void confetti({
 			...options,
 			origin: {
 				x: x / window.innerWidth,
