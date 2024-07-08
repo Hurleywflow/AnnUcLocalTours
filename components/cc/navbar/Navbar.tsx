@@ -23,7 +23,7 @@ import Link from "next/link";
 
 function Navbar(): JSX.Element {
 	return (
-		<header className='sticky top-0 z-50 flex h-16 items-center gap-4 border-b bg-background/70 px-4 backdrop-blur-xl   md:px-6'>
+		<header className='bg-background/70 sticky top-0 z-50 flex h-16 items-center gap-4 border-b px-4 backdrop-blur-xl   md:px-6'>
 			<nav className='hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6'>
 				{/* Navbar items */}
 				<Link
@@ -106,10 +106,10 @@ function Navbar(): JSX.Element {
 			</Sheet>
 			<div className='flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4'>
 				<Button className='group relative ml-auto flex-1 overflow-hidden rounded-md px-6  transition  sm:flex-initial '>
-					<Link href='tel:+610423099677'>
-						<span className='relative text-base'>Book Now</span>
-						<div className='absolute inset-0 top-[-20px] flex h-[calc(100%+40px)] w-full animate-shine-infinite justify-center blur-md'>
-							<div className='relative h-full w-8 bg-accent' />
+					<Link href='tel:+61401211890'>
+						<span className='relative text-base uppercase'>call now</span>
+						<div className='animate-shine-infinite absolute inset-0 top-[-20px] flex h-[calc(100%+40px)] w-full justify-center blur-md'>
+							<div className='bg-accent relative h-full w-8' />
 						</div>
 					</Link>
 				</Button>

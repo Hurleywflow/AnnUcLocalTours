@@ -1,0 +1,4 @@
+{"level":"error","message":"Failed to send email: dateTravel.toLocaleDateString is not a function"}
+{"level":"error","message":"Failed to send email: dateTravel.getDate is not a function"}
+{"level":"error","message":"Failed to send email: dateTravel.getDate is not a function"}
+{"level":"error","message":"Failed to send email: dateTravel.toDateString is not a function"}

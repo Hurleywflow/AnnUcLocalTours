@@ -110,8 +110,8 @@ const RootLayout = ({
 					<Navbar />
 					{children}
 					<DynamicFooter />
-					<Toaster richColors />
 				</ThemeProvider>
+				<Toaster richColors />
 				<Analytics />
 				<SpeedInsights />
 				<TailwindIndicator />

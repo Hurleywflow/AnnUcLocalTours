@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDays, format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -36,7 +37,8 @@ import {
 	FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
+import confetti from "canvas-confetti";
 
 const FormSchema = z.object({
 	username: z.string().min(2, {
@@ -50,10 +52,16 @@ const FormSchema = z.object({
 	email: z.string().email({
 		message: "Invalid email address",
 	}),
-	// number of people
-	numberOfPeople: z.string().min(1, {
-		message: "Number of people must be at least 1.",
-	}),
+	// number of people, can be a string or a number
+	numberOfPeople: z.preprocess(
+		(val) => {
+			if (typeof val === "string") return Number.parseInt(val);
+			return val;
+		},
+		z.number().min(1, {
+			message: "Number of people must be at least 1",
+		}),
+	),
 
 	//  check date to travel at least after today
 	dateTravel: z.date().min(new Date(), {
@@ -66,26 +74,90 @@ const FormSchema = z.object({
 
 export default function BookingForm() {
 	const [date, setDate] = useState<Date>();
+	const { toast } = useToast();
+	const router = useRouter();
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
 		defaultValues: {
 			username: "",
-			dateTravel: new Date(),
+			phone: "",
 			email: "",
-			numberOfPeople: String(1),
+			numberOfPeople: 1, // Changed from "" to 1
+			dateTravel: new Date(),
 			otherRequest: "",
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
-		toast({
-			title: "You submitted the following values:",
-			description: (
-				<pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
-					<code className='text-white'>{JSON.stringify(data, null, 2)}</code>
-				</pre>
-			),
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
+		// biome-ignore lint/suspicious/noConsoleLog: <explanation>
+		console.log(data);
+
+		try {
+			const response = await fetch("/api/email", {
+				method: "POST",
+				body: JSON.stringify(data),
+			});
+			if (!response.ok) {
+				toast({
+					variant: "destructive",
+					title: "Woops!",
+					description: "Your message has not been sent.",
+				});
+			}
+			if (response.status === 200) {
+				// if response is ok, start confetti animation
+				const end = Date.now() + 3 * 1000; // 3 seconds
+				const colors = ["#a786ff", "#fd8bbc", "#eca184", "#b1f8b4"];
+				// const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+				const frame = () => {
+					if (Date.now() > end) return;
+					void confetti({
+						particleCount: 2,
+						angle: 60,
+						spread: 55,
+						startVelocity: 60,
+						origin: { x: 0, y: 0.5 },
+						colors,
+					});
+					void confetti({
+						particleCount: 2,
+						angle: 120,
+						spread: 55,
+						startVelocity: 60,
+						origin: { x: 1, y: 0.5 },
+						colors,
+					});
+					requestAnimationFrame(frame);
+				};
+				frame();
+				toast({
+					title: "You submitted the following values:",
+					description: (
+						<pre className='mt-2 w-[340px] rounded-md bg-slate-950 p-4'>
+							<code className='text-white'>
+								{JSON.stringify(data, null, 2)}
+							</code>
+						</pre>
+					),
+				});
+			}
+		} catch (error) {
+			if (error instanceof Error) {
+				toast({
+					variant: "destructive",
+					title: "Woops!",
+					description: "Your message has not been sent.",
+				});
+			}
+			throw new Error("Error sending email");
+		}
+		// reset to default value of the from, closed dialog or drawer and redirect to home page
+		router.push("/");
+		await new Promise((resolve) => {
+			setTimeout(resolve, 2000);
 		});
+		form.reset();
+		return data;
 	}
 
 	return (

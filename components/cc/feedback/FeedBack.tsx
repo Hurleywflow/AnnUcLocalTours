@@ -17,9 +17,9 @@ function FeedBack() {
 				have a fantastic time on our tours. Thank you for considering sharing
 				your experience with us!
 			</P>
-			<Link href='/'>
+			<Link href='https://www.facebook.com/88.antour/reviews' target='_blank'>
 				<Button className='flex h-fit  flex-col text-base'>
-					<span className='animate-pulse'>Give us 🌟🌟🌟🌟🌟</span>
+					<span className='animate-pulse'>Recommend Us 🌟🌟🌟🌟🌟</span>
 					<span className='sr-only'>Submit Your Feedback</span>
 				</Button>
 			</Link>
