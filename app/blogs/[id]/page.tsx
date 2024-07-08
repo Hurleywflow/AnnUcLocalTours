@@ -27,7 +27,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 					</Link>
 				</div>
 				<div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-					<div className='flex cursor-pointer flex-col gap-4 hover:opacity-75 md:col-span-2'>
+					<div className='flex  flex-col gap-4  md:col-span-2'>
 						<CarouselWithThumbnails
 							slides={Array.isArray(blog.imageUrl) ? blog.imageUrl : []}
 						/>
@@ -36,7 +36,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 							<p className='flex flex-row items-center gap-2 text-sm'>
 								<span className='text-muted-foreground'>By</span>{" "}
 								<Avatar className='size-6'>
-									<AvatarImage src='https://github.com/shadcn.png' />
+									<AvatarImage src='/logo.png' />
 									<AvatarFallback>CN</AvatarFallback>
 								</Avatar>
 								<span>{blog.author}</span>
@@ -45,7 +45,13 @@ const Blog = ({ params }: { params: { id: string } }) => {
 						<div className='flex flex-col gap-2'>
 							<H5 className='text-start'>{blog.title}</H5>
 							<p className=' text-base text-muted-foreground'>
-								{blog.description}
+								{blog.description.map((desc) => (
+									<span key={desc}>
+										{desc}
+										<br />
+										<br />
+									</span>
+								))}
 							</p>
 						</div>
 					</div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
 import { H5 } from "@/components/cc/text-utils/TextUtils";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +30,7 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 					</Link>
 				</div>
 				<div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-					<div className='flex cursor-pointer flex-col gap-4 hover:opacity-75 md:col-span-2'>
+					<div className='flex flex-col gap-4 md:col-span-2'>
 						<CarouselWithThumbnails
 							slides={Array.isArray(AllTours.imageUrl) ? AllTours.imageUrl : []}
 						/>
@@ -45,8 +46,16 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 						</div>
 						<div className='flex flex-col gap-2'>
 							<H5 className='text-start'>{AllTours.title}</H5>
-							<p className=' text-base text-muted-foreground'>
-								{AllTours.description}
+							<p className=' mt-10 text-base text-muted-foreground'>
+								{/* spred out the descriptions */}
+								{AllTours?.description?.map((word, index) => (
+									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+									<span key={index}>
+										{word}
+										<br />
+										<br />
+									</span>
+								))}
 							</p>
 						</div>
 					</div>

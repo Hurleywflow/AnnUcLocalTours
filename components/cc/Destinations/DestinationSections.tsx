@@ -1,5 +1,6 @@
 import { Card, CardHeader } from "@/components/ui/card";
 import type { TourType } from "@/data/tours";
+import { MotionDiv } from "@/lib/framer";
 import Image from "next/image";
 import Link from "next/link";
 import { H4, H6 } from "../text-utils/TextUtils";
@@ -20,20 +21,31 @@ function DestinationSections({
 			</CardHeader>
 			<div className='grid w-full grid-cols-2 gap-1 md:gap-2 lg:grid-cols-3'>
 				{tours.map((tour) => (
-					<Link href={`/tours/${tour.id}`} key={tour.id}>
-						<Card className='relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden shadow-lg md:aspect-video'>
-							<Image
-								src={tour.imageUrl?.[0] ?? "Destination Image"}
-								alt={tour.title ?? " Destination title"}
-								className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-110 hover:blur-[1px]'
-								fill
-								sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
-							/>
-							<div className='from-background absolute inset-x-0 bottom-0 flex h-10 items-center justify-center bg-gradient-to-t to-transparent'>
-								<H6 className=''>{tour.title ?? " Destination title"}</H6>
-							</div>
-						</Card>
-					</Link>
+					<MotionDiv
+						key={tour.id}
+						initial={{ opacity: 0.7, y: 40, scale: 0.9 }}
+						whileInView={{ opacity: 1, y: 0, scale: 1 }}
+						transition={{
+							delay: 0.2,
+							duration: 0.5,
+							ease: "easeInOut",
+						}}
+					>
+						<Link href={`/tours/${tour.id}`}>
+							<Card className='relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden shadow-lg md:aspect-video'>
+								<Image
+									src={tour.imageUrl?.[0] ?? "Destination Image"}
+									alt={tour.title ?? " Destination title"}
+									className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-110 hover:blur-[1px]'
+									fill
+									sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
+								/>
+								<div className='absolute inset-x-0 bottom-0 flex h-10 items-center justify-center bg-gradient-to-t from-background to-transparent'>
+									<H6 className=''>{tour.title ?? " Destination title"}</H6>
+								</div>
+							</Card>
+						</Link>
+					</MotionDiv>
 				))}
 			</div>
 		</Card>

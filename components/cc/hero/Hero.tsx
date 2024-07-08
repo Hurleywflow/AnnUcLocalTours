@@ -11,7 +11,6 @@ function Hero(): JSX.Element {
 		"/Images/Demo/5.webp",
 		"/Images/Demo/6.webp",
 		"/Images/Demo/7.webp",
-		// "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 	];
 	return (
 		<div className=' flex h-screen w-full flex-col items-center justify-center'>
@@ -25,10 +24,10 @@ function Hero(): JSX.Element {
 						duration: 0.5,
 						ease: "easeInOut",
 					}}
-					className='bg-background/70 absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] p-2 backdrop-blur-sm lg:w-fit'
+					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/70 p-2 backdrop-blur-sm lg:w-fit'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
-					<H1 className='font-dancing_script text-balance p-2 text-center text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
+					<H1 className='text-balance p-2 text-center font-dancing_script text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
 						G'day mate!
 					</H1>
 					<H6 className=''>

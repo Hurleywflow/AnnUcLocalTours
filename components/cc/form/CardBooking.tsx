@@ -20,12 +20,12 @@ export function CardBooking() {
 						<BookingForm />
 					</CardContent>
 				</Card>
-				<div className='bg-background/80 relative hidden w-full overflow-hidden rounded-[0.4rem] p-1 backdrop-blur-md md:block'>
+				<div className='relative hidden w-full overflow-hidden rounded-[0.4rem] bg-background/80 p-1 backdrop-blur-md md:block'>
 					<Image
 						src='/Images/contact/form.webp'
 						alt='Card'
 						fill
-						className='object-contain object-center'
+						className='object-cover object-center'
 					/>
 				</div>
 			</CardContent>

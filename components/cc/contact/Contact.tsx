@@ -17,20 +17,20 @@ function Contact() {
 				</P>
 				<CardBooking />
 				<div className='flex w-full items-center justify-center px-10'>
-					<hr className='border-border flex-1 border-t' />
+					<hr className='flex-1 border-t border-border' />
 					<span className='px-2 text-sm'>OR CONTINUE WITH</span>
-					<hr className='border-border flex-1 border-t' />
+					<hr className='flex-1 border-t border-border' />
 				</div>
-				<Card className=' bg-background flex h-fit w-full flex-col items-center justify-center'>
+				<Card className=' flex h-fit w-full flex-col items-center justify-center bg-background'>
 					<CardHeader className='flex items-center justify-center'>
 						<p>
-							<span className='text-primary font-bold'>* </span>
+							<span className='font-bold text-primary'>* </span>
 							You can also reach out to us via email or through various
 							platforms such as Facebook, SMS, Zalo, and WhatsApp for your
 							convenience. Our team will get back to you as soon as possible.
 						</p>
 						<p>
-							<span className='text-primary font-bold'>* </span> if you have any
+							<span className='font-bold text-primary'>* </span> if you have any
 							questions, please do not hesitate to contact us. We are here to
 							help and ensure you have the best experience possible.
 						</p>
@@ -39,13 +39,13 @@ function Contact() {
 						<ShineBorderBasicDemo />
 					</CardContent>
 					<p className='text-balance text-center text-base font-semibold'>
-						<span className='text-primary font-bold'>* </span>
-						<span className='text-primary font-bold'>* </span>
-						<span className='text-primary font-bold'>* </span> Our trading hours
-						are Monday to Monday, 9:00 AM to 9:00 PM.{" "}
-						<span className='text-primary font-bold'>* </span>
-						<span className='text-primary font-bold'>* </span>
-						<span className='text-primary font-bold'>* </span>
+						<span className='font-bold text-primary'>* </span>
+						<span className='font-bold text-primary'>* </span>
+						<span className='font-bold text-primary'>* </span> Our trading hours
+						are Monday to SunDay, 9:00 AM to 9:00 PM.{" "}
+						<span className='font-bold text-primary'>* </span>
+						<span className='font-bold text-primary'>* </span>
+						<span className='font-bold text-primary'>* </span>
 					</p>
 				</Card>
 				<Card className='relative h-40 w-full overflow-hidden'>

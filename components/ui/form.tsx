@@ -173,7 +173,7 @@ export {
 	useFormField,
 	Form,
 	FormItem,
-	FormLabel,   
+	FormLabel,
 	FormControl,
 	FormDescription,
 	FormMessage,

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 	],
 	creator: "Hurley Nguyen",
 	publisher: "Hurley Nguyen",
-	title: "Ann Uc Local Tours",
+	title: "Ann's Uc Local Tours || Travel Tours in Australia",
 	description:
 		"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
 	metadataBase: new URL("https://www.netcodedev.com"),

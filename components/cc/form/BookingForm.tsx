@@ -189,7 +189,7 @@ export default function BookingForm() {
 						<FormItem>
 							<FormLabel>Phone</FormLabel>
 							<FormControl>
-								<Input placeholder='+610423099677' {...field} />
+								<Input placeholder='+61401211890' {...field} />
 							</FormControl>
 							{/* <FormDescription>
 								This is your public display name.
@@ -205,7 +205,7 @@ export default function BookingForm() {
 						<FormItem>
 							<FormLabel>Email</FormLabel>
 							<FormControl>
-								<Input placeholder='ann@uc.com' {...field} />
+								<Input placeholder='anthuy.yellowpages@gmail.com' {...field} />
 							</FormControl>
 							{/* <FormDescription>
 								This is your public display name.
