@@ -8,7 +8,11 @@ export function CardBooking() {
 		<Card className='flex w-full flex-col items-center justify-center'>
 			<CardHeader className='flex items-center justify-center'>
 				<H5>Booking</H5>
-				<Span>Please fill out the form below to book your tour.</Span>
+				<Span>
+					{" "}
+					Fill out the form below to inform us about your tour, and we'll
+					respond promptly.
+				</Span>
 			</CardHeader>
 			<CardContent className='grid w-full grid-cols-1 gap-4 md:grid-cols-2'>
 				<Card>
@@ -16,7 +20,7 @@ export function CardBooking() {
 						<BookingForm />
 					</CardContent>
 				</Card>
-				<div className='relative hidden w-full overflow-hidden rounded-[0.4rem] bg-background/80 p-1 backdrop-blur-md md:block'>
+				<div className='bg-background/80 relative hidden w-full overflow-hidden rounded-[0.4rem] p-1 backdrop-blur-md md:block'>
 					<Image
 						src='/Images/contact/form.webp'
 						alt='Card'
