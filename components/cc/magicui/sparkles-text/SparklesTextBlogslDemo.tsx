@@ -1,5 +1,5 @@
 import SparklesText from "./SparklesText";
 
 export async function SparklesTextBlogslDemo() {
-	return <SparklesText text='Our latest activities' />;
+	return <SparklesText text='OUR RECENT ACTIVITIES' />;
 }

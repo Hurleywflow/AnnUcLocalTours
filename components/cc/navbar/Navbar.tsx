@@ -32,12 +32,7 @@ function Navbar(): JSX.Element {
 				>
 					{/* <Package2 className='size-6' /> */}
 					<div className='relative size-10 overflow-hidden rounded-full'>
-						<Images
-							src='/NetCode.svg'
-							alt='AnnUcLocalTours'
-							className=''
-							fill
-						/>
+						<Images src='/logo.png' alt='AnnUcLocalTours' className='' fill />
 					</div>
 					<span className='sr-only'>AnnUcLocalTours</span>
 				</Link>
@@ -59,7 +54,7 @@ function Navbar(): JSX.Element {
 						>
 							<div className='relative size-10 overflow-hidden rounded-full'>
 								<Images
-									src='/NetCode.svg'
+									src='/logo.png'
 									alt='AnnUcLocalTours'
 									className=''
 									fill

@@ -6,21 +6,22 @@ function BoxRevealDemo() {
 	return (
 		<div className='h-fit w-full items-center justify-center overflow-hidden '>
 			<BoxReveal boxColor='#9ed6f9b6' duration={0.9}>
-				<P className='text-balance text-center'>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
-					inventore. Eius accusantium et nobis exercitationem facere voluptates
-					corporis? Excepturi natus officiis quod cum animi quas, fugiat
-					corrupti sunt ratione quam! Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Recusandae, perferendis! Laboriosam harum recusandae
-					blanditiis consequuntur id sunt, ipsum, architecto quae inventore
-					dolor officia nobis sint illo repellat officiis, accusamus iure. Lorem
-					ipsum dolor, sit amet consectetur adipisicing elit. Suscipit,
-					inventore. Eius accusantium et nobis exercitationem facere voluptates
-					corporis? Excepturi natus officiis quod cum animi quas, fugiat
-					corrupti sunt ratione quam! Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Recusandae, perferendis! Laboriosam harum recusandae
-					blanditiis consequuntur id sunt, ipsum, architecto quae inventore
-					dolor officia nobis sint illo repellat officiis, accusamus iure.
+				<P className='text-balance px-10 text-center'>
+					The name "Local" in Ann Local Tour pays homage to our cherished
+					friend, Aussie, whose unwavering support and presence enrich every
+					tour. Aussie is our steadfast guide, navigating every inch of
+					Australian terrain, ensuring each route is both safe and uniquely
+					captivating. With us, your journey will be a blend of thrill and
+					security.
+					<br /> The best way to explore a destination is with those who call it
+					home. We are your travel companions, experts, and friendly guides who
+					know the area inside and out—from hidden art galleries to every little
+					street. We promise it’s worth it. Whether you’re a family with young
+					children, friends seeking an adventure, or retirees looking to unwind
+					and savour the moments, we offer a variety of options to suit your
+					interests. Leave the logistics to us. We’ll handle the planning and
+					details, allowing you to relax, savour, and fully immerse yourself in
+					the places you visit.
 				</P>
 			</BoxReveal>
 		</div>
