@@ -17,19 +17,28 @@ function Hero(): JSX.Element {
 			{/* <BorderBeam size={250} duration={12} delay={9} /> */}
 			<ImagesSlider className='relative h-screen w-full' images={images}>
 				<MotionDiv
-					initial={{ opacity: 0.3, y: 50 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{
-						delay: 0.3,
-						duration: 0.5,
-						ease: "easeInOut",
-					}}
-					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/70 p-2 backdrop-blur-sm lg:w-fit'
+					// initial={{ opacity: 0.3, y: 50 }}
+					// whileInView={{ opacity: 1, y: 0 }}
+					// transition={{
+					// 	delay: 0.3,
+					// 	duration: 0.5,
+					// 	ease: "easeInOut",
+					// }}
+					className='bg-background/70 absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] p-2 backdrop-blur-sm lg:w-fit'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
-					<H1 className='text-balance p-2 text-center font-dancing_script text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
-						G'day mate!
-					</H1>
+					<MotionDiv
+						initial={{ opacity: 0.7, y: 40, scale: 0.9 }}
+						whileInView={{ opacity: 1, y: 0, scale: 1 }}
+						transition={{
+							duration: 0.5,
+							ease: "easeInOut",
+						}}
+					>
+						<H1 className='font-dancing_script text-balance p-2 text-center text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
+							G'day mate!
+						</H1>
+					</MotionDiv>
 					<H6 className=''>
 						Discover lively cities, rugged wilderness, and beautiful beaches
 						with the help of knowledgeable guides.
