@@ -25,6 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.8,
 		},
 		{
+			url: `${process.env.BASE_URL}/booking`,
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
 			url: `${process.env.BASE_URL}/favicon.ico`,
 			lastModified: new Date(),
 			priority: 0.8,

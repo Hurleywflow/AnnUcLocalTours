@@ -23,7 +23,7 @@ const Blogs = () => {
 							{/* render the first log posts */}
 							<div className='col-span-2 flex cursor-pointer flex-col gap-4 hover:opacity-75  md:col-span-3 lg:col-span-4'>
 								<Link href={`/blogs/${blogData[0].id}`} key={blogData[0].id}>
-									<div className='relative aspect-video overflow-hidden  rounded-md bg-muted'>
+									<div className='bg-muted relative aspect-video  overflow-hidden rounded-md'>
 										<Image
 											src={blogData[0].imageUrl[0]}
 											alt={blogData[0].title}
@@ -47,7 +47,7 @@ const Blogs = () => {
 										<H5 className='text-start'>
 											{blogData[blogData.length - 1].title}
 										</H5>
-										<p className=' truncate text-base text-muted-foreground'>
+										<p className=' text-muted-foreground truncate text-base'>
 											{blogData[blogData.length - 1].description}
 										</p>
 									</div>
@@ -62,12 +62,12 @@ const Blogs = () => {
 										initial={{ opacity: 0.5, y: 40, scale: 0.9 }}
 										whileInView={{ opacity: 1, y: 0, scale: 1 }}
 										transition={{
-											delay: 0.2,
-											duration: 0.5,
+											// delay: 0.2,
+											duration: 0.8,
 											ease: "easeInOut",
 										}}
 									>
-										<div className='relative aspect-square w-full overflow-hidden rounded-md bg-muted md:aspect-video'>
+										<div className='bg-muted relative aspect-square w-full overflow-hidden rounded-md md:aspect-video'>
 											<Image
 												src={blog.imageUrl[0]}
 												alt={blog.title}
@@ -89,7 +89,7 @@ const Blogs = () => {
 										</div>
 										<div className='flex flex-col gap-2'>
 											<H5 className='text-start'>{blog.title}</H5>
-											<p className='line-clamp-3 text-base text-muted-foreground'>
+											<p className='text-muted-foreground line-clamp-3 text-base'>
 												{blog.description}
 											</p>
 										</div>

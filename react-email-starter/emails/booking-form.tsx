@@ -32,11 +32,11 @@ const ContactForm = ({
 			<Head />
 			<Preview>Ann's Uc Local Tours</Preview>
 			<Tailwind>
-				<Body className='bg-sky-100 text-black'>
+				<Body className='bg-gray-100 text-zinc-950'>
 					<Container>
-						<Section className='borderBlack my-10 rounded-md bg-sky-200 px-10 py-4 text-zinc-950'>
+						<Section className='borderBlack my-10 rounded-md bg-gray-200 py-4 text-zinc-950 md:px-5 lg:px-10'>
 							<Row>
-								<Heading className='leading-tight'>
+								<Heading className='font-normal leading-tight'>
 									New booking from Ann's Uc Local Tours.
 								</Heading>
 							</Row>
