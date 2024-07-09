@@ -42,24 +42,26 @@ function Contact() {
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span> Our trading hours
-						are Monday to SunDay, 9:00 AM to 9:00 PM.{" "}
+						are Monday to Sunday, 9:00 AM to 9:00 PM.{" "}
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span>
 					</p>
 				</Card>
 				<Card className='relative h-40 w-full overflow-hidden'>
-					<Link
-						href='https://maps.apple.com/?address=32%20Longview%20Cr,%20Stanwell%20Tops%20NSW%202508,%20Australia&ll=-34.220603,150.979629&q=32%20Longview%20Cr'
-						target='_blank'
-					>
-						<Image
-							src='/Images/icons/address.webp'
-							alt='address'
-							fill
-							className='object-cover object-center'
-						/>
-					</Link>
+					<address>
+						<Link
+							href='https://maps.apple.com/?address=32%20Longview%20Cr,%20Stanwell%20Tops%20NSW%202508,%20Australia&ll=-34.220603,150.979629&q=32%20Longview%20Cr'
+							target='_blank'
+						>
+							<Image
+								src='/Images/icons/address.webp'
+								alt='address'
+								fill
+								className='object-cover object-center'
+							/>
+						</Link>
+					</address>
 				</Card>
 			</Card>
 		</div>

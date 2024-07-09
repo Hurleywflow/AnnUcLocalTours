@@ -23,7 +23,7 @@ const Blogs = () => {
 							{/* render the first log posts */}
 							<div className='col-span-2 flex cursor-pointer flex-col gap-4 hover:opacity-75  md:col-span-3 lg:col-span-4'>
 								<Link href={`/blogs/${blogData[0].id}`} key={blogData[0].id}>
-									<div className='bg-muted relative aspect-video  overflow-hidden rounded-md'>
+									<div className='relative aspect-video overflow-hidden  rounded-md bg-muted'>
 										<Image
 											src={blogData[0].imageUrl[0]}
 											alt={blogData[0].title}
@@ -47,7 +47,7 @@ const Blogs = () => {
 										<H5 className='text-start'>
 											{blogData[blogData.length - 1].title}
 										</H5>
-										<p className=' text-muted-foreground truncate text-base'>
+										<p className=' truncate text-base text-muted-foreground'>
 											{blogData[blogData.length - 1].description}
 										</p>
 									</div>
@@ -67,7 +67,7 @@ const Blogs = () => {
 											ease: "easeInOut",
 										}}
 									>
-										<div className='bg-muted relative aspect-square w-full overflow-hidden rounded-md md:aspect-video'>
+										<div className='relative aspect-square w-full overflow-hidden rounded-md bg-muted md:aspect-video'>
 											<Image
 												src={blog.imageUrl[0]}
 												alt={blog.title}
@@ -77,7 +77,7 @@ const Blogs = () => {
 											/>
 										</div>
 										<div className='flex flex-row items-center gap-4'>
-											<Badge>News</Badge>
+											<Badge>Recently</Badge>
 											<p className='flex flex-row items-center gap-2 text-sm'>
 												<span className='text-muted-foreground'>By</span>{" "}
 												<Avatar className='size-6'>
@@ -89,7 +89,7 @@ const Blogs = () => {
 										</div>
 										<div className='flex flex-col gap-2'>
 											<H5 className='text-start'>{blog.title}</H5>
-											<p className='text-muted-foreground line-clamp-3 text-base'>
+											<p className='line-clamp-3 text-base text-muted-foreground'>
 												{blog.description}
 											</p>
 										</div>

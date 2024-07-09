@@ -32,7 +32,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 							slides={Array.isArray(blog.imageUrl) ? blog.imageUrl : []}
 						/>
 						<div className='flex flex-row items-center gap-4'>
-							<Badge>News</Badge>
+							<Badge>⭐️⭐️⭐️⭐️⭐️</Badge>
 							<p className='flex flex-row items-center gap-2 text-sm'>
 								<span className='text-muted-foreground'>By</span>{" "}
 								<Avatar className='size-6'>
