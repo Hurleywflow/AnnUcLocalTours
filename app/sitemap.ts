@@ -1,10 +1,10 @@
 import { blogData } from "@/data/blogs";
-import { ToursAustralia, ToursVietNam } from "@/data/tours";
+import { ToursAustralia, ToursOtherCountries } from "@/data/tours";
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	// concatenate the australiaTours and vietNamTours
-	const allTours = [...ToursAustralia, ...ToursVietNam];
+	const allTours = [...ToursAustralia, ...ToursOtherCountries];
 	const postEntries = allTours.map((post) => ({
 		url: `${process.env.BASE_URL}/tours/${post.id}`,
 		// changeFrequency: "daily",
