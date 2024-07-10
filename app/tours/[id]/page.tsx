@@ -39,11 +39,11 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 						</div>
 						<div className='flex flex-col gap-2'>
 							<H5 className='text-start'>{AllTours.title}</H5>
-							<p className=' mt-10 text-base text-muted-foreground'>
+							<p className=' mt-10 text-base '>
 								{/* spred out the descriptions */}
 								{AllTours?.description?.map((word, index) => (
 									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-									<span key={index}>
+									<span key={`${word} +${index}`}>
 										{word}
 										<br />
 										<br />

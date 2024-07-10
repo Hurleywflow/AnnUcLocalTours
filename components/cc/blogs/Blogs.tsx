@@ -21,14 +21,14 @@ const Blogs = () => {
 					<div className=' mx-auto flex flex-col gap-10'>
 						<div className='grid h-fit grid-cols-2 gap-1 space-y-5 md:grid-cols-3 md:gap-2 lg:grid-cols-4'>
 							{/* render the first log posts */}
-							<div className='col-span-2 flex cursor-pointer flex-col gap-4 hover:opacity-75  md:col-span-3 lg:col-span-4'>
+							<div className='col-span-2 flex cursor-pointer flex-col gap-4  md:col-span-3 lg:col-span-4'>
 								<Link href={`/blogs/${blogData[0].id}`} key={blogData[0].id}>
 									<div className='relative aspect-video overflow-hidden  rounded-md bg-muted'>
 										<Image
 											src={blogData[0].imageUrl[0]}
 											alt={blogData[0].title}
 											fill
-											className='object-cover object-center'
+											className='object-cover object-center hover:scale-105 hover:transition-all hover:duration-300 hover:ease-linear'
 											sizes='(max-width: 640px) 420px, (max-width: 768px) 720px, (max-width: 1024px) 800px, (max-width: 1280px) 900px, (max-width: 1536px) 1024px, (max-width: 2000px) 1280px, (max-width: 2560px) 1500px, 1500px'
 										/>
 									</div>
@@ -72,7 +72,7 @@ const Blogs = () => {
 												src={blog.imageUrl[0]}
 												alt={blog.title}
 												fill
-												className='object-cover object-center'
+												className='object-cover object-center hover:scale-105 hover:transition-all hover:duration-300 hover:ease-linear'
 												sizes='(max-width: 640px) 320px, (max-width: 768px) 520px, (max-width: 1024px) 400px, 400px'
 											/>
 										</div>

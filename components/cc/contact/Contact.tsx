@@ -35,10 +35,10 @@ function Contact() {
 							help and ensure you have the best experience possible.
 						</p>
 					</CardHeader>
-					<CardContent>
+					<CardContent className='flex items-center justify-center'>
 						<ShineBorderBasicDemo />
 					</CardContent>
-					<p className='text-balance text-center text-base font-semibold'>
+					<p className='text-balance text-center text-base font-medium'>
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span>
 						<span className='font-bold text-primary'>* </span> Our trading hours

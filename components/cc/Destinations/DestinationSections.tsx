@@ -36,12 +36,14 @@ function DestinationSections({
 								<Image
 									src={tour.imageUrl?.[0] ?? "Destination Image"}
 									alt={tour.title ?? " Destination title"}
-									className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-110 hover:blur-[1px]'
+									className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 hover:blur-[1px]'
 									fill
 									sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
 								/>
 								<div className='absolute inset-x-0 bottom-0 flex h-10 items-center justify-center bg-gradient-to-t from-background to-transparent'>
-									<H6 className=''>{tour.title ?? " Destination title"}</H6>
+									<H6 className='font-poppins font-medium'>
+										{tour.title ?? " Destination title"}
+									</H6>
 								</div>
 							</Card>
 						</Link>
