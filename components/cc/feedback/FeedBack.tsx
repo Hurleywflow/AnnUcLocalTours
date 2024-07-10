@@ -7,7 +7,7 @@ import { P } from "../text-utils/TextUtils";
 
 function FeedBack() {
 	return (
-		<Card className='flex w-full flex-col items-center justify-center gap-10 p-2'>
+		<Card className='flex w-full flex-col items-center justify-center gap-10 py-2'>
 			<SparklesTextFeedbacklDemo />
 			{/* <ShineBorderBasicDemo /> */}
 			<MarqueeDemo />

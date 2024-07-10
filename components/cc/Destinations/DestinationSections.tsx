@@ -23,7 +23,7 @@ function DestinationSections({
 				{tours.map((tour) => (
 					<MotionDiv
 						key={tour.id}
-						initial={{ opacity: 0.7, y: 40, scale: 0.9 }}
+						initial={{ opacity: 0.5, y: 40, scale: 0.9 }}
 						whileInView={{ opacity: 1, y: 0, scale: 1 }}
 						transition={{
 							// delay: 0.2,
