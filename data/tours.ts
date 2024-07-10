@@ -277,7 +277,7 @@ export const ToursOtherCountries: TourType[] = [
 		id: "ko5",
 		title: "South Korea",
 		description: [
-			"JSouth Korea is an energetic and diverse country that provides a distinctive mix of age-old customs, contemporary innovations, stunning natural beauty, and thrilling urban adventures. Here's why you should consider South Korea for your next travel destination:",
+			"South Korea is an energetic and diverse country that provides a distinctive mix of age-old customs, contemporary innovations, stunning natural beauty, and thrilling urban adventures. Here's why you should consider South Korea for your next travel destination:",
 			"South Korea boasts a rich cultural legacy, including UNESCO World Heritage sites such as Changdeokgung Palace and Gyeongbokgung Palace. Take in the traditional lifestyle at Bukchon Hanok Village with its well-preserved hanok houses. In Seoul, ancient palaces and temples harmoniously coexist with modern skyscrapers and futuristic structures in areas like Gangnam and Hongdae.",
 			"Busan offers gorgeous beaches, vibrant seafood markets, and cultural festivities at Haeundae Beach and Gwangalli Beach. The lively atmosphere of Jagalchi Fish Market, where fresh seafood is abundant, is a must-visit. South Korea's natural beauty encompasses Hallasan Mountain on Jeju Island and the rugged mountains and forests of Seoraksan National Park.",
 			"Korean cuisine boasts bold flavors, diverse dishes, and a focus on fresh ingredients, such as bibimbap, bulgogi, and kimchi. In Seoul, you can savor street foods like tteokbokki, hotteok, and kimbap. Busan is renowned for its seafood, particularly sashimi and haemul jjigae.",
