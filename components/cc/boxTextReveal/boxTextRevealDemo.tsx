@@ -6,7 +6,7 @@ function BoxRevealDemo() {
 	return (
 		<div className='h-fit w-full items-center justify-center overflow-hidden '>
 			<BoxReveal boxColor='#9ed6f9b6' duration={0.9}>
-				<P className='text-balance text-start md:px-5 md:text-center lg:px-10'>
+				<P className='text-pretty tracking-normal md:px-5 lg:px-10'>
 					<span className='font-bold text-primary'>* </span> The name "Local" in
 					Ann's Uc Local Tours pays homage to our cherished friend, Aussie,
 					whose unwavering support and presence enrich every tour. Aussie is our

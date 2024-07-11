@@ -23,13 +23,13 @@ function Contact() {
 				</div>
 				<Card className=' flex h-fit w-full flex-col items-center justify-center bg-background'>
 					<CardHeader className='flex items-center justify-center'>
-						<p>
+						<p className='text-pretty'>
 							<span className='font-bold text-primary'>* </span>
 							You can also reach out to us via email or through various
 							platforms such as Facebook, SMS, Zalo, and WhatsApp for your
 							convenience. Our team will get back to you as soon as possible.
 						</p>
-						<p>
+						<p className='text-pretty'>
 							<span className='font-bold text-primary'>* </span> if you have any
 							questions, please do not hesitate to contact us. We are here to
 							help and ensure you have the best experience possible.

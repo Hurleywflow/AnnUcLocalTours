@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/require-await */
 import Link from "next/link";
+import { P } from "../text-utils/TextUtils";
 import BoxReveal from "./BoxTextReveal";
 
 function BoxRevealOurTourDemo() {
 	return (
 		<div className='h-fit w-full items-center justify-center overflow-hidden '>
 			<BoxReveal boxColor='#9ed6f9b6' duration={0.9}>
-				<h3 className='shadow-foreground-400 text-balance text-start text-xl  text-foreground text-shadow-lg md:px-5 md:text-center md:text-2xl lg:px-10'>
+				<P className='text-pretty tracking-normal md:px-5 lg:px-10'>
 					<span className='font-bold text-primary'>* </span> Our regular tours
 					are just the beginning. We offer an array of exciting adventures
 					across Sydney, Melbourne, Adelaide, Brisbane (Gold Coast), Perth, and
@@ -24,11 +25,11 @@ function BoxRevealOurTourDemo() {
 					destinations, get itinerary suggestions, and receive the latest travel
 					information by following and liking our Facebook page at
 					<Link href='https://www.facebook.com/88.antour/' target='_blank'>
-						<div className='ml-1 inline underline underline-offset-2 hover:cursor-pointer hover:text-primary hover:decoration-primary hover:underline-offset-4'>
+						<span className='ml-1 inline underline underline-offset-2 hover:cursor-pointer hover:text-primary hover:decoration-primary hover:underline-offset-4'>
 							Ann’s Uc Local Tours.
-						</div>
+						</span>
 					</Link>
-				</h3>
+				</P>
 			</BoxReveal>
 		</div>
 	);
