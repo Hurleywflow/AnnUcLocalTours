@@ -33,6 +33,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 						/>
 						<div className='flex flex-row items-center gap-4'>
 							<Badge>⭐️⭐️⭐️⭐️⭐️</Badge>
+
 							<p className='flex flex-row items-center gap-2 text-sm'>
 								<span className='text-muted-foreground'>By</span>{" "}
 								<Avatar className='size-6'>
@@ -42,6 +43,14 @@ const Blog = ({ params }: { params: { id: string } }) => {
 								<span>{blog.author}</span>
 							</p>
 						</div>
+						{
+							/* render the date range */
+							blog.dateRange && blog.dateRange.length > 0 && (
+								<Badge className='flex w-fit items-start justify-center text-center text-base'>
+									{blog.dateRange}
+								</Badge>
+							)
+						}
 						<div className='flex flex-col gap-2'>
 							<H5 className='text-start'>{blog.title}</H5>
 							<p className=' text-justify text-base'>

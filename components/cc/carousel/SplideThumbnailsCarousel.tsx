@@ -98,7 +98,7 @@ export const CarouselWithThumbnails = ({
 							>
 								<LoadingImage
 									src={slide}
-									className='mb-4 size-full  object-cover '
+									className='mb-4 size-full  object-contain object-center '
 									alt={"Ann's Uc Local Tours"}
 									sizes='(max-width: 420px) 420px, (max-width: 640px) 640px, (max-width: 768px) 720px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1536px'
 								/>

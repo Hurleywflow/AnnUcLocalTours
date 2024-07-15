@@ -22,18 +22,25 @@ const Blogs = () => {
 						<div className='grid h-fit grid-cols-2 gap-1 space-y-5 md:grid-cols-3 md:gap-2 lg:grid-cols-4'>
 							{/* render the first log posts */}
 							<div className='col-span-2 flex cursor-pointer flex-col gap-4  md:col-span-3 lg:col-span-4'>
-								<Link href={`/blogs/${blogData[0].id}`} key={blogData[0].id}>
+								<Link
+									href={`/blogs/${blogData[blogData.length - 1].id}`}
+									key={blogData[blogData.length - 1].id}
+								>
 									<div className='relative aspect-video overflow-hidden  rounded-md bg-muted'>
 										<Image
-											src={blogData[0].imageUrl[0]}
-											alt={blogData[0].title}
+											src={
+												blogData[blogData.length - 1].imageUrl[
+													blogData.length - 1
+												]
+											}
+											alt={blogData[blogData.length - 1].title}
 											fill
 											className='object-cover object-center hover:scale-105 hover:transition-all hover:duration-300 hover:ease-linear'
-											sizes='(max-width: 640px) 420px, (max-width: 768px) 720px, (max-width: 1024px) 800px, (max-width: 1280px) 900px, (max-width: 1536px) 1024px, (max-width: 2000px) 1280px, (max-width: 2560px) 1500px, 1500px'
+											sizes='(max-width: 420px) 420px, (max-width: 640px) 640px, (max-width: 768px) 720px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1536px'
 										/>
 									</div>
 									<div className='mt-2 flex flex-row items-center gap-4'>
-										<Badge>News</Badge>
+										<Badge>New</Badge>
 										<p className='flex flex-row items-center gap-2 text-sm'>
 											<span className='text-muted-foreground'>By</span>{" "}
 											<Avatar className='size-6'>
@@ -73,11 +80,11 @@ const Blogs = () => {
 												alt={blog.title}
 												fill
 												className='object-cover object-center hover:scale-105 hover:transition-all hover:duration-300 hover:ease-linear'
-												sizes='(max-width: 640px) 320px, (max-width: 768px) 520px, (max-width: 1024px) 400px, 400px'
+												sizes='(max-width: 420px) 420px, (max-width: 640px) 640px, (max-width: 768px) 720px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1536px'
 											/>
 										</div>
 										<div className='flex flex-row items-center gap-4'>
-											<Badge>Recently</Badge>
+											<Badge>New</Badge>
 											<p className='flex flex-row items-center gap-2 text-sm'>
 												<span className='text-muted-foreground'>By</span>{" "}
 												<Avatar className='size-6'>
