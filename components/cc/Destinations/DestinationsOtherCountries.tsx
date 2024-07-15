@@ -1,6 +1,6 @@
 import { ToursOtherCountries } from "@/data/tours";
 import DestinationSections from "./DestinationSections";
-const title = "Other Destinations";
+const title = 'OVERSEAS TOURS'
 
 function DestinationsOtherCountries() {
 	return (

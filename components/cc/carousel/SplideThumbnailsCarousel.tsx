@@ -100,7 +100,7 @@ export const CarouselWithThumbnails = ({
 									src={slide}
 									className='mb-4 size-full  object-cover '
 									alt={"Ann's Uc Local Tours"}
-									sizes='max-width: 640px) 420px, (max-width: 768px) 720px, (max-width: 1024px) 800px, (max-width: 1280px) 900px, (max-width: 1536px) 1024px, (max-width: 2000px) 1280px, (max-width: 2560px) 1500px, 1500px'
+									sizes='(max-width: 420px) 420px, (max-width: 640px) 640px, (max-width: 768px) 720px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1536px'
 								/>
 							</Suspense>
 							{/* <h3 className='mb-2 text-xl font-bold text-white'>

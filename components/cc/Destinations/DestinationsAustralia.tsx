@@ -1,6 +1,6 @@
 import { ToursAustralia } from "@/data/tours";
 import DestinationSections from "./DestinationSections";
-const title = "Australia";
+const title = 'AUSTRALIA TOURS'
 
 function DestinationsAustralia() {
 	return <DestinationSections tours={ToursAustralia} title={title as string} />;

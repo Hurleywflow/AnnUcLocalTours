@@ -16,8 +16,13 @@ function DestinationSections({
 }: Readonly<DestinationSectionProps>): JSX.Element {
 	return (
 		<Card className='w-full p-0'>
-			<CardHeader className=''>
-				<H4>{title}</H4>{" "}
+			<CardHeader className='text-center'>
+				<H4>{title}</H4>
+				<span className='italic text-primary'>
+					*** You can visit each tour to view the schedule, time, date,
+					department, price, and details of each tour.
+				</span>
+				<br />
 			</CardHeader>
 			<div className='grid w-full grid-cols-2 gap-1 md:gap-2 lg:grid-cols-3'>
 				{tours.map((tour) => (

@@ -1,12 +1,19 @@
 //! Tours
 
 export type TourType = {
-	id?: string;
+	id: string;
 	title?: string;
+	subTitle?: Array<{
+		id: string;
+		title?: string;
+		price?: string;
+		departs?: string;
+		schedule?: string[];
+	}>;
 	description?: Array<string>;
 	imageUrl?: string[];
 	link?: string;
-	price?: number;
+	price?: string;
 	rating?: number;
 };
 
@@ -14,6 +21,18 @@ export const ToursAustralia: TourType[] = [
 	{
 		id: "au1",
 		title: "Sydney",
+		price: "Adult: $120, Children < 10 years old: $90",
+		subTitle: [
+			{
+				id: "au1",
+				title: "DANDENONG AUTUMN – YARRA VALLEY",
+				price: "$150/person, children < 10 years old $120",
+				schedule: [
+					"Sydney, Australia, is an amazing city celebrated for its iconic landmarks, breathtaking harbour, lively culture, and diverse attractions. Here’s why Sydney should top your list for an unforgettable adventure:",
+					"Sydney, Australia is a city that offers a variety of cultural experiences, from the iconic Sydney Opera House to the vibrant nightlife scene of the city’s famous CBD pub scene. Sydney is also a city that offers a variety of cultural experiences, from the iconic Sydney Opera House to the vibrant nightlife scene of the city’s famous CBD pub scene.",
+				],
+			},
+		],
 		description: [
 			"Sydney, Australia, is an amazing city celebrated for its iconic landmarks, breathtaking harbour, lively culture, and diverse attractions. Here’s why Sydney should top your list for an unforgettable adventure:",
 			"Sydney boasts iconic landmarks like the Sydney Opera House and the Sydney Harbour Bridge. The coastline offers stunning beaches such as Bondi and Manly, as well as picturesque coastal walks. The city has a thriving cultural scene with art galleries, museums, and live performances. You’ll find lush parks and gardens like the Royal Botanic Garden and Centennial Park. Exciting attractions include the Taronga Zoo and various outdoor activities. The food scene is diverse, featuring fine dining, seafood markets, and multicultural cuisine. Sydney is also host to a variety of festivals and events throughout the year, and it's known for its welcoming locals and cosmopolitan atmosphere.",
@@ -28,12 +47,88 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
 		rating: 4,
 	},
 	{
 		id: "au2",
 		title: "Melbourne",
+		price: "",
+		subTitle: [
+			{
+				id: "au2.1",
+				title: "DANDENONG AUTUMN – YARRA VALLEY",
+				price: "$150/person, children < 10 years old $120",
+				departs: "Every Monday and Thursday",
+				schedule: [
+					"🚙 Ancient steam train – Botanic Garden – Ancient town - Waterfall – Chocolate & ice cream factory.",
+				],
+			},
+			{
+				id: "au2.2",
+				title: "BALLARAT AUTUMN",
+				price: "$150/person, children < 10 years old $120",
+				departs: "Every Tuesday",
+				schedule: [
+					"🚙 Fruit picking – gold mine – Ballarat town – Art museum – botanical garden.",
+				],
+			},
+			{
+				id: "au2.3",
+				title: "GREAT OCEAN ROAD",
+				price: "$140/person, children < 10 years old $110",
+				departs: "Every week",
+				schedule: [
+					"🚙 Rose garden, ancient castle - 12 apostles - Loch Goerge narrow gap – Appolo bay – Lorn –– Anglesea beach.",
+					" *** (If the tour does not go to the rose garden and ancient castle, the price is $120/person)",
+					" *** Guests who want to take a helicopter ride can buy their own tickets at the counter for $165/person.",
+				],
+			},
+			{
+				id: "au2.4",
+				title: "PENINSULAR",
+				price: "$130/person, children < 10 years old $100",
+				departs: "Monday and Saturday every week",
+				schedule: [
+					"🚙 Cape Schanck Light house – Gape farm Moonlit zoo – Mornington beach.",
+				],
+			},
+			{
+				id: "au2.5",
+				title: "BUFFLING BILLY RED HILL - PENINSULAR",
+				price: "$160/person, children < 10 years old $120",
+				departs: "Monday and Friday every week",
+				schedule: [
+					"🚙 Puffing Billy – Cape Schanck Lighthouse (Peninsula) – Gape farm – Botanic Gardent Dandenong.",
+				],
+			},
+			{
+				id: "au2.6",
+				title: "WILSON PROMONTORY",
+				price: "$130/person, children < 10 years old $100",
+				departs: "Sunday every week",
+				schedule: [
+					"🚙 Wilson Prom – Tidal river – Norman Bay – Squeaky – Dunes of the Drift.",
+					" *** (Customers who want to take the boat to the island must buy their own tickets for $145/person).",
+				],
+			},
+			{
+				id: "au2.7",
+				title: "MACEDON FALL FESTIVAL",
+				price: "$150/person, children < 10 years old $130",
+				departs: "Sunday every week",
+				schedule: [
+					"🚙 Macedon – Botanic Garden – Hanging Rock",
+					" *** (Tour price includes tickets to Botanic Garden and Hanging Rock).",
+				],
+			},
+			{
+				id: "au2.8",
+				title: "BRIGHT AUTUMN",
+				price: "$150/person, children < 10 years old $130",
+				departs: "Every week",
+				schedule: ["🚙 Bright – Ovens river – Lest we forget."],
+			},
+		],
 		description: [
 			"Melbourne, Australia, is an exciting and vibrant city that perfectly combines culture, natural beauty, and thrilling attractions. Whether you're passionate about art, food, nature, or adventure, Melbourne has something for you. Here's why Melbourne should be your next adventure destination:",
 			"Melbourne is renowned for its diverse culture and arts scene, boasting art galleries, theatres, and music venues. The city is a culinary paradise with a top-notch food and coffee scene, offering a wide range of dining options and a famous coffee culture. What's more, Melbourne boasts stunning parks and gardens, thrilling attractions and activities, coastal charm, and picturesque drives. The city hosts lively festivals and events throughout the year and has a welcoming, cosmopolitan vibe with friendly locals and efficient public transport.",
@@ -48,7 +143,6 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
 		rating: 4,
 	},
 	{
@@ -68,7 +162,7 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -88,7 +182,7 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 
 		rating: 4,
 	},
@@ -110,7 +204,7 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -129,7 +223,7 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -149,7 +243,7 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -169,14 +263,14 @@ export const ToursAustralia: TourType[] = [
 			"/Images/Demo/6.jpeg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 ];
 export const ToursOtherCountries: TourType[] = [
 	{
 		id: "vi1",
-		title: "Viet Nam",
+		title: "TOUR ACROSS VIETNAM",
 		description: [
 			"Vietnam is an extraordinary destination that promises a blend of breathtaking landscapes, rich cultural heritage, and vibrant city life. ",
 			"Vietnamese cuisine is a highlight of any visit. From the world-famous pho (noodle soup) to fresh spring rolls and banh mi (Vietnamese sandwich), the flavors are vibrant and unforgettable. Don’t miss out on street food tours to experience the authentic taste of Vietnam.",
@@ -184,19 +278,27 @@ export const ToursOtherCountries: TourType[] = [
 			"Vietnam is an extraordinary destination known for its stunning natural beauty, rich cultural heritage, exciting attractions, delicious cuisine, warm and welcoming people, and adventure opportunities. The country offers breathtaking landscapes, vibrant city life, and a blend of old and new in places like Hanoi and Ho Chi Minh City. With its UNESCO World Heritage sites, stunning natural wonders like Ha Long Bay and Phong Nha-Ke Bang National Park, and delicious cuisine, Vietnam promises an unforgettable adventure for travellers.",
 		],
 		imageUrl: [
-			"/Images/tours/vietnam/4.jpg",
-			"/Images/tours/vietnam/1.jpg",
-			"/Images/tours/vietnam/2.jpg",
-			"/Images/tours/vietnam/3.jpg",
-			"/Images/tours/vietnam/5.jpg",
-			"/Images/tours/vietnam/6.jpg",
-			"/Images/tours/vietnam/7.jpg",
-			"/Images/tours/vietnam/8.jpg",
-			"/Images/tours/vietnam/9.jpg",
-			"/Images/tours/vietnam/10.jpg",
+			"/Images/tours/vietNam/1.jpg",
+			"/Images/tours/vietNam/2.jpg",
+			"/Images/tours/vietNam/3.jpg",
+			"/Images/tours/vietNam/4.jpg",
+			"/Images/tours/vietNam/5.jpg",
+			"/Images/tours/vietNam/6.jpg",
+			"/Images/tours/vietNam/7.jpg",
+			"/Images/tours/vietNam/8.jpg",
+			"/Images/tours/vietNam/9.jpg",
+			"/Images/tours/vietNam/10.jpg",
+			"/Images/tours/vietNam/11.jpg",
+			"/Images/tours/vietNam/12.jpg",
+			"/Images/tours/vietNam/13.jpg",
+			"/Images/tours/vietNam/14.jpg",
+			"/Images/tours/vietNam/15.jpg",
+			"/Images/tours/vietNam/16.jpg",
+			"/Images/tours/vietNam/17.jpg",
+			"/Images/tours/vietNam/18.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "",
 		rating: 4,
 	},
 	{
@@ -220,7 +322,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/10.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -244,7 +346,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/10.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -258,19 +360,31 @@ export const ToursOtherCountries: TourType[] = [
 			"Japan is a destination that offers an extraordinary mix of ancient traditions, stunning natural landscapes, cutting-edge technology, and unique cultural experiences. Whether you're exploring historic temples, enjoying exquisite cuisine, embarking on urban adventures, or participating in traditional festivals, Japan has something to captivate every traveller. So, pack your bags and get ready to embark on an unforgettable journey to the Land of the Rising Sun!",
 		],
 		imageUrl: [
-			"/Images/tours/vietnam/5.jpg",
-			"/Images/tours/vietnam/6.jpg",
-			"/Images/tours/vietnam/1.jpg",
-			"/Images/tours/vietnam/4.jpg",
-			"/Images/tours/vietnam/2.jpg",
-			"/Images/tours/vietnam/3.jpg",
-			"/Images/tours/vietnam/7.jpg",
-			"/Images/tours/vietnam/8.jpg",
-			"/Images/tours/vietnam/9.jpg",
-			"/Images/tours/vietnam/10.jpg",
+			"/Images/tours/japan/1.jpg",
+			"/Images/tours/japan/2.jpg",
+			"/Images/tours/japan/3.jpg",
+			"/Images/tours/japan/4.jpg",
+			"/Images/tours/japan/5.jpg",
+			"/Images/tours/japan/6.jpg",
+			"/Images/tours/japan/7.jpg",
+			"/Images/tours/japan/8.jpg",
+			"/Images/tours/japan/9.jpg",
+			"/Images/tours/japan/10.jpg",
+			"/Images/tours/japan/11.jpg",
+			"/Images/tours/japan/12.jpg",
+			"/Images/tours/japan/13.jpg",
+			"/Images/tours/japan/14.jpg",
+			"/Images/tours/japan/15.jpg",
+			"/Images/tours/japan/16.jpg",
+			"/Images/tours/japan/17.jpg",
+			"/Images/tours/japan/18.jpg",
+			"/Images/tours/japan/19.jpg",
+			"/Images/tours/japan/20.jpg",
+			"/Images/tours/japan/21.jpg",
+			"/Images/tours/japan/22.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "",
 		rating: 4,
 	},
 	{
@@ -298,7 +412,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/10.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -322,7 +436,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/9.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -348,7 +462,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/9.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 	{
@@ -376,7 +490,7 @@ export const ToursOtherCountries: TourType[] = [
 			"/Images/tours/vietnam/9.jpg",
 		],
 		link: "https://www.netcodedev.com",
-		price: 10,
+		price: "Adult: $120, Children < 10 years old:  $90",
 		rating: 4,
 	},
 ];
