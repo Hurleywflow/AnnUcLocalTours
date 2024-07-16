@@ -425,7 +425,7 @@ export const ToursAustralia: TourType[] = [
 			"Wollongong Beach and Kiama offer a perfect combination of natural beauty, adventure, cultural experiences, and local charm. Whether you’re exploring the stunning coastlines, enjoying thrilling outdoor activities, or immersing yourself in the rich culture and history, these destinations promise an unforgettable experience. So pack your bags and get ready to discover the wonders of Wollongong Beach and Kiama in New South Wales!",
 		],
 		imageUrl: [
-			"/Images/tours/Wollongong-kiama/1.jpg",
+			"/Images/tours/wollongong-kiama/1.jpg",
 			"/Images/tours/Wollongong-kiama/2.jpg",
 			"/Images/tours/Wollongong-kiama/3.jpg",
 			"/Images/tours/Wollongong-kiama/4.jpg",
