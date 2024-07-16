@@ -35,13 +35,13 @@ function ContactSocial() {
 				</Button>
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
-			<Link href="sms:61401211890;?&body=Hi Ann's Uc Local Tours, I would like to know a tour">
+			<Link href="sms:61401211890;?&body=Hi Ann's Uc Local Tours, I would like to know about a tour">
 				<Button variant='ghost'>
 					<Image src={sms} alt='sms' width={40} height={40} className='' />
 				</Button>
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
-			<Link href='tel:+61401211890'>
+			<Link href='https://zalo.me/+61401211890' target='_blank'>
 				<Button variant='ghost'>
 					<Image
 						src={zaloIcon}
@@ -64,7 +64,7 @@ function ContactSocial() {
 					/>
 				</Button>
 			</Link> */}
-			<Link href='tel:+61401211890'>
+			<Link href='https://wa.me/+61401211890' target='_blank'>
 				<Button variant='ghost'>
 					<Image
 						src={whatapp}
