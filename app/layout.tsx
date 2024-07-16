@@ -40,35 +40,36 @@ export const metadata: Metadata = {
 	referrer: "origin-when-cross-origin",
 	authors: [
 		{ name: "Hurley" },
-		{ name: "Nguyen", url: "https://www.netcodedev.com" },
+		{ name: "Nguyen", url: "https://www.annsuclocaltours.com" },
 	],
 	creator: "Hurley Nguyen",
 	publisher: "Hurley Nguyen",
 	title: "Ann's Uc Local Tours || Tourist Information Center",
 	description:
-		"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
-	metadataBase: new URL("https://www.netcodedev.com"),
+		"Explore Sydney's hidden gems with Ann's Uc Local Tours. Expert guides, tailored experiences, and unforgettable adventures await!",
+	metadataBase: new URL("https://www.annsuclocaltours.com"),
 	keywords: [],
 	alternates: {
-		canonical: "https://www.netcodedev.com/en",
-		languages: {
-			"en-US": "https://www.netcodedev.com/en",
-			"vn-VN": "https://www.netcodedev.com/vn",
-		},
+		canonical: "https://www.annsuclocaltours.com/",
+		// languages: {
+		// 	"en-US": "https://www.annsuclocaltours.com/en",
+		// 	"vn-VN": "https://www.annsuclocaltours.com/vn",
+		// },
 		media: {
-			"only screen and (max-width: 600px)": "https://www.netcodedev.com/mobile",
+			"only screen and (max-width: 600px)":
+				"https://www.annsuclocaltours.com/mobile",
 		},
 		types: {
-			"application/rss+xml": "https://www.netcodedev.com/rss",
+			"application/rss+xml": "https://www.annsuclocaltours.com/rss",
 		},
 	},
 	openGraph: {
-		title: "Ann Uc Local Tours",
+		title: "Ann's Uc Local Tours",
 		description:
 			"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
 		type: "website",
-		url: "https://www.netcodedev.com",
-		siteName: "NetCode",
+		url: "https://www.annsuclocaltours.com",
+		siteName: "Ann's Uc Local Tours",
 		images: [
 			{
 				url: "",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Ann Uc Local Tours",
+		title: "Ann's Uc Local Tours",
 		description:
 			"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
 		images: {
