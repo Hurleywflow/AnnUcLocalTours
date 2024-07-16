@@ -70,8 +70,8 @@ const Blogs = () => {
 										whileInView={{ opacity: 1, y: 0, scale: 1 }}
 										transition={{
 											// delay: 0.2,
-											duration: 0.8,
-											ease: "easeInOut",
+											duration: 0.3,
+											ease: "linear",
 										}}
 									>
 										<div className='relative aspect-square w-full overflow-hidden rounded-md bg-muted md:aspect-video'>

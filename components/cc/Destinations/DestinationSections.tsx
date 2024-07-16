@@ -32,8 +32,8 @@ function DestinationSections({
 						whileInView={{ opacity: 1, y: 0, scale: 1 }}
 						transition={{
 							// delay: 0.2,
-							duration: 0.8,
-							ease: "easeInOut",
+							duration: 0.3,
+							ease: "linear",
 						}}
 					>
 						<Link href={`/tours/${tour.id}`}>

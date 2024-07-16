@@ -6,7 +6,7 @@ import BoxReveal from "./BoxTextReveal";
 function BoxRevealOurTourDemo() {
 	return (
 		<div className='h-fit w-full items-center justify-center overflow-hidden '>
-			<BoxReveal boxColor='#9ed6f9b6' duration={0.9}>
+			<BoxReveal boxColor='#9ed6f9b6' duration={0.5}>
 				<P className='text-pretty tracking-normal md:px-5 lg:px-10'>
 					<span className='font-bold text-primary'>* </span> Our regular tours
 					are just the beginning. We offer an array of exciting adventures
