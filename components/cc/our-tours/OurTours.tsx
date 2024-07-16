@@ -6,7 +6,7 @@ import { SparklesTextOurTourDemo } from "../magicui/sparkles-text/SparklesTextOu
 
 function OurTours() {
 	return (
-		<Card className='flex flex-col items-center justify-center gap-10 p-2'>
+		<Card className='flex flex-col items-center justify-center gap-10'>
 			<div className='flex flex-col items-center justify-center gap-10 p-2'>
 				<SparklesTextOurTourDemo />
 				<BoxRevealOurTourDemo />

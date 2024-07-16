@@ -9,7 +9,7 @@ import { P } from "../text-utils/TextUtils";
 function Contact() {
 	return (
 		<div className='flex h-fit w-full flex-col items-center justify-center gap-10'>
-			<Card className='flex w-full flex-col items-center justify-center gap-10'>
+			<Card className='flex w-full flex-col items-center justify-center gap-10 pt-2'>
 				<SparklesTextContactDemo />
 				<P className='text-center'>
 					If you have any questions, please do not hesitate to contact us. We

@@ -13,11 +13,11 @@ const tabs = [
 		link: "/#intro",
 	},
 	{
-		text: "Blogs",
+		text: "Feature Tours",
 		link: "/#blogs",
 	},
 	{
-		text: "Our Tours",
+		text: "Regular Tours",
 		link: "/#our-tours",
 	},
 	{

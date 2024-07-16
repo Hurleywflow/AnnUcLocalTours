@@ -26,7 +26,7 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 				<div className='flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between'>
 					<Link href='/#blogs'>
 						<Button className='group gap-4'>
-							View all Destination{" "}
+							All Destination{" "}
 							<MoveLeft className='size-4 transition-all duration-100 ease-linear hover:group-hover:-translate-x-3' />
 						</Button>
 					</Link>

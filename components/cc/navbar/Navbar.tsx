@@ -75,13 +75,13 @@ function Navbar(): JSX.Element {
 							href='/#blogs'
 							className='text-muted-foreground hover:text-foreground'
 						>
-							Blogs
+							Feature Tours
 						</Link>
 						<Link
 							href='/#our-tours'
 							className='text-muted-foreground hover:text-foreground'
 						>
-							Our Tours
+							Regular Tours
 						</Link>
 
 						<Link

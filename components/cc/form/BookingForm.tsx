@@ -291,10 +291,10 @@ export default function BookingForm() {
 					name='otherRequest'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Other Request</FormLabel>
+							<FormLabel>Other enquiry</FormLabel>
 							<FormControl>
 								<Textarea
-									placeholder='Tell us a little bit about your request'
+									placeholder='Tell us a little bit about your enquiry.'
 									className='resize-none'
 									{...field}
 								/>

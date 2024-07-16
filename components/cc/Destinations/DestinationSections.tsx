@@ -41,7 +41,7 @@ function DestinationSections({
 								<Image
 									src={tour.imageUrl?.[0] ?? "Destination Image"}
 									alt={tour.title ?? " Destination title"}
-									className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 hover:blur-[1px]'
+									className='object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 hover:opacity-80'
 									fill
 									sizes='(max-width: 640px) 150px, (max-width: 768px) 220px, (max-width: 1024px) 320px, 320px'
 								/>

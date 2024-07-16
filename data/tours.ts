@@ -471,7 +471,7 @@ export const ToursAustralia: TourType[] = [
 export const ToursOtherCountries: TourType[] = [
 	{
 		id: "vi1",
-		title: "TOUR ACROSS VIETNAM",
+		title: "Across Vietnam",
 		description: [
 			"Vietnam is an extraordinary destination that promises a blend of breathtaking landscapes, rich cultural heritage, and vibrant city life. ",
 			"Vietnamese cuisine is a highlight of any visit. From the world-famous pho (noodle soup) to fresh spring rolls and banh mi (Vietnamese sandwich), the flavors are vibrant and unforgettable. Don’t miss out on street food tours to experience the authentic taste of Vietnam.",
@@ -504,7 +504,7 @@ export const ToursOtherCountries: TourType[] = [
 	},
 	{
 		id: "ba2",
-		title: "Bali - Indonesia",
+		title: "Bali Indonesia",
 		description: [
 			"Bali, Indonesia, is a mesmerizing tropical paradise offering a perfect combination of breathtaking natural beauty, a rich cultural heritage, and thrilling adventures. Here's why Bali should be your next travel destination:",
 			"Renowned for its stunning natural beauty, Bali features picturesque beaches, lush rice terraces, and majestic volcanic mountains. The island also showcases a rich culture deeply intertwined with Hinduism, vibrant dance and music scenes, and festivals that provide an insight into the island's spiritual life. Bali offers a wide array of outdoor activities, such as snorkelling, diving, trekking, and rafting. It's also a well-known destination for wellness and relaxation, featuring luxurious spas, yoga retreats, and holistic healing practices. Bali's cuisine is a delightful fusion of traditional Indonesian flavours and international influences, and the island provides unique shopping experiences with a wide variety of handmade items. Finally, the Balinese people are renowned for their friendliness and warm hospitality, ensuring an unforgettable travel experience.",
