@@ -39,7 +39,9 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 						<div className='flex flex-col items-start gap-4'>
 							<Badge>⭐️⭐️⭐️⭐️⭐️</Badge>
 							{AllTours?.price && AllTours.price.length > 0 && (
-								<Badge className='text-center text-base'>{AllTours?.price}</Badge>
+								<Badge className='text-center text-base'>
+									{AllTours?.price}
+								</Badge>
 							)}
 						</div>
 						<div className='flex flex-col gap-2'>
@@ -73,7 +75,7 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 										</Card>
 									))}
 							</div>
-							<p className='text-justify text-base '>
+							<p className='text-pretty text-base'>
 								{/* spread out the descriptions */}
 								{AllTours.description?.map((word, index) => (
 									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

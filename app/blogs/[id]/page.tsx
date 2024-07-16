@@ -53,7 +53,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 						}
 						<div className='flex flex-col gap-2'>
 							<H5 className='text-start'>{blog.title}</H5>
-							<p className=' text-justify text-base'>
+							<p className=' text-pretty text-base'>
 								{blog.description.map((desc) => (
 									<span key={desc}>
 										{desc}
