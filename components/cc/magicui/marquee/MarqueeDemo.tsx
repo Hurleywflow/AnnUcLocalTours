@@ -38,7 +38,7 @@ const ReviewCard = ({
 			<CardContent className=''>
 				<Suspense
 					fallback={
-						<div className='bg-background flex size-full flex-col items-center justify-center space-y-3'>
+						<div className='flex size-full flex-col items-center justify-center space-y-3 bg-background'>
 							<Skeleton className='aspect-video w-4/5 rounded-xl' />
 							<div className='flex w-full flex-col items-center justify-center space-y-2'>
 								<Skeleton className='h-4 w-3/5 ' />
@@ -61,20 +61,20 @@ const ReviewCard = ({
 
 const MarqueeDemo = (): JSX.Element => {
 	return (
-		<div className='border-border relative flex size-full flex-col items-center justify-center gap-2 overflow-hidden p-2'>
+		<div className='relative flex size-full flex-col items-center justify-center gap-2 overflow-hidden border-border p-2'>
 			<Marquee pauseOnHover className='[--duration:190s]'>
 				{firstRow.map((review) => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
-			<div className=' border-border w-full border-t-4 border-dashed' />
+			<div className=' w-full border-t-4 border-dashed border-border' />
 			<Marquee reverse pauseOnHover className='[--duration:190s]'>
 				{secondRow.map((review) => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
-			<div className='from-background pointer-events-none absolute inset-y-0 left-0 w-5 bg-gradient-to-r md:w-10' />
-			<div className='from-background pointer-events-none absolute inset-y-0 right-0 w-5 bg-gradient-to-l md:w-10' />
+			<div className='pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-background md:w-20' />
+			<div className='pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-background md:w-20' />
 		</div>
 	);
 };
