@@ -87,13 +87,13 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Ann's Uc Local Tours",
 		description:
-			"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
+			"Explore Sydney's hidden gems with Ann's Uc Local Tours. Expert guides, tailored experiences, and unforgettable adventures await!",
 		type: "website",
 		url: "https://www.annsuclocaltours.com",
 		siteName: "Ann's Uc Local Tours",
 		images: [
 			{
-				url: "",
+				url: "/opengraph-image.png",
 				width: 1200,
 				height: 630,
 			},
@@ -103,9 +103,9 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Ann's Uc Local Tours",
 		description:
-			"Looking for professional web development services? Our skilled developers can assist in crafting a top-notch, responsive site tailored to your business needs.",
+			"Explore Sydney's hidden gems with Ann's Uc Local Tours. Expert guides, tailored experiences, and unforgettable adventures await!",
 		images: {
-			url: "",
+			url: "/opengraph-image.png",
 			width: 1200,
 			height: 630,
 		},
