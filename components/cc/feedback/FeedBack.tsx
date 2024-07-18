@@ -19,7 +19,7 @@ function FeedBack() {
 			</P>
 			<Link href='https://www.facebook.com/88.antour/reviews' target='_blank'>
 				<Button className='flex h-fit  flex-col text-base'>
-					<span className='animate-pulse'>Your Recommend</span>
+					<span className='animate-pulse'>Your Feedback</span>
 					<span className='sr-only'>Submit Your Feedback</span>
 				</Button>
 			</Link>

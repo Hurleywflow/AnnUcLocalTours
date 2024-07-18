@@ -48,21 +48,42 @@ export const metadata: Metadata = {
 	description:
 		"Explore Sydney's hidden gems with Ann's Uc Local Tours. Expert guides, tailored experiences, and unforgettable adventures await!",
 	metadataBase: new URL("https://www.annsuclocaltours.com"),
-	keywords: [],
-	alternates: {
-		canonical: "https://www.annsuclocaltours.com/",
-		// languages: {
-		// 	"en-US": "https://www.annsuclocaltours.com/en",
-		// 	"vn-VN": "https://www.annsuclocaltours.com/vn",
-		// },
-		media: {
-			"only screen and (max-width: 600px)":
-				"https://www.annsuclocaltours.com/mobile",
-		},
-		types: {
-			"application/rss+xml": "https://www.annsuclocaltours.com/rss",
-		},
-	},
+	keywords: [
+		"Sydney",
+		"Local Tours",
+		"Tourist Information",
+		"Expert Guides",
+		"Tailored Experiences",
+		"Hidden Gems",
+		"Adventure",
+		"Travel",
+		"Australia",
+		"Sightseeing",
+		"Exploration",
+		"Cultural Tours",
+		"City Tours",
+		"Customized Itineraries",
+		"Tourist Attractions",
+		"Travel Planning",
+		"Guided Excursions",
+		"Vacation Experiences",
+		"Local Insights",
+		"Authentic Travel",
+	],
+	// alternates: {
+	// 	canonical: "https://www.annsuclocaltours.com/",
+	// 	// languages: {
+	// 	// 	"en-US": "https://www.annsuclocaltours.com/en",
+	// 	// 	"vn-VN": "https://www.annsuclocaltours.com/vn",
+	// 	// },
+	// 	media: {
+	// 		"only screen and (max-width: 600px)":
+	// 			"https://www.annsuclocaltours.com/mobile",
+	// 	},
+	// 	types: {
+	// 		"application/rss+xml": "https://www.annsuclocaltours.com/rss",
+	// 	},
+	// },
 	openGraph: {
 		title: "Ann's Uc Local Tours",
 		description:
