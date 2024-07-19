@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { CardBooking } from "../form/CardBooking";
 import { ShineBorderBasicDemo } from "../magicui/shine-border/ShineBorderBasicDemo";
 import { SparklesTextContactDemo } from "../magicui/sparkles-text/SparklesTextContactDemo";
@@ -51,15 +53,27 @@ function Contact() {
 				<Card className='relative h-40 w-full overflow-hidden'>
 					<address>
 						<Link
-							href='https://maps.apple.com/?address=32%20Longview%20Cr,%20Stanwell%20Tops%20NSW%202508,%20Australia&ll=-34.220603,150.979629&q=32%20Longview%20Cr'
+							href='https://www.google.com/maps/place/32+Longview+Cres,+Stanwell+Tops+NSW+2508/@-34.2206543,150.9795387,20.57z/data=!4m6!3m5!1s0x6b12ddc052fc1ba7:0x7663a41ada54cb82!8m2!3d-34.2206869!4d150.9796514!16s%2Fg%2F11cskb7qx_?entry=ttu'
 							target='_blank'
 						>
-							<Image
-								src='/Images/icons/address.webp'
-								alt='address'
-								fill
-								className='object-cover object-center'
-							/>
+							<Suspense
+								fallback={
+									<div className='flex size-full max-h-screen flex-col items-center justify-center space-y-3 overflow-hidden bg-background'>
+										<Skeleton className='aspect-video w-4/5 rounded-xl' />
+										<div className='flex w-full flex-col items-center justify-center space-y-2'>
+											<Skeleton className='h-4 w-3/5 ' />
+											<Skeleton className='h-4 w-3/5 ' />
+										</div>
+									</div>
+								}
+							>
+								<Image
+									src='/Images/icons/address.webp'
+									alt='address'
+									fill
+									className='object-cover object-center'
+								/>
+							</Suspense>
 						</Link>
 					</address>
 				</Card>
