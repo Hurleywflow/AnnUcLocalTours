@@ -1,5 +1,6 @@
+"use client";
 import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
-import FloatingNav from "@/components/cc/floating-navbar/FloatingNavbar";
+import { FloatingNav1 } from "@/components/cc/floating-navbar/FloatingNavbar";
 import { H5 } from "@/components/cc/text-utils/TextUtils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -7,21 +8,31 @@ import { Button } from "@/components/ui/button";
 import { blogData } from "@/data/blogs";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 const Blog = ({ params }: { params: { id: string } }) => {
+	const pathname = usePathname();
+	// Check if the pathname includes "/vi" or "/en"
+	const isEn = pathname.includes("/en");
+
+	// Determine the locale based on the pathname
+	let locale = "vi";
+	if (isEn) {
+		// Default locale
+		locale = "en";
+	}
 	const id = params.id;
 	const blog = blogData.find((blog) => blog.id === String(id));
-	// check if the blog exists
 	if (!blog) {
+		// check if the blog exists
 		return notFound();
 	}
 	return (
 		<div className='relative min-h-screen w-full py-10'>
-			<FloatingNav />
+			<FloatingNav1 />
 			<div className='container mx-auto flex flex-col gap-14'>
 				<div className='flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between'>
-					<Link href='/#blogs'>
+					<Link href={`/${locale}/#blogs`}>
 						<Button className='group gap-4'>
 							All Destination
 							<MoveLeft className='size-4 transition-all duration-100 ease-linear hover:group-hover:-translate-x-3' />

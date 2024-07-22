@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 const tabs = [
 	{
@@ -26,6 +27,32 @@ const tabs = [
 	},
 	{
 		text: "Contact",
+		link: "/#contact",
+	},
+];
+const tabsVi = [
+	{
+		text: "Trang chủ",
+		link: "/",
+	},
+	{
+		text: "Giới thiệu",
+		link: "/#intro",
+	},
+	{
+		text: "Tours Nổi  Bật",
+		link: "/#blogs",
+	},
+	{
+		text: "Tours Thường Xuyên",
+		link: "/#our-tours",
+	},
+	{
+		text: "Phản Hồi",
+		link: "/#feedback",
+	},
+	{
+		text: "Liên Hệ",
 		link: "/#contact",
 	},
 ];
@@ -76,6 +103,7 @@ type LineTabProps = {
 };
 
 const LineTabs = ({ center, customID }: LineTabProps): JSX.Element => {
+	const pathname = usePathname();
 	const [selected, setSelected] = useState<string>(tabs[0].text);
 	return (
 		<div
@@ -83,17 +111,29 @@ const LineTabs = ({ center, customID }: LineTabProps): JSX.Element => {
 				center ? "justify-center " : ""
 			} flex items-center gap-2 border-b border-border`}
 		>
-			{tabs.map((tab) => (
-				<Link href={tab.link} key={tab.text}>
-					<Tab
-						text={tab.text}
-						selected={selected === tab.text}
-						setSelected={setSelected}
-						// key={tab.text}
-						customID={customID}
-					/>
-				</Link>
-			))}
+			{pathname.includes("vi")
+				? tabsVi.map((tab) => (
+						<Link href={tab.link} key={tab.text}>
+							<Tab
+								text={tab.text}
+								selected={selected === tab.text}
+								setSelected={setSelected}
+								// key={tab.text}
+								customID={customID}
+							/>
+						</Link>
+					))
+				: tabs.map((tab) => (
+						<Link href={tab.link} key={tab.text}>
+							<Tab
+								text={tab.text}
+								selected={selected === tab.text}
+								setSelected={setSelected}
+								// key={tab.text}
+								customID={customID}
+							/>
+						</Link>
+					))}
 		</div>
 	);
 };

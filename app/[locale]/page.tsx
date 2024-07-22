@@ -53,20 +53,18 @@ const Home = (): JSX.Element => {
 					<div className='h-fit w-full gap-10' id='intro'>
 						<Intro />
 					</div>
-					<div className='relative h-fit w-full gap-10'>
-						<FloatingNav />
-						<div className='h-fit w-full' id='blogs'>
-							<Blogs />
-						</div>
-						<div className='h-fit w-full' id='our-tours'>
-							<OurTours />
-						</div>
-						<div className='h-fit w-full' id='feedback'>
-							<FeedBack />
-						</div>
-						<div className='h-fit w-full gap-10' id='contact'>
-							<Contact />
-						</div>
+					<FloatingNav />
+					<div className='h-fit w-full' id='blogs'>
+						<Blogs />
+					</div>
+					<div className='h-fit w-full' id='our-tours'>
+						<OurTours />
+					</div>
+					<div className='h-fit w-full' id='feedback'>
+						<FeedBack />
+					</div>
+					<div className='h-fit w-full gap-10' id='contact'>
+						<Contact />
 					</div>
 				</div>
 			</Container>

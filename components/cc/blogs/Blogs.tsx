@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "@/components/cc/container/container";
 import { H5 } from "@/components/cc/text-utils/TextUtils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -7,9 +8,21 @@ import { blogData } from "@/data/blogs";
 import { MotionDiv } from "@/lib/framer";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SparklesTextBlogslDemo } from "../magicui/sparkles-text/SparklesTextBlogslDemo";
 
 const Blogs = () => {
+	const pathname = usePathname();
+	// Check if the pathname includes "/vi" or "/en"
+	const isEn = pathname.includes("/en");
+
+	// Determine the locale based on the pathname
+	let locale = "vi";
+	if (isEn) {
+		// Default locale
+		locale = "en";
+	}
+
 	// go through blogData and remove the last one
 	const blogDataSlice = blogData.slice(0, blogData.length - 1);
 
@@ -23,7 +36,7 @@ const Blogs = () => {
 							{/* render the first log posts */}
 							<div className='col-span-2 flex cursor-pointer flex-col gap-4  md:col-span-3 lg:col-span-4'>
 								<Link
-									href={`/blogs/${blogData[blogData.length - 1].id}`}
+									href={`/${locale}/blogs/${blogData[blogData.length - 1].id}`}
 									key={blogData[blogData.length - 1].id}
 								>
 									<div className='relative aspect-video overflow-hidden  rounded-md bg-muted'>
@@ -62,7 +75,7 @@ const Blogs = () => {
 							</div>
 							{/* render the rest of the posts */}
 							{blogDataSlice.map((blog) => (
-								<Link href={`/blogs/${blog.id}`} key={blog.id}>
+								<Link href={`/${locale}/blogs/${blog.id}`} key={blog.id}>
 									<MotionDiv
 										className='col-span-1 flex cursor-pointer flex-col gap-2 hover:opacity-75 '
 										key={blog.id}

@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDays, format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -73,6 +73,7 @@ const FormSchema = z.object({
 });
 
 export default function BookingForm() {
+	const pathname = usePathname();
 	const [date, setDate] = useState<Date>();
 	const { toast } = useToast();
 	const router = useRouter();
@@ -171,7 +172,9 @@ export default function BookingForm() {
 					name='username'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Username</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Tên" : "Username"}
+							</FormLabel>
 							<FormControl>
 								<Input placeholder="Ann's Uc Local Tours" {...field} />
 							</FormControl>
@@ -187,7 +190,9 @@ export default function BookingForm() {
 					name='phone'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Phone</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Điện thoại" : "Phone"}
+							</FormLabel>
 							<FormControl>
 								<Input placeholder='+61401211890' {...field} />
 							</FormControl>
@@ -203,7 +208,9 @@ export default function BookingForm() {
 					name='email'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Email</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Email" : "Email"}
+							</FormLabel>
 							<FormControl>
 								<Input placeholder='anthuy.yellowpages@gmail.com' {...field} />
 							</FormControl>
@@ -219,7 +226,11 @@ export default function BookingForm() {
 					name='numberOfPeople'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Number of People</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi")
+									? "Số lượng người"
+									: "Number of People"}
+							</FormLabel>
 							<FormControl>
 								<Input placeholder='1' {...field} />
 							</FormControl>
@@ -235,7 +246,9 @@ export default function BookingForm() {
 					name='dateTravel'
 					render={({ field }) => (
 						<FormItem className='flex flex-col'>
-							<FormLabel>Travel Date</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Ngày đi du lịch" : "Travel Date"}
+							</FormLabel>
 							<Popover>
 								<PopoverTrigger asChild>
 									<Button
@@ -291,10 +304,10 @@ export default function BookingForm() {
 					name='otherRequest'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>Other enquiry</FormLabel>
+							<FormLabel>{pathname.includes("/vi") ? "Yêu cầu khác" : "Other enquiry"}</FormLabel>
 							<FormControl>
 								<Textarea
-									placeholder='Tell us a little bit about your enquiry.'
+									placeholder={pathname.includes("/vi") ? "Hãy cho chúng tôi biêt thêm về yêu cầu khác của bạn." : "Tell us a little bit about your enquiry."}
 									className='resize-none'
 									{...field}
 								/>
@@ -306,7 +319,7 @@ export default function BookingForm() {
 				/>
 
 				<Button type='submit' className='w-full self-center'>
-					Submit
+					{pathname.includes("/vi") ? "Gửi" : "Submit"}
 				</Button>
 			</form>
 		</Form>

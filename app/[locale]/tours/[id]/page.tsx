@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-array-index-key */
 import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
 import { H5, P } from "@/components/cc/text-utils/TextUtils";
@@ -5,30 +6,40 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ToursAustralia, ToursOtherCountries } from "@/data/tours";
 
-import FloatingNav from "@/components/cc/floating-navbar/FloatingNavbar";
+import { FloatingNav1 } from "@/components/cc/floating-navbar/FloatingNavbar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 function AustraliaTours({ params }: { params: { id: string } }) {
+	const pathname = usePathname();
+	// Check if the pathname includes "/vi" or "/en"
+	const isEn = pathname.includes("/en");
+	// Determine the locale based on the pathname
+	let locale = "vi";
+	if (isEn) {
+		// Default locale
+		locale = "en";
+	}
 	const id = params.id;
 	// concatenate the australiaTours and vietNamTours
 	const allTours = [...ToursAustralia, ...ToursOtherCountries];
 	const AllTours = allTours.find((tour) => tour.id === id);
-	// check if the australiaTours exists
 	if (!AllTours) {
+		// check if the australiaTours exists
 		return notFound();
 	}
+
 	return (
 		<div className='relative min-h-screen w-full py-10'>
-			<FloatingNav />
+			<FloatingNav1 />
 			<div className='container mx-auto flex flex-col gap-14'>
 				<div className='flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between'>
-					<Link href='/#blogs'>
+					<Link href={`/${locale}/#our-tours`}>
 						<Button className='group gap-4'>
-							All Destination{" "}
+							All Destination
 							<MoveLeft className='size-4 transition-all duration-100 ease-linear hover:group-hover:-translate-x-3' />
 						</Button>
 					</Link>

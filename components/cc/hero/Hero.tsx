@@ -1,3 +1,4 @@
+"use client";
 import { H1, H6 } from "@/components/cc/text-utils/TextUtils";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/lib/framer";
@@ -5,8 +6,10 @@ import Link from "next/link";
 import AvatarCirclesDemo from "../avatar-circles/AvatarCirclesDemo";
 import { BorderBeam } from "../magicui/boderBeam/BorderBeam";
 import { ImagesSlider } from "./ImagesSlider";
+import { usePathname } from "next/navigation";
 
 function Hero(): JSX.Element {
+	const pathname = usePathname();
 	const images = [
 		"/Images/hero/1.jpg",
 		"/Images/hero/2.jpg",
@@ -48,8 +51,9 @@ function Hero(): JSX.Element {
 						</H1>
 					</MotionDiv>
 					<H6 className=''>
-						Discover lively cities, rugged wilderness, and beautiful beaches
-						with the help of knowledgeable guides.
+						{pathname.includes("/vi")
+							? "Khám phá các thành phố sôi động, vùng hoang dã thô sơ và những bãi biển tuyệt đẹp với sự hỗ trợ của những hướng dẫn viên chuyên nghiệp."
+							: "Discover lively cities, rugged wilderness, and beautiful beaches with the help of knowledgeable guides."}
 					</H6>
 					<Link href='/#feedback'>
 						<Button className='flex items-center gap-5' variant='ghost'>

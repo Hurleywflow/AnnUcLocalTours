@@ -1,8 +1,10 @@
+"use client";
 import { Card, CardHeader } from "@/components/ui/card";
 import type { TourType } from "@/data/tours";
 import { MotionDiv } from "@/lib/framer";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { H4, H6 } from "../text-utils/TextUtils";
 
 type DestinationSectionProps = {
@@ -14,13 +16,24 @@ function DestinationSections({
 	tours,
 	title,
 }: Readonly<DestinationSectionProps>): JSX.Element {
+	const pathname = usePathname();
+	// Check if the pathname includes "/vi" or "/en"
+	const isEn = pathname.includes("/en");
+
+	// Determine the locale based on the pathname
+	let locale = "vi";
+	if (isEn) {
+		// Default locale
+		locale = "en";
+	}
 	return (
 		<Card className='w-full p-0'>
 			<CardHeader className='text-center'>
 				<H4>{title}</H4>
 				<span className='italic text-primary'>
-					*** You can visit each tour to view the schedule, time, date,
-					department, price, and details of each tour.
+					{pathname.includes("/vi")
+						? "*** Bạn có thể xem thêm chi tiết mỗi chuyến tham quan để xem lịch trình, thời gian, ngày, bộ phận, giá cả của mỗi chuyến tham quan."
+						: "*** You can visit each tour to view the schedule, time, date, department, price, and details of each tour."}
 				</span>
 				<br />
 			</CardHeader>
@@ -36,7 +49,7 @@ function DestinationSections({
 							ease: "linear",
 						}}
 					>
-						<Link href={`/tours/${tour.id}`}>
+						<Link href={`/${locale}/tours/${tour.id}`}>
 							<Card className='relative flex aspect-square w-full flex-col items-center justify-center overflow-hidden shadow-lg md:aspect-video'>
 								<Image
 									src={tour.imageUrl?.[0] ?? "Destination Image"}

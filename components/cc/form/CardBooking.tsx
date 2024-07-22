@@ -1,17 +1,20 @@
+"use client";
 import BookingForm from "@/components/cc/form/BookingForm";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { H5, Span } from "../text-utils/TextUtils";
 
 export function CardBooking() {
+	const pathname = usePathname();
 	return (
 		<Card className='flex w-full flex-col items-center justify-center'>
 			<CardHeader className='flex items-center justify-center'>
-				<H5>Booking</H5>
+				<H5>{pathname.includes("/vi") ? "Đặt Chỗ" : "Booking"}</H5>
 				<Span>
-					{" "}
-					Fill out the form below to inform us about your tour, and we'll
-					respond promptly.
+					{pathname.includes("/vi")
+						? "Điền vào biểu mẫu bên dưới để thông báo cho chúng tôi về chuyến tham quan của bạn và chúng tôi sẽ phản hồi nhanh nhất có thể."
+						: "Fill out the form below to inform us about your tour, and we'll respond promptly."}
 				</Span>
 			</CardHeader>
 			<CardContent className='grid w-full grid-cols-1 gap-4 md:grid-cols-2'>
