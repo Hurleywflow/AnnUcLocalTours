@@ -39,6 +39,7 @@ const Contact = dynamic(async () => import("@/components/cc/contact/Contact"), {
 });
 
 const Home = (): JSX.Element => {
+	// const t = useTranslations("HomePage");
 	return (
 		<main className='m-0 h-fit w-full p-0'>
 			<Container>

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
@@ -17,7 +19,7 @@ const DynamicFooter = dynamic(
 		loading: () => <Loading />,
 	},
 );
-import "./globals.css";
+import "../globals.css";
 import "@splidejs/react-splide/css";
 
 const fontSans = FontSans({
@@ -131,13 +133,18 @@ export const metadata: Metadata = {
 		},
 	},
 };
-const RootLayout = ({
+export default async function LocaleLayout({
 	children,
+	params: { locale },
 }: Readonly<{
 	children: React.ReactNode;
-}>) => {
+	params: { locale: string };
+}>) {
+	// Providing all messages to the client
+	// side is the easiest way to get started
+	const messages = await getMessages();
 	return (
-		<html lang='en' className='h-full ' suppressHydrationWarning>
+		<html lang={locale} className='h-full ' suppressHydrationWarning>
 			<head />
 			<body
 				className={cn(
@@ -148,17 +155,22 @@ const RootLayout = ({
 					`${pinyon_script} `,
 				)}
 			>
-				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
-					<Navbar />
-					{children}
-					<DynamicFooter />
-				</ThemeProvider>
-				<Toaster richColors />
-				<Analytics />
-				<SpeedInsights />
-				<TailwindIndicator />
+				<NextIntlClientProvider messages={messages}>
+					<ThemeProvider
+						attribute='class'
+						enableSystem
+						disableTransitionOnChange
+					>
+						<Navbar />
+						{children}
+						<DynamicFooter />
+					</ThemeProvider>
+					<Toaster richColors />
+					<Analytics />
+					<SpeedInsights />
+					<TailwindIndicator />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
-};
-export default RootLayout;
+}
