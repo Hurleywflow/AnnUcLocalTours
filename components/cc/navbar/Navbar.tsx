@@ -52,7 +52,7 @@ function Navbar(): JSX.Element {
 				<SheetContent side='left'>
 					<nav className='grid gap-6 text-lg font-medium'>
 						<Link
-							href='/'
+							href={pathname.includes("/vi") ? "/vi" : "/en"}
 							className='flex items-center gap-2 text-lg font-semibold'
 						>
 							<div className='relative size-10 overflow-hidden rounded-full'>
