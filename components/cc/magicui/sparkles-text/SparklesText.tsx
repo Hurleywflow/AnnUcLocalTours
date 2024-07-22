@@ -66,7 +66,7 @@ type SparklesTextProps = {
 
 const SparklesText: React.FC<SparklesTextProps> = ({
 	text,
-	colors = { first: "#A07CFE", second: "#8fd2fe" },
+	colors = { first: "#F2F2F2", second: "#E31B5D" },
 	className,
 	sparklesCount = 10,
 	...props
@@ -127,7 +127,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
 				{sparkles.map((sparkle) => (
 					<Sparkle key={sparkle.id} {...sparkle} />
 				))}
-				<strong className='text-balance bg-gradient-to-r from-[var(--sparkles-first-color)] to-[var(--sparkles-second-color)] bg-clip-text text-center text-transparent'>
+				<strong className='text-balance bg-gradient-to-br from-[var(--sparkles-first-color)] to-[var(--sparkles-second-color)] bg-clip-text text-center text-transparent'>
 					{text}
 				</strong>
 			</span>

@@ -17,6 +17,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		lastModified: new Date(),
 		priority: 1.0,
 	}));
+	const postEntries2 = blogData.map((post) => ({
+		url: `https://annsuclocaltours.com/blogs/${post.id}`,
+		// changeFrequency: "daily",
+		lastModified: new Date(),
+		priority: 1.0,
+	}));
+	const postEntries3 = blogData.map((post) => ({
+		url: `https://annsuclocaltours.com/blogs/${post.id}`,
+		// changeFrequency: "daily",
+		lastModified: new Date(),
+		priority: 1.0,
+	}));
 
 	return [
 		{
@@ -46,5 +58,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		},
 		...postEntries,
 		...postEntries1,
+		// now with this url  https://annsuclocaltours.com
+		{
+			url: "https://annsuclocaltours.com",
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: "https://annsuclocaltours.com/booking",
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: "https://annsuclocaltours.com/favicon.ico",
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: "https://annsuclocaltours.com/blogs",
+			lastModified: new Date(),
+			priority: 0.7,
+		},
+		{
+			url: "https://annsuclocaltours.com/tours",
+			lastModified: new Date(),
+			priority: 0.6,
+		},
+		...postEntries2,
+		...postEntries3,
 	];
 }

@@ -16,8 +16,8 @@ function ContactSocial() {
 					<Image
 						src={mailIcon}
 						alt='mail'
-						width={40}
-						height={40}
+						width={45}
+						height={45}
 						className=''
 					/>
 				</Button>
@@ -36,19 +36,25 @@ function ContactSocial() {
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
 			<Link href="sms:61401211890;?&body=Hi Ann's Uc Local Tours, I would like to know about a tour">
-				<Button variant='ghost'>
-					<Image src={sms} alt='sms' width={40} height={40} className='' />
+				<Button variant='ghost' className=' overflow-hidden'>
+					<Image
+						src={sms}
+						alt='sms'
+						width={40}
+						height={40}
+						className='rounded-lg'
+					/>
 				</Button>
 			</Link>
 			<Separator orientation='vertical' className=' h-10' />
 			<Link href='https://zalo.me/+61401211890' target='_blank'>
-				<Button variant='ghost'>
+				<Button variant='ghost' className=' overflow-hidden'>
 					<Image
 						src={zaloIcon}
 						alt='zalo'
 						width={40}
 						height={40}
-						className=''
+						className='rounded-lg'
 					/>
 				</Button>
 			</Link>

@@ -8,11 +8,17 @@ import { ImagesSlider } from "./ImagesSlider";
 
 function Hero(): JSX.Element {
 	const images = [
-		// "/Images/hero/1.jpg",
+		"/Images/hero/1.jpg",
 		"/Images/hero/2.jpg",
-		// "/Images/hero/3.jpg",
+		"/Images/hero/3.jpg",
 		"/Images/hero/4.jpg",
 		"/Images/hero/5.jpg",
+		"/Images/hero/6.jpg",
+		"/Images/hero/7.jpg",
+		"/Images/hero/8.jpg",
+		"/Images/hero/9.jpg",
+		"/Images/hero/10.jpg",
+		"/Images/hero/11.jpg",
 	];
 	return (
 		<div className=' flex h-screen w-full flex-col items-center justify-center'>
@@ -26,7 +32,7 @@ function Hero(): JSX.Element {
 					// 	duration: 0.5,
 					// 	ease: "easeInOut",
 					// }}
-					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/70 p-2 backdrop-blur-sm lg:w-fit'
+					className='absolute bottom-20 z-10 flex h-fit w-4/5 flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/50 p-2 backdrop-blur-sm lg:w-fit'
 				>
 					<BorderBeam size={250} duration={12} delay={9} />
 					<MotionDiv

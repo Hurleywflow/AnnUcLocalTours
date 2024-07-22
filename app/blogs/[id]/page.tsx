@@ -1,4 +1,5 @@
 import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
+import FloatingNav from "@/components/cc/floating-navbar/FloatingNavbar";
 import { H5 } from "@/components/cc/text-utils/TextUtils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +17,8 @@ const Blog = ({ params }: { params: { id: string } }) => {
 		return notFound();
 	}
 	return (
-		<div className='min-h-screen w-full py-10'>
+		<div className='relative min-h-screen w-full py-10'>
+			<FloatingNav />
 			<div className='container mx-auto flex flex-col gap-14'>
 				<div className='flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between'>
 					<Link href='/#blogs'>

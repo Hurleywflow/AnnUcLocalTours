@@ -1,10 +1,9 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 import { CardBooking } from "../form/CardBooking";
-import { ShineBorderBasicDemo } from "../magicui/shine-border/ShineBorderBasicDemo";
 import { SparklesTextContactDemo } from "../magicui/sparkles-text/SparklesTextContactDemo";
 import { P } from "../text-utils/TextUtils";
 
@@ -18,42 +17,17 @@ function Contact() {
 					are here to help and ensure you have the best experience possible.
 				</P>
 				<CardBooking />
-				<div className='flex w-full items-center justify-center px-10'>
+				{/* continue with card */}
+				{/* <div className='flex w-full items-center justify-center px-10'>
 					<hr className='flex-1 border-t border-border' />
 					<span className='px-2 text-sm'>OR CONTINUE WITH</span>
 					<hr className='flex-1 border-t border-border' />
-				</div>
-				<Card className=' flex h-fit w-full flex-col items-center justify-center bg-background'>
-					<CardHeader className='flex items-center justify-center'>
-						<p className='text-pretty'>
-							<span className='font-bold text-primary'>* </span>
-							You can also reach out to us via email or through various
-							platforms such as Facebook, SMS, Zalo, and WhatsApp for your
-							convenience. Our team will get back to you as soon as possible.
-						</p>
-						<p className='text-pretty'>
-							<span className='font-bold text-primary'>* </span> if you have any
-							questions, please do not hesitate to contact us. We are here to
-							help and ensure you have the best experience possible.
-						</p>
-					</CardHeader>
-					<CardContent className='flex items-center justify-center'>
-						<ShineBorderBasicDemo />
-					</CardContent>
-					<p className='text-balance text-center text-base font-medium'>
-						<span className='font-bold text-primary'>* </span>
-						<span className='font-bold text-primary'>* </span>
-						<span className='font-bold text-primary'>* </span> Our trading hours
-						are Monday to Sunday, 9:00 AM to 9:00 PM.{" "}
-						<span className='font-bold text-primary'>* </span>
-						<span className='font-bold text-primary'>* </span>
-						<span className='font-bold text-primary'>* </span>
-					</p>
-				</Card>
+				</div> */}
+				{/* map address card */}
 				<Card className='relative h-40 w-full overflow-hidden'>
 					<address>
 						<Link
-							href='https://www.google.com/maps/place/32+Longview+Cres,+Stanwell+Tops+NSW+2508/@-34.2206543,150.9795387,20.57z/data=!4m6!3m5!1s0x6b12ddc052fc1ba7:0x7663a41ada54cb82!8m2!3d-34.2206869!4d150.9796514!16s%2Fg%2F11cskb7qx_?entry=ttu'
+							href='https://www.google.com/maps/place/Sydney+Opera+House/@-35.8092221,145.2490189,7z/data=!4m20!1m13!4m12!1m4!2m2!1d144.5574042!2d-37.7091052!4e1!1m6!1m2!1s0x6b12ae665e892fdd:0x3133f8d75a1ac251!2sSydney+Opera+House,+Bennelong+Point,+Sydney+NSW+2000!2m2!1d151.2152967!2d-33.8567844!3m5!1s0x6b12ae665e892fdd:0x3133f8d75a1ac251!8m2!3d-33.8567844!4d151.2152967!16zL20vMDZfbm0?entry=ttu'
 							target='_blank'
 						>
 							<Suspense

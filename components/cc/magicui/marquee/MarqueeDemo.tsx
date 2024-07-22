@@ -34,7 +34,7 @@ const ReviewCard = ({
 	src: CardType["src"];
 }): JSX.Element => {
 	return (
-		<Card className='relative h-52 w-[350px] max-w-full cursor-pointer overflow-hidden bg-[#202020] md:w-[450px]'>
+		<Card className='relative h-52 w-[350px] max-w-full cursor-pointer overflow-hidden bg-[#252326] md:w-[450px]'>
 			<CardContent className=''>
 				<Suspense
 					fallback={
@@ -62,13 +62,13 @@ const ReviewCard = ({
 const MarqueeDemo = (): JSX.Element => {
 	return (
 		<div className='relative flex size-full flex-col items-center justify-center gap-2 overflow-hidden border-border p-2'>
-			<Marquee pauseOnHover className='[--duration:190s]'>
+			<Marquee pauseOnHover className='[--duration:140s]'>
 				{firstRow.map((review) => (
 					<ReviewCard key={review.id} {...review} />
 				))}
 			</Marquee>
 			<div className=' w-full border-t-4 border-dashed border-border' />
-			<Marquee reverse pauseOnHover className='[--duration:190s]'>
+			<Marquee reverse pauseOnHover className='[--duration:140s]'>
 				{secondRow.map((review) => (
 					<ReviewCard key={review.id} {...review} />
 				))}

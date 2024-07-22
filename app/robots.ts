@@ -4,10 +4,22 @@ export default function robots(): MetadataRoute.Robots {
 	return {
 		rules: {
 			userAgent: "*",
-			allow: ["/", "/blogs", "/booking", "/tours", "/blogs/*", "/tours/*"],
+			allow: [
+				"/",
+				"/favicon.ico",
+				"opengraph-image.png",
+				"/blogs",
+				"/booking",
+				"/tours",
+				"/blogs/*",
+				"/tours/*",
+			],
 			// not allow to show in google
 			// disallow: "/studio",
 		},
-		sitemap: `${process.env.BASE_URL}/sitemap.xml`,
+		sitemap: [
+			`${process.env.BASE_URL}/sitemap.xml`,
+			"https://annsuclocaltours.com/sitemap.xml",
+		],
 	};
 }

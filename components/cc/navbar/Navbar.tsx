@@ -104,7 +104,7 @@ function Navbar(): JSX.Element {
 					<Link href='tel:+61401211890'>
 						<span className='relative text-base uppercase'>call now</span>
 						<div className='absolute inset-0 top-[-20px] flex h-[calc(100%+40px)] w-full animate-shine-infinite justify-center blur-md'>
-							<div className='relative h-full w-8 bg-accent' />
+							<div className='relative h-full w-10 bg-background/30' />
 						</div>
 					</Link>
 				</Button>

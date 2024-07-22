@@ -5,7 +5,7 @@ export function ShineBorderBasicDemo() {
 	return (
 		<ShineBorder
 			className='bg-background text-center text-2xl font-medium capitalize md:text-4xl'
-			color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+			color={["#A07CFE", "#ff7625", "#E31B5D"]}
 		>
 			<ContactSocial />
 		</ShineBorder>
