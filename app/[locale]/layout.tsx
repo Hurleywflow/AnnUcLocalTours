@@ -133,7 +133,8 @@ export const metadata: Metadata = {
 		},
 	},
 };
-export default async function LocaleLayout({
+export default function LocaleLayout({
+// export default async function LocaleLayout({
 	children,
 	params: { locale },
 }: Readonly<{
@@ -142,7 +143,6 @@ export default async function LocaleLayout({
 }>) {
 	// Providing all messages to the client
 	// side is the easiest way to get started
-	const messages = await getMessages();
 	return (
 		<html lang={locale} className='h-full ' suppressHydrationWarning>
 			<head />
@@ -155,21 +155,19 @@ export default async function LocaleLayout({
 					`${pinyon_script} `,
 				)}
 			>
-				<NextIntlClientProvider messages={messages}>
-					<ThemeProvider
-						attribute='class'
-						enableSystem
-						disableTransitionOnChange
-					>
-						<Navbar />
-						{children}
-						<DynamicFooter />
-					</ThemeProvider>
-					<Toaster richColors />
-					<Analytics />
-					<SpeedInsights />
-					<TailwindIndicator />
-				</NextIntlClientProvider>
+				<ThemeProvider
+					attribute='class'
+					enableSystem
+					disableTransitionOnChange
+				>
+					<Navbar />
+					{children}
+					<DynamicFooter />
+				</ThemeProvider>
+				<Toaster richColors />
+				<Analytics />
+				<SpeedInsights />
+				<TailwindIndicator />
 			</body>
 		</html>
 	);

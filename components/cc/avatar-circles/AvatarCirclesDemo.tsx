@@ -8,6 +8,6 @@ const avatarUrls = [
 	"/Images/Testimonials/t5.png",
 ];
 
-export default async function AvatarCirclesDemo() {
+export default function AvatarCirclesDemo() {
 	return <AvatarCircles numPeople={19} avatarUrls={avatarUrls} />;
 }
