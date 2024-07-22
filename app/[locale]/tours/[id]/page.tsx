@@ -4,7 +4,12 @@ import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnail
 import { H5, P } from "@/components/cc/text-utils/TextUtils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ToursAustralia, ToursOtherCountries } from "@/data/tours";
+import {
+	ToursAustralia,
+	ToursAustraliaVi,
+	ToursOtherCountries,
+	ToursOtherCountriesVi,
+} from "@/data/tours";
 
 import { FloatingNav1 } from "@/components/cc/floating-navbar/FloatingNavbar";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -26,8 +31,15 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 	const id = params.id;
 	// concatenate the australiaTours and vietNamTours
 	const allTours = [...ToursAustralia, ...ToursOtherCountries];
+	const allToursVi = [...ToursAustraliaVi, ...ToursOtherCountriesVi];
 	const AllTours = allTours.find((tour) => tour.id === id);
+	const AllToursVi = allToursVi.find((tour) => tour.id === id);
+
 	if (!AllTours) {
+		// check if the australiaTours exists
+		return notFound();
+	}
+	if (!AllToursVi) {
 		// check if the australiaTours exists
 		return notFound();
 	}
@@ -39,71 +51,135 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 				<div className='flex w-full flex-col gap-8 sm:flex-row sm:items-center sm:justify-between'>
 					<Link href={`/${locale}/#our-tours`}>
 						<Button className='group gap-4'>
-							All Destination
+							{pathname.includes("/vi") ? "Tất cả địa điểm" : "All Destination"}
 							<MoveLeft className='size-4 transition-all duration-100 ease-linear hover:group-hover:-translate-x-3' />
 						</Button>
 					</Link>
 				</div>
 				<div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
 					<div className='flex flex-col gap-4 md:col-span-2'>
-						<CarouselWithThumbnails
-							slides={Array.isArray(AllTours.imageUrl) ? AllTours.imageUrl : []}
-						/>
+						{pathname.includes("/vi") ? (
+							<CarouselWithThumbnails
+								slides={
+									Array.isArray(AllToursVi.imageUrl) ? AllToursVi.imageUrl : []
+								}
+							/>
+						) : (
+							<CarouselWithThumbnails
+								slides={
+									Array.isArray(AllTours.imageUrl) ? AllTours.imageUrl : []
+								}
+							/>
+						)}
+
 						<div className='flex flex-col items-start gap-4'>
 							<Badge>⭐️⭐️⭐️⭐️⭐️</Badge>
-							{AllTours?.price && AllTours.price.length > 0 && (
-								<Badge className='text-center text-base'>
-									{AllTours?.price}
-								</Badge>
-							)}
+							{pathname.includes("/vi")
+								? AllToursVi?.price &&
+									AllToursVi.price.length > 0 && (
+										<Badge className='text-center text-base'>
+											{AllToursVi?.price}
+										</Badge>
+									)
+								: AllTours?.price &&
+									AllTours.price.length > 0 && (
+										<Badge className='text-center text-base'>
+											{AllTours?.price}
+										</Badge>
+									)}
 						</div>
 						<div className='flex flex-col gap-2'>
-							<H5 className='text-start'>{AllTours.title}</H5>
+							<H5 className='text-start'>
+								{pathname.includes("/vi") ? AllToursVi.title : AllTours.title}
+							</H5>
 							<div className='grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3'>
-								{AllTours?.subTitle &&
-									AllTours.subTitle.length > 0 &&
-									AllTours.subTitle.map((subTitle, index) => (
-										<Card
-											className='flex flex-col items-center justify-center gap-1 md:gap-2'
-											key={`${index}-${subTitle.title}`}
-										>
-											<CardHeader>
-												<P>{subTitle.title}</P>
-											</CardHeader>
-											<Separator className='' />
-											<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
-												<p>
-													<span className='font-semibold'>- Price: </span>
-													{subTitle?.price}
-												</p>
-												<p>
-													<span className='font-semibold'>- Departs: </span>
-													{subTitle?.departs}
-												</p>
-												<p>
-													<span className='font-semibold'>- Schedule: </span>
-													{subTitle?.schedule}
-												</p>
-											</CardContent>
-										</Card>
-									))}
+								{pathname.includes("/vi")
+									? AllToursVi?.subTitle &&
+										AllToursVi.subTitle.length > 0 &&
+										AllToursVi.subTitle.map((subTitleVi, index) => (
+											<Card
+												className='flex flex-col items-center justify-center gap-1 md:gap-2'
+												key={`${index}-${subTitleVi.title}`}
+											>
+												<CardHeader>
+													<P>{subTitleVi.title}</P>
+												</CardHeader>
+												<Separator className='' />
+												<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+													<p>
+														<span className='font-semibold'>- Giá: </span>
+														{subTitleVi?.price}
+													</p>
+													<p>
+														<span className='font-semibold'>
+															- Ngày khởi hành:
+														</span>
+														{subTitleVi?.departs}
+													</p>
+													<p>
+														<span className='font-semibold'>
+															- Lịch trình:{" "}
+														</span>
+														{subTitleVi?.schedule}
+													</p>
+												</CardContent>
+											</Card>
+										))
+									: AllTours?.subTitle &&
+										AllTours.subTitle.length > 0 &&
+										AllTours.subTitle.map((subTitle, index) => (
+											<Card
+												className='flex flex-col items-center justify-center gap-1 md:gap-2'
+												key={`${index}-${subTitle.title}`}
+											>
+												<CardHeader>
+													<P>{subTitle.title}</P>
+												</CardHeader>
+												<Separator className='' />
+												<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+													<p>
+														<span className='font-semibold'>- Price: </span>
+														{subTitle?.price}
+													</p>
+													<p>
+														<span className='font-semibold'>- Departs: </span>
+														{subTitle?.departs}
+													</p>
+													<p>
+														<span className='font-semibold'>- Schedule: </span>
+														{subTitle?.schedule}
+													</p>
+												</CardContent>
+											</Card>
+										))}
 							</div>
 							<p className='text-pretty text-base'>
 								{/* spread out the descriptions */}
-								{AllTours.description?.map((word, index) => (
-									// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-									<span key={`${word}-${index}`}>
-										{word}
-										<br />
-										<br />
-									</span>
-								))}
+								{pathname.includes("/vi")
+									? AllToursVi.description?.map((word, index) => (
+											// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+											<span key={`${word}-${index}`}>
+												{word}
+												<br />
+												<br />
+											</span>
+										))
+									: AllTours.description?.map((word, index) => (
+											// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+											<span key={`${word}-${index}`}>
+												{word}
+												<br />
+												<br />
+											</span>
+										))}
 							</p>
 							<span className='text-base italic text-primary'>
-								*** If you're interested in private tours, please contact Ann
+								{pathname.includes("/vi")
+									? "*** Nếu bạn quan tâm đến các tour du lịch riêng, vui lòng liên hệ với Ann để biết thêm thông tin. Các chuyến du lịch nước ngoài của chúng tôi là hoàn toàn theo yêu cầu và bộ phận lập kế hoạch sẽ hỗ trợ yêu cầu của bạn. ***"
+									: `*** If you're interested in private tours, please contact Ann
 								for more information. Our Overseas Tours are exclusively private
 								and the scheduling department will assist with your
-								requirements. ***
+								requirements. ***`}
 							</span>
 						</div>
 					</div>

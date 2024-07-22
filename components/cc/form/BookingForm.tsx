@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDays, format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -304,10 +304,16 @@ export default function BookingForm() {
 					name='otherRequest'
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel>{pathname.includes("/vi") ? "Yêu cầu khác" : "Other enquiry"}</FormLabel>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Yêu cầu khác" : "Other enquiry"}
+							</FormLabel>
 							<FormControl>
 								<Textarea
-									placeholder={pathname.includes("/vi") ? "Hãy cho chúng tôi biêt thêm về yêu cầu khác của bạn." : "Tell us a little bit about your enquiry."}
+									placeholder={
+										pathname.includes("/vi")
+											? "Hãy cho chúng tôi biêt thêm về yêu cầu khác của bạn."
+											: "Tell us a little bit about your enquiry."
+									}
 									className='resize-none'
 									{...field}
 								/>

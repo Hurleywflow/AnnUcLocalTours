@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MarqueeDemo from "../magicui/marquee/MarqueeDemo";
 import { SparklesTextFeedbacklDemo } from "../magicui/sparkles-text/SparklesTextFeedbacklDemo";
 import { P } from "../text-utils/TextUtils";
-import { usePathname } from "next/navigation";
 
 function FeedBack() {
 	const pathname = usePathname();
@@ -22,7 +22,9 @@ function FeedBack() {
 			</P>
 			<Link href='https://www.facebook.com/88.antour/reviews' target='_blank'>
 				<Button className='flex h-fit  flex-col text-base'>
-					<span className='animate-pulse'>{pathname.includes("/vi") ? "Phản hồi của bạn" : "Your Feedback"}</span>
+					<span className='animate-pulse'>
+						{pathname.includes("/vi") ? "Phản hồi của bạn" : "Your Feedback"}
+					</span>
 					<span className='sr-only'>Submit Your Feedback</span>
 				</Button>
 			</Link>

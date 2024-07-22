@@ -1,7 +1,6 @@
 "use client";
-import SparklesText from "./SparklesText";
 import { usePathname } from "next/navigation";
-
+import SparklesText from "./SparklesText";
 
 export async function SparklesTextFeedbacklDemo() {
 	const pathname = usePathname();

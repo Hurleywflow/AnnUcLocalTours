@@ -1,7 +1,7 @@
+import { getRequestConfig } from "next-intl/server";
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { notFound } from "next/navigation";
-import { getRequestConfig } from "next-intl/server";
 
 // Can be imported from a shared config
 const locales = ["en", "vi"];

@@ -3,10 +3,10 @@ import { H1, H6 } from "@/components/cc/text-utils/TextUtils";
 import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/lib/framer";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AvatarCirclesDemo from "../avatar-circles/AvatarCirclesDemo";
 import { BorderBeam } from "../magicui/boderBeam/BorderBeam";
 import { ImagesSlider } from "./ImagesSlider";
-import { usePathname } from "next/navigation";
 
 function Hero(): JSX.Element {
 	const pathname = usePathname();
