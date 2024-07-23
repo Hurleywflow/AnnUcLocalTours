@@ -6,7 +6,7 @@ export async function SparklesTextOurTourDemo() {
 	return (
 		<SparklesText
 			text={
-				pathname.includes("/vi") ? "TOURS THƯỜNG XUYÊN " : "OUR REGULAR TOURS"
+				pathname.includes("/vi") ? "CÁC CHUYẾN THAM QUAN THƯỜNG XUYÊN " : "OUR REGULAR TOURS"
 			}
 		/>
 	);

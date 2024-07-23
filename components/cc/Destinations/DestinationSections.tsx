@@ -32,8 +32,8 @@ function DestinationSections({
 				<H4>{title}</H4>
 				<span className='italic text-primary'>
 					{pathname.includes("/vi")
-						? "*** Bạn có thể xem thêm chi tiết mỗi chuyến tham quan để xem lịch trình, thời gian, ngày, bộ phận, giá cả của mỗi chuyến tham quan."
-						: "*** You can visit each tour to view the schedule, time, date, department, price, and details of each tour."}
+						? "* Bạn có thể xem thêm chi tiết mỗi chuyến tham quan để xem lịch trình, thời gian, ngày, bộ phận và giá cả."
+						: "* You can visit each tour to view the schedule, time, date, department, price, and details of each tour."}
 				</span>
 				<br />
 			</CardHeader>

@@ -17,7 +17,7 @@ function FeedBack() {
 			<MarqueeDemo />
 			<P className=''>
 				{pathname.includes("/vi")
-					? "Chúng tôi đánh giá rất cao phản hồi của bạn về trải nghiệm của bạn với chúng tôi. Phản hồi tích cực của bạn sẽ giúp chúng tôi cải thiện dịch vụ của mình và đảm bảo bạn có khoảng thời gian tuyệt vời trong các chuyến tham quan cùng chúng tôi. Cảm ơn bạn đã cân nhắc chia sẻ kinh nghiệm của bạn với chúng tôi!"
+					? "Chúng tôi rất trân trọng phản hồi của du khách. Phản hồi mang tính xây dựng của bạn sẽ giúp chúng tôi cải thiện dịch vụ của mình và đảm bảo du khách có khoảng thời gian tuyệt vời trong các chuyến tham quan cùng chúng tôi. Cảm ơn bạn đã cân nhắc chia sẻ trải nghiệm của mình!"
 					: "We would greatly appreciate your feedback on your experience with us. Your valuable feedback will help us improve our services and ensure you have a fantastic time on our tours. Thank you for considering sharing your experience with us!"}
 			</P>
 			<Link href='https://www.facebook.com/88.antour/reviews' target='_blank'>

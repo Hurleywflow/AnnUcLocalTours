@@ -24,12 +24,13 @@ const FloatingNav = ({
 	useMotionValueEvent(scrollYProgress, "change", (current) => {
 		// Check if current is not undefined and is a number
 		if (typeof current === "number") {
-			const direction = current! - scrollYProgress.getPrevious()!;
+			const direction = current - scrollYProgress.getPrevious()!;
 			// change to 0.08 to show up on screen
 			if (scrollYProgress.get() < 0.22) {
+				// change to 0.08 to show up on screen
 				// if (scrollYProgress.get() < 0.05) {
 				setVisible(false);
-			} else if (direction < 0) {
+				} else if (direction < 0) {
 				setVisible(true);
 			} else {
 				setVisible(false);
@@ -53,7 +54,7 @@ const FloatingNav = ({
 					duration: 0.2,
 				}}
 				className={cn(
-					"flex max-w-fit fixed bottom-10 md:bottom-5 inset-x-0 mx-auto z-20",
+					"flex max-w-fit fixed bottom-0 md:bottom-1 inset-x-0 mx-auto z-20",
 					className,
 				)}
 				// className={cn(
@@ -78,9 +79,9 @@ idx}`}
 					<span>Login</span>
 					<span className='absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px' />
 				</button> */}
-				<CardContent className='flex items-center justify-center'>
+				<div className='flex items-center justify-center'>
 					<ShineBorderBasicDemo />
-				</CardContent>
+				</div>
 			</motion.div>
 		</AnimatePresence>
 	);
@@ -100,7 +101,7 @@ export const FloatingNav1 = ({
 	useMotionValueEvent(scrollYProgress, "change", (current) => {
 		// Check if current is not undefined and is a number
 		if (typeof current === "number") {
-			const direction = current! - scrollYProgress.getPrevious()!;
+			const direction = current - scrollYProgress.getPrevious()!;
 			// change to 0.08 to show up on screen
 			// if (scrollYProgress.get() < 0.2) {
 			if (scrollYProgress.get() < 0.05) {
@@ -129,7 +130,7 @@ export const FloatingNav1 = ({
 					duration: 0.2,
 				}}
 				className={cn(
-					"flex max-w-fit fixed bottom-10 md:bottom-5 inset-x-0 mx-auto z-20",
+					"flex max-w-fit fixed bottom-0 md:bottom-1 inset-x-0 mx-auto z-20",
 					className,
 				)}
 				// className={cn(
@@ -154,9 +155,9 @@ idx}`}
 					<span>Login</span>
 					<span className='absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px' />
 				</button> */}
-				<CardContent className='flex items-center justify-center'>
+				<div className='flex items-center justify-center'>
 					<ShineBorderBasicDemo />
-				</CardContent>
+				</div>
 			</motion.div>
 		</AnimatePresence>
 	);

@@ -10,7 +10,7 @@ export function CardBooking() {
 	return (
 		<Card className='flex w-full flex-col items-center justify-center'>
 			<CardHeader className='flex items-center justify-center'>
-				<H5>{pathname.includes("/vi") ? "Đặt Chỗ" : "Booking"}</H5>
+				<H5>{pathname.includes("/vi") ? "Đặt chỗ" : "Booking"}</H5>
 				<Span>
 					{pathname.includes("/vi")
 						? "Điền vào biểu mẫu bên dưới để thông báo cho chúng tôi về chuyến tham quan của bạn và chúng tôi sẽ phản hồi nhanh nhất có thể."

@@ -129,7 +129,7 @@ function Navbar(): JSX.Element {
 					size='default'
 					className='text-base'
 				>
-					{pathname.includes("/vi") ? "🇻🇳 Tiếng Việt" : "🇦🇺 English"}
+					{pathname.includes("/vi") ? "🇦🇺 En" : "🇻🇳 VN"}
 				</Button>
 				{/* <DropdownMenu>
 					<DropdownMenuTrigger asChild>

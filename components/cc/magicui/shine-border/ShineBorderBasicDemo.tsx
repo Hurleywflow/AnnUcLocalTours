@@ -4,7 +4,7 @@ import ShineBorder from "./ShineBorder";
 export function ShineBorderBasicDemo() {
 	return (
 		<ShineBorder
-			className='bg-background text-center text-2xl font-medium capitalize md:text-4xl'
+			className='m-0 flex items-center justify-center bg-background mb-0'
 			color={["#A07CFE", "#ff7625", "#E31B5D"]}
 		>
 			<ContactSocial />

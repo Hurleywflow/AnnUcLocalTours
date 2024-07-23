@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import facebookIcon from "@/public/Images/icons/facebook.png";
 import mailIcon from "@/public/Images/icons/mail.png";
@@ -10,8 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 function ContactSocial() {
 	return (
-		<Card className='flex h-12 flex-row items-center justify-center pt-[7px] '>
-			<Link href='mailto:anthuy.yellowpages@gmail.com'>
+		<div className='flex size-fit flex-row items-center justify-center pb-0 pt-2'>
+			<Link href='mailto:asuzeellowpages@gmail.com'>
 				<Button variant='ghost'>
 					<Image
 						src={mailIcon}
@@ -81,7 +80,7 @@ function ContactSocial() {
 					/>
 				</Button>
 			</Link>
-		</Card>
+		</div>
 	);
 }
 export default ContactSocial;

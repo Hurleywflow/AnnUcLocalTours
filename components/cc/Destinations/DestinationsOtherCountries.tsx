@@ -2,7 +2,7 @@
 import { ToursOtherCountries, ToursOtherCountriesVi } from "@/data/tours";
 import { usePathname } from "next/navigation";
 import DestinationSections from "./DestinationSections";
-const titleVi = "TOURS NGOÀI NƯỚC AUSTRALIA";
+const titleVi = "THAM QUAN NGOÀI NƯỚC ÚC";
 const titleEn = "OVERSEAS TOURS";
 
 function DestinationsOtherCountries() {

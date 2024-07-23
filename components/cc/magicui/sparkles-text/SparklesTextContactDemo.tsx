@@ -8,7 +8,7 @@ export async function SparklesTextContactDemo() {
 		<SparklesText
 			text={
 				pathname.includes("/vi")
-					? "CÙNG CHÚNG TÔI HOÀ NHẬP VÀO NHỮNG CUỘC PHIÊU LƯU THÚ VỊ!"
+					? "CÙNG CHÚNG TÔI HOÀ MÌNH VÀO NHỮNG CUỘC PHIÊU LƯU THÚ VỊ!"
 					: "EMBARK ON MORE ADVENTURES - JOIN US!"
 			}
 		/>

@@ -6,7 +6,7 @@ export async function SparklesTextBlogslDemo() {
 
 	return (
 		<SparklesText
-			text={pathname.includes("/vi") ? "TOURS NỖI BẬT" : "OUR FEATURE TOURS"}
+			text={pathname.includes("/vi") ? "CÁC CHUYẾN THAM QUAN NỖI BẬT" : "OUR FEATURE TOURS"}
 		/>
 	);
 }
