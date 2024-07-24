@@ -12,20 +12,19 @@ function Hero(): JSX.Element {
 	const pathname = usePathname();
 	const images = [
 		"/Images/hero/1.jpg",
-		"/Images/hero/2.jpg",
+		"/Images/hero/2.webp",
 		"/Images/hero/3.jpg",
-		"/Images/hero/4.jpg",
+		"/Images/hero/4.webp",
 		"/Images/hero/5.jpg",
-		"/Images/hero/6.jpg",
+		"/Images/hero/6.webp",
 		"/Images/hero/7.jpg",
 		"/Images/hero/8.jpg",
-		"/Images/hero/9.jpg",
+		"/Images/hero/9.webp",
 		"/Images/hero/10.jpg",
-		"/Images/hero/11.jpg",
+		"/Images/hero/11.webp",
 	];
 	return (
-		<div className=' flex h-screen w-full flex-col items-center justify-center'>
-			{/* <BorderBeam size={250} duration={12} delay={9} /> */}
+		<div className=' flex h-screen max-h-[1024px] w-full flex-col items-center justify-center'>
 			<ImagesSlider className='relative h-screen w-full' images={images}>
 				<MotionDiv
 					// initial={{ opacity: 0.3, y: 50 }}

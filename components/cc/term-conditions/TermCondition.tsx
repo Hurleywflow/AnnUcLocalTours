@@ -64,14 +64,14 @@ function TermCondition() {
 						In addition, for small group tours going on private days, please
 						message Ann to plan for your own.
 						<br /> Contact Ann (+61) 0401211890 in Australia or Zalo or Viber.
-						<br /> <span className='font-bold text-primary'>*{" "} </span> Propective clients, please read the itinerary carefully and
+						<br /> <span className='font-bold text-primary'>*{" "} </span> Propectives clients, please read the itinerary carefully and
 						deposit funds to reserve the total tour package.
 						<br /> <span className='font-bold text-primary'>*{" "} </span> Pay ID 0401211890 Or:
 						<br /> <span className='font-bold text-primary'>*{" "} </span> ANZ bank
 						<br /> <span className='font-bold text-primary'>*{" "} </span> Account name: LE T T
 						<br /> <span className='font-bold text-primary'>*{" "} </span> BSB: 012430
 						<br /> <span className='font-bold text-primary'>*{" "} </span> Account number: 428651728
-						<br /> <span className='font-bold text-primary'>*{" "} </span> Or Ann's account in Vietnam:
+						<br />  Or Ann's account in Vietnam:
 						<br /> <span className='font-bold text-primary'>*{" "} </span> Account name: LE THI THUY
 						<br /> <span className='font-bold text-primary'>*{" "} </span> Account number: 21908222
 						<br /> <span className='font-bold text-primary'>*{" "} </span> MB bank

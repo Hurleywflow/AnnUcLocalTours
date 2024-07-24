@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
@@ -133,18 +133,19 @@ export const metadata: Metadata = {
 		},
 	},
 };
-export default function LocaleLayout({
-// export default async function LocaleLayout({
+export default function RootLayout({
+	// export default async function LocaleLayout({
 	children,
 	params: { locale },
 }: Readonly<{
 	children: React.ReactNode;
 	params: { locale: string };
 }>) {
-	// Providing all messages to the client
-	// side is the easiest way to get started
+	// set the default locale is vi
+	const defaultLocale = locale ?? "vi";
+	
 	return (
-		<html lang={locale} className='h-full ' suppressHydrationWarning>
+		<html lang={defaultLocale} className='h-full ' suppressHydrationWarning>
 			<head />
 			<body
 				className={cn(
@@ -155,11 +156,7 @@ export default function LocaleLayout({
 					`${pinyon_script} `,
 				)}
 			>
-				<ThemeProvider
-					attribute='class'
-					enableSystem
-					disableTransitionOnChange
-				>
+				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
 					<Navbar />
 					{children}
 					<DynamicFooter />
