@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
@@ -133,19 +133,18 @@ export const metadata: Metadata = {
 		},
 	},
 };
-export default function RootLayout({
-	// export default async function LocaleLayout({
+export default async function LocaleLayout({
 	children,
 	params: { locale },
-}: Readonly<{
+}: {
 	children: React.ReactNode;
 	params: { locale: string };
-}>) {
+}) {
 	// set the default locale is vi
-	const defaultLocale = locale ?? "vi";
-	
+	const messages = await getMessages();
+
 	return (
-		<html lang={defaultLocale} className='h-full ' suppressHydrationWarning>
+		<html lang={locale} className='h-full' suppressHydrationWarning>
 			<head />
 			<body
 				className={cn(
@@ -156,15 +155,21 @@ export default function RootLayout({
 					`${pinyon_script} `,
 				)}
 			>
-				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
-					<Navbar />
-					{children}
-					<DynamicFooter />
-				</ThemeProvider>
-				<Toaster richColors />
-				<Analytics />
-				<SpeedInsights />
-				<TailwindIndicator />
+				<NextIntlClientProvider messages={messages}>
+					<ThemeProvider
+						attribute='class'
+						enableSystem
+						disableTransitionOnChange
+					>
+						<Navbar />
+						{children}
+						<DynamicFooter />
+					</ThemeProvider>
+					<Toaster richColors />
+					<Analytics />
+					<SpeedInsights />
+					<TailwindIndicator />
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);

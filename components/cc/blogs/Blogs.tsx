@@ -176,14 +176,19 @@ const Blogs = () => {
 													/>
 												</div>
 												<div className='flex flex-row items-center gap-4'>
-													<Badge>New</Badge>
+													<Badge className='bg-secondary'>New</Badge>
 													<p className='flex flex-row items-center gap-2 text-sm'>
-														<span className='text-muted-foreground'>By</span>{" "}
+														{/* <span className='text-muted-foreground'>By</span>{" "}
 														<Avatar className='size-6'>
 															<AvatarImage src='/logo.png' />
 															<AvatarFallback>CN</AvatarFallback>
 														</Avatar>
-														<span>{blog.author}</span>
+														<span>{blog.author}</span> */}
+														{blog.price && blog.price.length > 0 && (
+															<Badge className='flex w-fit items-start justify-center text-center text-base'>
+																{blog.price}
+															</Badge>
+														)}
 													</p>
 												</div>
 												<div className='flex flex-col gap-2'>
@@ -218,15 +223,20 @@ const Blogs = () => {
 													/>
 												</div>
 												<div className='flex flex-row items-center gap-4'>
-													<Badge>New</Badge>
-													<p className='flex flex-row items-center gap-2 text-sm'>
-														<span className='text-muted-foreground'>By</span>{" "}
+													<Badge className='bg-secondary'>New</Badge>
+													<div className='flex flex-row items-center gap-2 text-sm'>
+														{/* <span className='text-muted-foreground'>By</span>{" "}
 														<Avatar className='size-6'>
 															<AvatarImage src='/logo.png' />
 															<AvatarFallback>CN</AvatarFallback>
 														</Avatar>
-														<span>{blog.author}</span>
-													</p>
+														<span>{blog.author}</span> */}
+														{blog.price && blog.price.length > 0 && (
+															<Badge className='flex w-fit items-start justify-center text-center text-base'>
+																{blog.price}
+															</Badge>
+														)}
+													</div>
 												</div>
 												<div className='flex flex-col gap-2'>
 													<H5 className='text-start'>{blog.title}</H5>

@@ -4,6 +4,7 @@ import Hero from "@/components/cc/hero/Hero";
 import Loading from "@/components/cc/loading/Loading";
 import TermCondition from "@/components/cc/term-conditions/TermCondition";
 import dynamic from "next/dynamic";
+
 const MapContact = dynamic(
 	async () => import("@/components/cc/map/MapContact"),
 	{
@@ -48,6 +49,7 @@ const Contact = dynamic(async () => import("@/components/cc/contact/Contact"), {
 
 const Home = (): JSX.Element => {
 	// const t = useTranslations("HomePage");
+
 	return (
 		<main className='m-0 h-fit w-full p-0'>
 			<Container>

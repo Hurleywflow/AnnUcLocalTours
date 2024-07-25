@@ -92,68 +92,192 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 							<H5 className='text-start'>
 								{pathname.includes("/vi") ? AllToursVi.title : AllTours.title}
 							</H5>
-							<div className='grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2 lg:grid-cols-3'>
-								{pathname.includes("/vi")
-									? AllToursVi?.subTitle &&
-										AllToursVi.subTitle.length > 0 &&
-										AllToursVi.subTitle.map((subTitleVi, index) => (
-											<Card
-												className='flex flex-col items-center justify-center gap-1 md:gap-2'
-												key={`${index}-${subTitleVi.title}`}
-											>
-												<CardHeader>
-													<P>{subTitleVi.title}</P>
-												</CardHeader>
-												<Separator className='' />
-												<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
-													<p>
-														<span className='font-semibold'>- Giá: </span>
-														{subTitleVi?.price}
-													</p>
-													<p>
-														<span className='font-semibold'>
-															- Ngày khởi hành:
-														</span>
-														{subTitleVi?.departs}
-													</p>
-													<p>
-														<span className='font-semibold'>
-															- Lịch trình:{" "}
-														</span>
-														{subTitleVi?.schedule}
-													</p>
-												</CardContent>
-											</Card>
-										))
-									: AllTours?.subTitle &&
-										AllTours.subTitle.length > 0 &&
-										AllTours.subTitle.map((subTitle, index) => (
-											<Card
-												className='flex flex-col items-center justify-center gap-1 md:gap-2'
-												key={`${index}-${subTitle.title}`}
-											>
-												<CardHeader>
-													<P>{subTitle.title}</P>
-												</CardHeader>
-												<Separator className='' />
-												<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
-													<p>
-														<span className='font-semibold'>- Price: </span>
-														{subTitle?.price}
-													</p>
-													<p>
-														<span className='font-semibold'>- Departs: </span>
-														{subTitle?.departs}
-													</p>
-													<p>
-														<span className='font-semibold'>- Schedule: </span>
-														{subTitle?.schedule}
-													</p>
-												</CardContent>
-											</Card>
-										))}
-							</div>
-							<p className='text-pretty text-base'>
+							
+							{AllTours?.subTitle &&
+							AllTours.subTitle.length > 1 &&
+							AllToursVi?.subTitle &&
+							AllToursVi.subTitle.length > 1 ? (
+								<div className='grid grid-cols-1 gap-1 md:grid-cols-2 md:gap-2'>
+									{pathname.includes("/vi")
+										? AllToursVi?.subTitle &&
+											AllToursVi.subTitle.length > 0 &&
+											AllToursVi.subTitle.map((subTitleVi, index) => (
+												<Card
+													className='flex flex-col items-center justify-center gap-1 md:gap-2'
+													key={`${index}-${subTitleVi.title}`}
+												>
+													<CardHeader>
+														<P>{subTitleVi.title}</P>
+													</CardHeader>
+													<Separator className='' />
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Giá:{" "}
+															</span>
+															{subTitleVi?.price}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Ngày khởi hành:
+															</span>
+															{subTitleVi?.departs}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Lịch trình:{" "}
+															</span>
+															{subTitleVi?.schedule?.map((schedule, index) => (
+																<span
+																	key={`${schedule}-${
+																		// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+																		index
+																	}`}
+																>
+																	{schedule}
+																	<br />
+																</span>
+															))}
+														</p>
+													</CardContent>
+												</Card>
+											))
+										: AllTours?.subTitle &&
+											AllTours.subTitle.length > 0 &&
+											AllTours.subTitle.map((subTitle, index) => (
+												<Card
+													className='flex flex-col items-center justify-center gap-1 md:gap-2'
+													key={`${index}-${subTitle.title}`}
+												>
+													<CardHeader>
+														<P>{subTitle.title}</P>
+													</CardHeader>
+													<Separator className='' />
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Price:{" "}
+															</span>
+															{subTitle?.price}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Departs:{" "}
+															</span>
+															{subTitle?.departs}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Schedule:{" "}
+															</span>
+															{subTitle?.schedule?.map((schedule, index) => (
+																<span
+																	key={`${schedule}-${
+																		// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+																		index
+																	}`}
+																>
+																	{schedule}
+																	<br />
+																</span>
+															))}
+														</p>
+													</CardContent>
+												</Card>
+											))}
+								</div>
+							) : (
+								<div className='grid grid-cols-1 gap-1  md:gap-2'>
+									{pathname.includes("/vi")
+										? AllToursVi?.subTitle &&
+											AllToursVi.subTitle.length > 0 &&
+											AllToursVi.subTitle.map((subTitleVi, index) => (
+												<Card
+													className='flex flex-col items-center justify-center gap-1 md:gap-2'
+													key={`${index}-${subTitleVi.title}`}
+												>
+													<CardHeader>
+														<P>{subTitleVi.title}</P>
+													</CardHeader>
+													<Separator className='' />
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Giá:{" "}
+															</span>
+															{subTitleVi?.price}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Ngày khởi hành:{" "}
+															</span>
+															{subTitleVi?.departs}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Lịch trình:{" "}
+															</span>
+															{subTitleVi?.schedule?.map((schedule, index) => (
+																<span
+																	key={`${schedule}-${
+																		// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+																		index
+																	}`}
+																>
+																	{schedule}
+																	<br />
+																</span>
+															))}
+														</p>
+													</CardContent>
+												</Card>
+											))
+										: AllTours?.subTitle &&
+											AllTours.subTitle.length > 0 &&
+											AllTours.subTitle.map((subTitle, index) => (
+												<Card
+													className='flex flex-col items-center justify-center gap-1 md:gap-2'
+													key={`${index}-${subTitle.title}`}
+												>
+													<CardHeader>
+														<P>{subTitle.title}</P>
+													</CardHeader>
+													<Separator className='' />
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-base'>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Price:{" "}
+															</span>
+															{subTitle?.price}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Departs:{" "}
+															</span>
+															{subTitle?.departs}
+														</p>
+														<p>
+															<span className='text-lg font-medium md:text-xl'>
+																- Schedule:{" "}
+															</span>
+															{subTitle?.schedule?.map((schedule, index) => (
+																<span
+																	key={`${schedule}-${
+																		// biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+																		index
+																	}`}
+																>
+																	{schedule}
+																	<br />
+																</span>
+															))}
+														</p>
+													</CardContent>
+												</Card>
+											))}
+								</div>
+							)}
+							<p className='mt-10 text-pretty text-base'>
 								{/* spread out the descriptions */}
 								{pathname.includes("/vi")
 									? AllToursVi.description?.map((word, index) => (
