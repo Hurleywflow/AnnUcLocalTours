@@ -982,7 +982,7 @@ export const ToursOtherCountries: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan || (04/2025 - 11/2025) ",
+		title: "Japan - (04/2025 - 11/2025) ",
 		subTitle: [
 			{
 				id: "ja4.1",
@@ -1287,7 +1287,7 @@ export const ToursOtherCountriesVi: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan || (04/2025 - 11/2025)",
+		title: "Japan - (04/2025 - 11/2025)",
 		subTitle: [
 			{
 				id: "ja4.1",

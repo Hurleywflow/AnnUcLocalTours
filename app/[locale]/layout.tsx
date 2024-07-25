@@ -7,11 +7,11 @@ import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
+import "../globals.css";
+import "@splidejs/react-splide/css";
 const DynamicFooter = dynamic(
 	async () => import("@/components/cc/footer/footer"),
 	{
@@ -19,8 +19,6 @@ const DynamicFooter = dynamic(
 		loading: () => <Loading />,
 	},
 );
-import "../globals.css";
-import "@splidejs/react-splide/css";
 
 const fontSans = FontSans({
 	subsets: ["latin"],
@@ -133,16 +131,13 @@ export const metadata: Metadata = {
 		},
 	},
 };
-export default async function LocaleLayout({
+export default function LocaleLayout({
 	children,
 	params: { locale },
 }: {
 	children: React.ReactNode;
 	params: { locale: string };
 }) {
-	// set the default locale is vi
-	const messages = await getMessages();
-
 	return (
 		<html lang={locale} className='h-full' suppressHydrationWarning>
 			<head />
@@ -155,21 +150,17 @@ export default async function LocaleLayout({
 					`${pinyon_script} `,
 				)}
 			>
-				<NextIntlClientProvider messages={messages}>
-					<ThemeProvider
-						attribute='class'
-						enableSystem
-						disableTransitionOnChange
-					>
-						<Navbar />
-						{children}
-						<DynamicFooter />
-					</ThemeProvider>
-					<Toaster richColors />
-					<Analytics />
-					<SpeedInsights />
-					<TailwindIndicator />
-				</NextIntlClientProvider>
+				{/* <NextIntlClientProvider messages={messages}> */}
+				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
+					<Navbar />
+					{children}
+					<DynamicFooter />
+				</ThemeProvider>
+				<Toaster richColors />
+				<Analytics />
+				<SpeedInsights />
+				<TailwindIndicator />
+				{/* </NextIntlClientProvider> */}
 			</body>
 		</html>
 	);
