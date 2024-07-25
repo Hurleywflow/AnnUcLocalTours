@@ -982,7 +982,7 @@ export const ToursOtherCountries: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan - (from 11/2024 to 04/2025) ",
+		title: "Japan || (04/2025 - 11/2025) ",
 		subTitle: [
 			{
 				id: "ja4.1",
@@ -1210,7 +1210,7 @@ export const ToursOtherCountries: TourType[] = [
 export const ToursOtherCountriesVi: TourType[] = [
 	{
 		id: "vi1",
-		title: "Tour Xuyên Việt, Việt Nam",
+		title: "Tour Xuyên Việt - Việt Nam",
 		description: [
 			"Việt Nam là một điểm đến đặc biệt hứa hẹn sự kết hợp giữa cảnh quan ngoạn mục, di sản văn hóa phong phú và cuộc sống thành phố sôi động.",
 			"Ẩm thực Việt Nam là điểm nhấn của bất kỳ chuyến du lịch nào. Từ món phở nổi tiếng thế giới đến chả giò tươi và bánh mì (bánh mì Việt Nam), hương vị đậm đà và khó quên. Đừng bỏ lỡ các tour ẩm thực đường phố để trải nghiệm hương vị đích thực của Việt Nam.",
@@ -1287,7 +1287,7 @@ export const ToursOtherCountriesVi: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan - (từ 11/2024 đến 04/2025)",
+		title: "Japan || (04/2025 - 11/2025)",
 		subTitle: [
 			{
 				id: "ja4.1",

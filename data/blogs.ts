@@ -21,7 +21,7 @@ export const blogData: BlogType[] = [
 	{
 		id: "blog1",
 		title: "Canberra - Tulip Festival",
-		price: "From $99/person",
+		price: "From $99",
 		dateRange: "Saturdays and Sundays from August 14 to October 15",
 		subTitle: [
 			{
@@ -93,7 +93,7 @@ export const blogData: BlogType[] = [
 		id: "blog2",
 		title: "Other Cherry Blossom Festival",
 		dateRange: "From August to October in various regions",
-		price: "From $190/person",
+		price: "From $190",
 		subTitle: [
 			{
 				id: "blog2.1",
@@ -262,7 +262,7 @@ export const blogDataVi: BlogType[] = [
 	{
 		id: "blog1",
 		title: "Canberra - Lễ hội hoa Tulip",
-		price: "Từ $99/người",
+		price: "Từ $99",
 		subTitle: [
 			{
 				id: "blog1.1",
@@ -311,27 +311,27 @@ export const blogDataVi: BlogType[] = [
 			"/Images/tours/canberra/18.jpg",
 			"/Images/tours/canberra/19.jpg",
 			"/Images/tours/canberra/20.jpg",
-			"/Images/tours/canberra/21.jpg",
-			"/Images/tours/canberra/22.jpg",
-			"/Images/tours/canberra/23.jpg",
-			"/Images/tours/canberra/24.jpg",
-			"/Images/tours/canberra/25.jpg",
-			"/Images/tours/canberra/26.jpg",
-			"/Images/tours/canberra/27.jpg",
-			"/Images/tours/canberra/28.jpg",
-			"/Images/tours/canberra/29.jpg",
-			"/Images/tours/canberra/30.jpg",
-			"/Images/tours/canberra/31.jpg",
-			"/Images/tours/canberra/32.jpg",
-			"/Images/tours/canberra/33.jpg",
-			"/Images/tours/canberra/34.jpg",
+			// "/Images/tours/canberra/21.jpg",
+			// "/Images/tours/canberra/22.jpg",
+			// "/Images/tours/canberra/23.jpg",
+			// "/Images/tours/canberra/24.jpg",
+			// "/Images/tours/canberra/25.jpg",
+			// "/Images/tours/canberra/26.jpg",
+			// "/Images/tours/canberra/27.jpg",
+			// "/Images/tours/canberra/28.jpg",
+			// "/Images/tours/canberra/29.jpg",
+			// "/Images/tours/canberra/30.jpg",
+			// "/Images/tours/canberra/31.jpg",
+			// "/Images/tours/canberra/32.jpg",
+			// "/Images/tours/canberra/33.jpg",
+			// "/Images/tours/canberra/34.jpg",
 		],
 		author: "Ann's Uc Local Tours",
 	},
 	{
 		id: "blog2",
 		title: "Chương trình hoa Anh đào khác",
-		price: "Từ $190/người",
+		price: "Từ $190",
 		subTitle: [
 			{
 				id: "blog2.1",
