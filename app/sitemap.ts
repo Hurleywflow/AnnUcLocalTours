@@ -6,25 +6,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 	// concatenate the australiaTours and vietNamTours
 	const allTours = [...ToursAustralia, ...ToursOtherCountries];
 	const postEntries = allTours.map((post) => ({
-		url: `${process.env.BASE_URL}/tours/${post.id}`,
+		url: `${process.env.BASE_URL}/en/tours/${post.id}`,
 		// changeFrequency: "daily",
 		lastModified: new Date(),
 		priority: 1.0,
 	}));
 	const postEntries1 = blogData.map((post) => ({
-		url: `${process.env.BASE_URL}/blogs/${post.id}`,
+		url: `${process.env.BASE_URL}/en/blogs/${post.id}`,
 		// changeFrequency: "daily",
 		lastModified: new Date(),
 		priority: 1.0,
 	}));
-	const postEntries2 = blogData.map((post) => ({
-		url: `https://annsuclocaltours.com/blogs/${post.id}`,
+	const postEntries2 = allTours.map((post) => ({
+		url: `${process.env.BASE_URL}/vi/tours/${post.id}`,
 		// changeFrequency: "daily",
 		lastModified: new Date(),
 		priority: 1.0,
 	}));
 	const postEntries3 = blogData.map((post) => ({
-		url: `https://annsuclocaltours.com/blogs/${post.id}`,
+		url: `${process.env.BASE_URL}/vi/blogs/${post.id}`,
 		// changeFrequency: "daily",
 		lastModified: new Date(),
 		priority: 1.0,
@@ -37,53 +37,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			priority: 0.8,
 		},
 		{
-			url: `${process.env.BASE_URL}/booking`,
-			lastModified: new Date(),
-			priority: 0.8,
-		},
-		{
 			url: `${process.env.BASE_URL}/favicon.ico`,
 			lastModified: new Date(),
 			priority: 0.8,
 		},
 		{
-			url: `${process.env.BASE_URL}/blogs`,
+			url: `${process.env.BASE_URL}/en`,
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: `${process.env.BASE_URL}/en/booking`,
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: `${process.env.BASE_URL}/en/blogs`,
 			lastModified: new Date(),
 			priority: 0.7,
 		},
 		{
-			url: `${process.env.BASE_URL}/tours`,
+			url: `${process.env.BASE_URL}/en/tours`,
 			lastModified: new Date(),
 			priority: 0.6,
 		},
+		{
+			url: `${process.env.BASE_URL}/vi`,
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: `${process.env.BASE_URL}/vi/booking`,
+			lastModified: new Date(),
+			priority: 0.8,
+		},
+		{
+			url: `${process.env.BASE_URL}/vi/blogs`,
+			lastModified: new Date(),
+			priority: 0.7,
+		},
+		{
+			url: `${process.env.BASE_URL}/vi/tours`,
+			lastModified: new Date(),
+			priority: 0.6,
+		},
+
 		...postEntries,
 		...postEntries1,
-		// now with this url  https://annsuclocaltours.com
-		{
-			url: "https://annsuclocaltours.com",
-			lastModified: new Date(),
-			priority: 0.8,
-		},
-		{
-			url: "https://annsuclocaltours.com/booking",
-			lastModified: new Date(),
-			priority: 0.8,
-		},
-		{
-			url: "https://annsuclocaltours.com/favicon.ico",
-			lastModified: new Date(),
-			priority: 0.8,
-		},
-		{
-			url: "https://annsuclocaltours.com/blogs",
-			lastModified: new Date(),
-			priority: 0.7,
-		},
-		{
-			url: "https://annsuclocaltours.com/tours",
-			lastModified: new Date(),
-			priority: 0.6,
-		},
 		...postEntries2,
 		...postEntries3,
 	];
