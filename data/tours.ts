@@ -982,7 +982,7 @@ export const ToursOtherCountries: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan",
+		title: "Japan - (from 11/2024 to 04/2025) ",
 		subTitle: [
 			{
 				id: "ja4.1",
@@ -1287,14 +1287,14 @@ export const ToursOtherCountriesVi: TourType[] = [
 	// },
 	{
 		id: "ja4",
-		title: "Japan",
+		title: "Japan - (từ 11/2024 đến 04/2025)",
 		subTitle: [
 			{
 				id: "ja4.1",
 				title: "LỊCH TRÌNH TOUR NHẬT BẢN",
 				price:
 					"AUD$4,800/khách. Trẻ em dưới 8 tuổi: AUD$3,700, trẻ dưới 2 tuổi: AUD$2,100/bé. (đặt sau 15/1/2025 giá tour sẽ cộng thêm 20%)",
-				departs: "Tháng 11/2024 và 04/2025:",
+				departs: "Tháng 11/2024 và 04/2025",
 				schedule: [
 					"Tour đã bao gồm: ",
 					"* Vé máy bay khứ hồi Sydney- Nhật Bản,",
