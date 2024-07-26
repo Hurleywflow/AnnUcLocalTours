@@ -1,10 +1,21 @@
 import { Container } from "@/components/cc/container/container";
-import FloatingNav from "@/components/cc/floating-navbar/FloatingNavbar";
 import Hero from "@/components/cc/hero/Hero";
 import Loading from "@/components/cc/loading/Loading";
-import TermCondition from "@/components/cc/term-conditions/TermCondition";
 import dynamic from "next/dynamic";
-
+const FloatingNav = dynamic(
+	async () => import("@/components/cc/floating-navbar/FloatingNavbar"),
+	{
+		ssr: true,
+		loading: () => <Loading />,
+	},
+);
+const TermCondition = dynamic(
+	async () => import("@/components/cc/term-conditions/TermCondition"),
+	{
+		ssr: true,
+		loading: () => <Loading />,
+	},
+);
 const MapContact = dynamic(
 	async () => import("@/components/cc/map/MapContact"),
 	{
@@ -48,14 +59,12 @@ const Contact = dynamic(async () => import("@/components/cc/contact/Contact"), {
 });
 
 const Home = (): JSX.Element => {
-	// const t = useTranslations("HomePage");
-
 	return (
 		<main className='m-0 h-fit w-full p-0'>
 			<Container>
 				<div className='flex h-fit min-h-screen w-full flex-col items-center justify-center gap-20 overscroll-x-none'>
 					<FloatingNav />
-					<div className='h-screen w-full' id='home'>
+					<div className='h-screen max-h-[1280px] w-full' id='home'>
 						<Hero />
 					</div>
 					<div className='h-fit w-full gap-10' id='media-contact'>

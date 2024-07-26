@@ -12,6 +12,8 @@ import dynamic from "next/dynamic";
 import { Inter as FontSans } from "next/font/google";
 import "../globals.css";
 import "@splidejs/react-splide/css";
+import { locales } from "@/config";
+import { unstable_setRequestLocale } from "next-intl/server";
 const DynamicFooter = dynamic(
 	async () => import("@/components/cc/footer/footer"),
 	{
@@ -131,6 +133,10 @@ export const metadata: Metadata = {
 		},
 	},
 };
+export function generateStaticParams() {
+	return locales.map((locale) => ({ locale }));
+}
+
 export default function LocaleLayout({
 	children,
 	params: { locale },
@@ -138,6 +144,9 @@ export default function LocaleLayout({
 	children: React.ReactNode;
 	params: { locale: string };
 }) {
+	// Enable static rendering
+	unstable_setRequestLocale(locale);
+
 	return (
 		<html lang={locale} className='h-full' suppressHydrationWarning>
 			<head />

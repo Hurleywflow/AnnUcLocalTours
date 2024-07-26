@@ -1,25 +1,26 @@
 import createMiddleware from "next-intl/middleware";
-import type { NextRequest } from "next/server";
-import { locales } from "./config";
+import { defaultLocale, localePrefix, locales, pathnames } from "./config";
 
-export default async function middleware(request: NextRequest) {
-	// Step 1: Use the incoming request (example)
-	const defaultLocale = request.headers.get("vi") as "vi" | "en" ?? "en";
-
-	// Step 2: Create and call the next-intl middleware (example)
-	const handleI18nRouting = createMiddleware({
-		locales,
-		defaultLocale,
-	});
-	const response = handleI18nRouting(request);
-
-	// Step 3: Alter the response (example)
-	response.headers.set("vi", defaultLocale);
-
-	return response;
-}
+export default createMiddleware({
+	defaultLocale,
+	locales,
+	localePrefix,
+	pathnames,
+	localeDetection: false, // Disables automatic locale detection
+});
 
 export const config = {
-	// Match only internationalized pathnames
-	matcher: ["/", "/(vi|en)/:path*"],
+	matcher: [
+		// Enable a redirect to a matching locale at the root
+		"/",
+		"/vi",
+
+		// Set a cookie to remember the previous locale for
+		// all requests that have a locale prefix
+		"/(en|vi)/:path*",
+
+		// Enable redirects that add missing locales
+		// (e.g. `/pathnames` -> `/en/pathnames`)
+		"/((?!_next|_vercel|.*\\..*).*)",
+	],
 };

@@ -24,7 +24,7 @@ function Hero(): JSX.Element {
 		"/Images/hero/11.webp",
 	];
 	return (
-		<div className=' flex h-screen max-h-[1024px] w-full flex-col items-center justify-center'>
+		<div className=' flex h-screen max-h-[1280px] w-full flex-col items-center justify-center'>
 			<ImagesSlider className='relative h-screen w-full' images={images}>
 				<MotionDiv
 					// initial={{ opacity: 0.3, y: 50 }}
