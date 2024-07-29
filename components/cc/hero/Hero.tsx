@@ -20,8 +20,9 @@ function Hero(): JSX.Element {
 		"/Images/hero/10.jpg",
 	];
 	return (
-		<div className=' flex h-screen max-h-[1280px] w-full flex-col items-center justify-center'>
-			<ImagesSlider className='relative h-screen w-full' images={images}>
+		<div className=' relative flex h-screen max-h-[1280px] w-full flex-col items-center justify-center'>
+
+			<ImagesSlider className='relative z-20 h-screen w-full' images={images}>
 				<MotionDiv
 					// initial={{ opacity: 0.3, y: 50 }}
 					// whileInView={{ opacity: 1, y: 0 }}
@@ -40,11 +41,11 @@ function Hero(): JSX.Element {
 							ease: "easeInOut",
 						}}
 					>
-						<H1 className='font-dancing_script text-balance p-2 text-center text-7xl font-light text-white md:p-4 md:text-9xl lg:p-6  lg:text-[10rem] dark:text-white'>
+						<H1 className='text-balance p-2 text-center font-dancing_script text-7xl font-light text-white dark:text-white md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
 							G'day mate!
 						</H1>
 					</MotionDiv>
-					<div className='bg-background/50 relative flex w-fit flex-col items-center justify-center gap-2 rounded-[0.4rem] p-2 md:gap-5'>
+					<div className='relative flex w-fit flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/50 p-2 md:gap-5'>
 						<BorderBeam size={250} duration={12} delay={9} />
 						<H6 className='text-black dark:text-white'>
 							{pathname.includes("/vi")

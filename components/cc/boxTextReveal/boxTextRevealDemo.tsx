@@ -17,12 +17,6 @@ function BoxRevealDemo() {
 					<br />
 					<span className='font-bold text-primary'>* </span>
 					{pathname.includes("/vi")
-						? "Cái tên 'Local' trong Ann's Uc Local Tours bày tỏ sự cám ơn đối với người bạn yêu quý của chúng ta, Aussie, người địa phương luôn hiện diện để làm phong phú thêm cho mọi chuyến tham quan. Aussie là hướng dẫn viên của chúng ta, chỉ dẫn từng ngõ ngách của địa hình Úc, đảm bảo mỗi tuyến đường đều an toàn cùng sự quyến rũ độc đáo. Với chúng tôi, hành trình của bạn sẽ là sự pha trộn giữa cảm giác vừa hồi hộp nhưng an toàn."
-						: "The name 'Local' in Ann's Uc Local Tours pays homage to our cherished friend, Aussie, whose unwavering support and presence enrich every tour. Aussie is our steadfast guide, navigating every inch of Australian terrain, ensuring each route is both safe and uniquely captivating. With us, your journey will be a blend of thrill and security."}
-					<br />
-					<br />
-					<span className='font-bold text-primary'>* </span>
-					{pathname.includes("/vi")
 						? "Để lại phần hậu cần cho chúng tôi. Chúng tôi sẽ thu xếp việc lập kế hoạch chi tiết, để bạn thư giãn, thưởng thức và đắm mình hoàn toàn vào những điểm đến."
 						: "Leave the logistics to us. We’ll handle the planning and details, allowing you to relax, savour, and fully immerse yourself in the places you visit."}
 				</P>
