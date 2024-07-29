@@ -27,7 +27,7 @@ function Navbar(): JSX.Element {
 	const pathname = usePathname();
 	const router = useRouter();
 	return (
-		<header className='bg-background/70 sticky top-0 z-50 flex h-16 items-center gap-4 border-b px-4 backdrop-blur-xl   md:px-6'>
+		<header className='sticky top-0 z-50 flex h-16 items-center gap-4 border-b bg-background/70 px-4 backdrop-blur-xl   md:px-6'>
 			<nav className='hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6'>
 				{/* Navbar items */}
 				<Link
@@ -117,8 +117,11 @@ function Navbar(): JSX.Element {
 					</Link>
 				</Button> */}
 				{/* this is theme switcher */}
-				<div className='group relative ml-auto flex-1 rounded-md px-6  transition  sm:flex-initial '>
+				<div className='group relative ml-auto flex-initial rounded-md transition'>
 					<ThemeSwitcher />
+					<div className='absolute inset-0 top-[-20px] flex h-[calc(100%+40px)] w-full animate-shine-infinite justify-center blur-md'>
+						<div className='relative h-full w-10 bg-background/30' />
+					</div>
 				</div>
 
 				{/* this is language switcher */}
