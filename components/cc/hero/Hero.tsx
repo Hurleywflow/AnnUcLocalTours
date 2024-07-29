@@ -14,14 +14,10 @@ function Hero(): JSX.Element {
 		"/Images/hero/1.jpg",
 		"/Images/hero/2.webp",
 		"/Images/hero/3.jpg",
-		"/Images/hero/4.webp",
 		"/Images/hero/5.jpg",
-		"/Images/hero/6.webp",
 		"/Images/hero/7.jpg",
 		"/Images/hero/8.jpg",
-		"/Images/hero/9.webp",
 		"/Images/hero/10.jpg",
-		"/Images/hero/11.webp",
 	];
 	return (
 		<div className=' flex h-screen max-h-[1280px] w-full flex-col items-center justify-center'>
@@ -44,13 +40,13 @@ function Hero(): JSX.Element {
 							ease: "easeInOut",
 						}}
 					>
-						<H1 className='text-balance p-2 text-center font-dancing_script text-7xl font-light md:p-4 md:text-9xl  lg:p-6 lg:text-[10rem]'>
+						<H1 className='font-dancing_script text-balance p-2 text-center text-7xl font-light text-white md:p-4 md:text-9xl lg:p-6  lg:text-[10rem] dark:text-white'>
 							G'day mate!
 						</H1>
 					</MotionDiv>
-					<div className='relative flex w-fit flex-col items-center justify-center gap-2 rounded-[0.4rem] bg-background/50 p-2 md:gap-5'>
+					<div className='bg-background/50 relative flex w-fit flex-col items-center justify-center gap-2 rounded-[0.4rem] p-2 md:gap-5'>
 						<BorderBeam size={250} duration={12} delay={9} />
-						<H6 className=''>
+						<H6 className='text-black dark:text-white'>
 							{pathname.includes("/vi")
 								? "Khám phá các thành phố sôi động, các vùng đất hoang  sơ và những bãi biển tuyệt đẹp với sự đồng hành của những hướng dẫn viên chuyên nghiệp."
 								: "Discover lively cities, rugged wilderness, and beautiful beaches with the company of knowledgeable guides."}

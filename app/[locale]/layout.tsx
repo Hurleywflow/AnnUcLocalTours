@@ -1,7 +1,7 @@
 import Loading from "@/components/cc/loading/Loading";
 import Navbar from "@/components/cc/navbar/Navbar";
 import { TailwindIndicator } from "@/components/cc/tailwind-indicator/tailwind-indicator";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { dancing_script, pinyon_script, poppins } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
@@ -14,13 +14,13 @@ import "../globals.css";
 import "@splidejs/react-splide/css";
 import { locales } from "@/config";
 import { unstable_setRequestLocale } from "next-intl/server";
-const DynamicFooter = dynamic(
-	async () => import("@/components/cc/footer/footer"),
-	{
-		ssr: true,
-		loading: () => <Loading />,
-	},
-);
+// const DynamicFooter = dynamic(
+// 	async () => import("@/components/cc/footer/footer"),
+// 	{
+// 		ssr: true,
+// 		loading: () => <Loading />,
+// 	},
+// );
 
 const fontSans = FontSans({
 	subsets: ["latin"],
@@ -152,7 +152,7 @@ export default function LocaleLayout({
 			<head />
 			<body
 				className={cn(
-					"min-h-fit m-0 p-0 bg-background font-sans antialiased bg-dot-white/[0.2]  dark:bg-dot-white/[0.2] overflow-x-clip",
+					"min-h-fit m-0 p-0 bg-background font-sans antialiased bg-dot-black/[0.2]  dark:bg-dot-white/[0.2] overflow-x-clip",
 					fontSans.variable,
 					`${poppins} `,
 					`${dancing_script} `,
@@ -163,9 +163,9 @@ export default function LocaleLayout({
 				<ThemeProvider attribute='class' enableSystem disableTransitionOnChange>
 					<Navbar />
 					{children}
-					<DynamicFooter />
+					<Toaster />
+					{/* <DynamicFooter /> */}
 				</ThemeProvider>
-				<Toaster richColors />
 				<Analytics />
 				<SpeedInsights />
 				<TailwindIndicator />

@@ -52,16 +52,24 @@ const FormSchema = z.object({
 	email: z.string().email({
 		message: "Invalid email address",
 	}),
-	// number of people, can be a string or a number
-	numberOfPeople: z.preprocess(
+	// number of adults, can be a string or a number
+	numberOfAdults: z.preprocess(
 		(val) => {
 			if (typeof val === "string") return Number.parseInt(val);
 			return val;
 		},
 		z.number().min(1, {
-			message: "Number of people must be at least 1",
+			message: "Number of adult must be at least 1",
 		}),
 	),
+	// number of children, can be a string or a number
+	numberOfChildren: z.string(),
+	// payment reference
+	referencePayment: z.string(),
+	// type of travel, can be a string or a number
+	typeOfTravel: z.string({
+		required_error: "Please select an type of travel.",
+	}),
 
 	//  check date to travel at least after today
 	dateTravel: z.date().min(new Date(), {
@@ -72,7 +80,7 @@ const FormSchema = z.object({
 	otherRequest: z.string(),
 });
 
-export default function BookingForm() {
+export default function FormBookingDetail() {
 	const pathname = usePathname();
 	const [date, setDate] = useState<Date>();
 	const { toast } = useToast();
@@ -83,7 +91,10 @@ export default function BookingForm() {
 			username: "",
 			phone: "",
 			email: "",
-			numberOfPeople: 1, // Changed from "" to 1
+			numberOfAdults: 1, // Changed from "" to 1
+			numberOfChildren: "",
+			typeOfTravel: "",
+			referencePayment: "",
 			dateTravel: new Date(),
 			otherRequest: "",
 		},
@@ -94,7 +105,7 @@ export default function BookingForm() {
 		console.log(data);
 
 		try {
-			const response = await fetch("/api/email", {
+			const response = await fetch("/api/bookingDetail", {
 				method: "POST",
 				body: JSON.stringify(data),
 			});
@@ -108,8 +119,8 @@ export default function BookingForm() {
 			if (response.status === 200) {
 				// if response is ok, start confetti animation
 				const end = Date.now() + 3 * 1000; // 3 seconds
-				const colors = ["#a786ff", "#fd8bbc", "#eca184", "#305ffa"];
-				// const colors = ["#a786ff", "#fd8bbc", "#84ecb6", "#f8deb1"];
+				const colors = ["#a786ff", "#ff59a1", "#90ec84", "#2957ff"];
+				// const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 				const frame = () => {
 					if (Date.now() > end) return;
 					void confetti({
@@ -139,7 +150,7 @@ export default function BookingForm() {
 				router.push("/");
 				toast({
 					title: "Your booking has been submitted!",
-					description: "We will contact you soon.",
+					description: 'We will contact you soon.',
 				});
 				return data;
 			}
@@ -153,7 +164,6 @@ export default function BookingForm() {
 			}
 			throw new Error("Error sending email");
 		}
-
 	}
 
 	return (
@@ -218,13 +228,13 @@ export default function BookingForm() {
 				/>
 				<FormField
 					control={form.control}
-					name='numberOfPeople'
+					name='numberOfAdults'
 					render={({ field }) => (
 						<FormItem>
 							<FormLabel>
 								{pathname.includes("/vi")
-									? "Số lượng người"
-									: "Number of People"}
+									? "Số lượng người lớn"
+									: "Number of Adults"}
 							</FormLabel>
 							<FormControl>
 								<Input placeholder='1' {...field} />
@@ -232,6 +242,83 @@ export default function BookingForm() {
 							{/* <FormDescription>
 								This is your public display name.
 							</FormDescription> */}
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name='numberOfChildren'
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>
+								{pathname.includes("/vi")
+									? "Số lượng trẻ em"
+									: "Number of children"}
+							</FormLabel>
+							<FormControl>
+								<Input placeholder='0' {...field} />
+							</FormControl>
+							{/* <FormDescription>
+								This is your public display name.
+							</FormDescription> */}
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name='referencePayment'
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>
+								{pathname.includes("/vi")
+									? "Số tham chiếu thanh toán "
+									: "Payment reference"}
+							</FormLabel>
+							<FormControl>
+								<Input placeholder='0' {...field} />
+							</FormControl>
+							{/* <FormDescription>
+								This is your public display name.
+							</FormDescription> */}
+							<FormMessage />
+						</FormItem>
+					)}
+				/>
+				<FormField
+					control={form.control}
+					name='typeOfTravel'
+					render={({ field }) => (
+						<FormItem>
+							<FormLabel>
+								{pathname.includes("/vi") ? "Loại tours" : "Type of tours"}
+							</FormLabel>
+							<Select onValueChange={field.onChange} defaultValue={field.value}>
+								<FormControl>
+									<SelectTrigger>
+										<SelectValue
+											placeholder={
+												pathname.includes("/vi")
+													? "Chọn loại hình tham quan."
+													: "Select a type of travel."
+											}
+										/>
+									</SelectTrigger>
+								</FormControl>
+								<SelectContent>
+									<SelectItem
+										value={pathname.includes("/vi") ? "Ghép" : "public"}
+									>
+										{pathname.includes("/vi") ? "Ghép" : "Public"}
+									</SelectItem>
+									<SelectItem
+										value={pathname.includes("/vi") ? "Riêng" : "private"}
+									>
+										{pathname.includes("/vi") ? "Riêng" : "Private"}
+									</SelectItem>
+								</SelectContent>
+							</Select>
 							<FormMessage />
 						</FormItem>
 					)}

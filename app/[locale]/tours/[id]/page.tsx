@@ -17,6 +17,7 @@ import { Separator } from "@/components/ui/separator";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound, usePathname } from "next/navigation";
+import BookingDetailCard from '@/components/cc/booking-detail-card/BookingDetailCard';
 
 function AustraliaTours({ params }: { params: { id: string } }) {
 	const pathname = usePathname();
@@ -88,11 +89,11 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 										</Badge>
 									)}
 						</div>
-						<div className='flex flex-col gap-2'>
+						<div className='flex flex-col gap-10'>
 							<H5 className='text-start'>
 								{pathname.includes("/vi") ? AllToursVi.title : AllTours.title}
 							</H5>
-							
+
 							{AllTours?.subTitle &&
 							AllTours.subTitle.length > 1 &&
 							AllToursVi?.subTitle &&
@@ -277,7 +278,7 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 											))}
 								</div>
 							)}
-							<p className='mt-10 text-pretty text-base'>
+							<p className='text-pretty text-base'>
 								{/* spread out the descriptions */}
 								{pathname.includes("/vi")
 									? AllToursVi.description?.map((word, index) => (
@@ -297,7 +298,8 @@ function AustraliaTours({ params }: { params: { id: string } }) {
 											</span>
 										))}
 							</p>
-							<span className='text-base italic text-primary'>
+							<BookingDetailCard />
+							<span className='text-primary text-base italic'>
 								{pathname.includes("/vi")
 									? "*** Nếu bạn quan tâm đến các tour du lịch riêng, vui lòng liên hệ với Ann để biết thêm thông tin. Các chuyến du lịch nước ngoài của chúng tôi là hoàn toàn theo yêu cầu và bộ phận lập kế hoạch sẽ hỗ trợ yêu cầu của bạn. ***"
 									: `*** If you're interested in private tours, please contact Ann

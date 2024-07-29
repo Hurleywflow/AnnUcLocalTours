@@ -1,12 +1,13 @@
 "use client";
+import BookingDetailCard from "@/components/cc/booking-detail-card/BookingDetailCard";
 import { CarouselWithThumbnails } from "@/components/cc/carousel/SplideThumbnailsCarousel";
 import { FloatingNav1 } from "@/components/cc/floating-navbar/FloatingNavbar";
 import { H5, P } from "@/components/cc/text-utils/TextUtils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { blogData, blogDataVi } from "@/data/blogs";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
@@ -81,7 +82,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 										{blog.dateRange}
 									</Badge>
 								)}
-						<div className='flex flex-col gap-2'>
+						<div className='flex flex-col gap-10'>
 							<H5 className='text-start'>
 								{pathname.includes("/vi") ? blogVi.title : blog.title}
 							</H5>
@@ -102,7 +103,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 														<P>{subTitleVi.title}</P>
 													</CardHeader>
 													<Separator className='' />
-													<CardContent className='flex flex-col items-start justify-center gap-2 text-base text-start'>
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-start text-base'>
 														<p>
 															<span className='text-lg font-medium md:text-xl'>
 																- Giá:{" "}
@@ -145,7 +146,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 														<P>{subTitle.title}</P>
 													</CardHeader>
 													<Separator className='' />
-													<CardContent className='flex flex-col items-start justify-center gap-2 text-base text-start'>
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-start text-base'>
 														<p>
 															<span className='text-lg font-medium md:text-xl'>
 																- Price:{" "}
@@ -192,7 +193,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 														<P>{subTitleVi.title}</P>
 													</CardHeader>
 													<Separator className='' />
-													<CardContent className='flex flex-col items-start justify-center gap-2 text-base text-start'>
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-start text-base'>
 														<p>
 															<span className='text-lg font-medium md:text-xl'>
 																- Giá:{" "}
@@ -235,7 +236,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 														<P>{subTitle.title}</P>
 													</CardHeader>
 													<Separator className='' />
-													<CardContent className='flex flex-col items-start justify-center gap-2 text-base text-start'>
+													<CardContent className='flex flex-col items-start justify-center gap-2 text-start text-base'>
 														<p>
 															<span className='text-lg font-medium md:text-xl'>
 																- Price:{" "}
@@ -269,7 +270,7 @@ const Blog = ({ params }: { params: { id: string } }) => {
 											))}
 								</div>
 							)}
-							<p className='mt-10 text-pretty text-base'>
+							<p className=' text-pretty text-base'>
 								{/* spread out the descriptions */}
 								{pathname.includes("/vi")
 									? blogVi.description?.map((word, index) => (
@@ -289,6 +290,8 @@ const Blog = ({ params }: { params: { id: string } }) => {
 											</span>
 										))}
 							</p>
+							{/* render the booking detail card */}
+							<BookingDetailCard />
 							<span className='text-base italic text-primary'>
 								{pathname.includes("/vi")
 									? "*** Nếu bạn quan tâm đến các tour du lịch riêng, vui lòng liên hệ với Ann để biết thêm thông tin. Các chuyến du lịch nước ngoài của chúng tôi là hoàn toàn theo yêu cầu và bộ phận lập kế hoạch sẽ hỗ trợ yêu cầu của bạn. ***"

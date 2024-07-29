@@ -177,7 +177,7 @@ const Blogs = () => {
 												</div>
 												<div className='flex flex-row items-center gap-4'>
 													<Badge className='bg-secondary'>New</Badge>
-													<p className='flex flex-row items-center gap-2 text-sm'>
+													<div className='flex flex-row items-center gap-2 text-sm'>
 														{/* <span className='text-muted-foreground'>By</span>{" "}
 														<Avatar className='size-6'>
 															<AvatarImage src='/logo.png' />
@@ -189,7 +189,7 @@ const Blogs = () => {
 																{blog.price}
 															</Badge>
 														)}
-													</p>
+													</div>
 												</div>
 												<div className='flex flex-col gap-2'>
 													<H5 className='text-start'>{blog.title}</H5>

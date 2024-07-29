@@ -21,12 +21,13 @@ import Images from "next/image";
 // import { CircleUser, Menu, Package2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import ThemeSwitcher from "../theme-switcher/theme-switcher";
 
 function Navbar(): JSX.Element {
 	const pathname = usePathname();
 	const router = useRouter();
 	return (
-		<header className='sticky top-0 z-50 flex h-16 items-center gap-4 border-b bg-background/70 px-4 backdrop-blur-xl   md:px-6'>
+		<header className='bg-background/70 sticky top-0 z-50 flex h-16 items-center gap-4 border-b px-4 backdrop-blur-xl   md:px-6'>
 			<nav className='hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6'>
 				{/* Navbar items */}
 				<Link
@@ -105,7 +106,7 @@ function Navbar(): JSX.Element {
 				</SheetContent>
 			</Sheet>
 			<div className='flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4'>
-				<Button className='group relative ml-auto flex-1 overflow-hidden rounded-md px-6  transition  sm:flex-initial '>
+				{/* <Button className='group relative ml-auto flex-1 overflow-hidden rounded-md px-6  transition  sm:flex-initial '>
 					<Link href='tel:+61401211890'>
 						<span className='relative text-base uppercase'>
 							{pathname.includes("/vi") ? "Gọi Điện" : "call now"}
@@ -114,9 +115,11 @@ function Navbar(): JSX.Element {
 							<div className='relative h-full w-10 bg-background/30' />
 						</div>
 					</Link>
-				</Button>
+				</Button> */}
 				{/* this is theme switcher */}
-				{/* <ThemeSwitcher /> */}
+				<div className='group relative ml-auto flex-1 rounded-md px-6  transition  sm:flex-initial '>
+					<ThemeSwitcher />
+				</div>
 
 				{/* this is language switcher */}
 				<Button
